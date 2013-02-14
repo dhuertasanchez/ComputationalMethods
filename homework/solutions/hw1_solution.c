@@ -135,9 +135,11 @@ void split_string(char *city, char *country, char *place, int n_chars){
   for(i=comma+1;i<n_chars;i++){
     if(place[i]!='\n'){//take out that from the last item in the line
       country[i-comma-1] = place[i];
+    }else{
+      country[i-comma-1] = '\0';
     }
   }
-  country[i-comma-1] = '\0'; //closes the strins
+
 
 }
 
