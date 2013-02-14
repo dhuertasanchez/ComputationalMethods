@@ -249,16 +249,16 @@ Many times in physics you don't have a theory, not event a model, of the data yo
 
 One of the first techniques that you have to learn in statistical analysis is Principal Component Analysis (PCA). The objective of this section is that you learn to perform and interpret data using this technique.
 
-This time we start from $N$ different measurements of points in $M$ dimensions. The dimensions might be different physical quantities (velocities, masses), or might be the points in wavelength where you measure the intensity of a spectrum.
+This time we start from $M$ different measurements of points in $N$ dimensions. The dimensions might be different physical quantities (velocities, masses), or might be the points in wavelength where you measure the intensity of a spectrum.
 
-We start by measuring the covariance matrix of different dimension of all the data points. This covariance matrix will be a $M\times M$ matrix where each element is computed as:
+We start by measuring the covariance matrix of different dimension of all the data points. This covariance matrix will be a $N\times N$ matrix where each element is computed as:
 
 \begin{equation}
-\sigma_{i,j} = \frac{\sum_{k=1}^{N} (d^{k}_i - \bar{d_i})(d^{k}_j -\bar{d_{j}})}{N-1}
+\sigma_{i,j} = \frac{\sum_{k=1}^{M} (d^{k}_i - \bar{d_i})(d^{k}_j -\bar{d_{j}})}{N-1}
 \end{equation}
 
-In this notation there are $N$ vector of measurements ${\mathbf d}^{1}$,\ldots,${\mathbf d}^{N}$. Where each vector has $M$ components, for instance the $k$-th measurement will be ${\mathbf d}^{k}=(d^k_{1},\ldots,d^k_{M})$.
+In this notation there are $M$ vector of measurements ${\mathbf d}^{1}$,\ldots,${\mathbf d}^{M}$. Where each vector has $N$ components, for instance the $k$-th measurement will be ${\mathbf d}^{k}=(d^k_{1},\ldots,d^k_{N})$.
 
-The PCA technique consists in calculating the covariance matrix and calculating its eigenvalues and eigenvectors. If you rank the eigenvalues in descending order the associated eigenvectors will tell the directions (in $M$ dimensional space) where the variance decreases. With this you will be able to reduce the dimensionality of your problem and express each point as the sum of the eigenvectors.
+The PCA technique consists in calculating the covariance matrix and calculating its eigenvalues and eigenvectors. If you rank the eigenvalues in descending order the associated eigenvectors will tell the directions (in $N$ dimensional space) where the variance decreases. With this you will be able to reduce the dimensionality of your problem and express each point as the sum of the eigenvectors.
 
 \end{document}
