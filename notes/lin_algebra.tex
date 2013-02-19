@@ -151,7 +151,7 @@ In general the methods to infer the properties of a model from the measurements 
 In general mathematical terms, if we have a model for a physical phenomenon described by a set of parameter and we have a theory that can relate those parameters to produce and observable, we can write
 
 \begin{equation}
-d_{i} = G (\mathbf{m}_{i}),
+d_{i} = G_i (\mathbf{m}),
 \end{equation}
 
 where ${\mathbf m}$ contain-ts all the instances of the physical parameters in my model (i.e time, masses, etc), $d$ is the observed data and $G$ is the is the theory that produces the observed data $d$ from the parameters in the model $m$. The index $i$ goes over the number of measurements that you have.
@@ -209,7 +209,7 @@ Solving this problem means finding a model $\mathbf{\hat{m}}$ that best reproduc
 
 Suppose we are given a collection of $M$ measurements of a property to form a vector $\mathbf{d} \in \real^M$. From our geophysics we know the forward problem such that we can predict the data from a known model $\mathbf{m} \in \real^N$. That is, we know the $N$ vectors $\mathbf{g}_k \in \real^M$ such that 
 \begin{equation}
-\mathbf{d} = \sum_{k=1}^{N} \mathbf{t}_k m_k = \mathbf{G} \mathbf{m}
+\mathbf{d} = \sum_{k=1}^{N} \mathbf{g}_k m_k = \mathbf{G} \mathbf{m}
 \end{equation}
 where
 \begin{equation}
@@ -219,7 +219,7 @@ where
 We are looking for a model $\hat{\mathbf{m}}$ that minimizes the size of the residual vector defined
 
 \begin{equation}
-\mathbf{r} = \mathbf{d} -  \sum_{k=1}^{N} \mathbf{t}_k \hat{m}_k
+\mathbf{r} = \mathbf{d} -  \sum_{k=1}^{N} \mathbf{g}_k \hat{m}_k
 \end{equation}
 
 We do not expect to have an exact fit so there will be some error, and we use a norm to measure the size of the residual
