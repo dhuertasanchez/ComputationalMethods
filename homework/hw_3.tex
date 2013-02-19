@@ -1,0 +1,81 @@
+\documentclass{article}
+\title{Taller \#3. F\'isica Computacional / FISI 2025 \\Semestre 2013-I. \\ Profesor: Jaime E. Forero Romero}
+\date{Febrero 19 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe estar en un repositorio de la cuenta de github de
+  cada uno con un commit final hecho antes del medio d\'ia del jueves
+  28 de Febrero del 2013} 
+
+\begin{enumerate}
+\item
+Dentro del repositorio del curso vayan al directorio
+\verb"hands_on/lin_algebra". 
+
+\item
+Ahi encontrar\'an el archivo \verb"movimiento.dat" que tiene 2
+columnas. La primera representa una variable temporal y la segunda una
+posici\'on. Corresponden a las mediciones de la posici\'on de un
+cuerpo en un campo gravitacional. 
+
+Siguiendo la parametrizaci\'on que se da en las notas de clase,
+escriba un programa en C que calcule el valor \'optimo de esos
+par\'ametros. Los c\'alculos deben utilizar expl\'icitamente la
+formulaci\'on matricial del problema inverso.
+
+\item
+El output del c\'odigo debe ser un archivo de texto con tres floats
+escritos en la misma fila, correspondientes a los par\'ametros $m_1$,
+$m_2$ y $m_3$. El archivo de salida se debe llamar \verb"parametros_movimiento.dat".  
+
+\item
+
+En el mismo directorio encontrar\'an el archivo \verb"3D_data.dat" que
+tiene 3 columnas. Cada una de las filas
+corresponde a una medici\'on de un elemento descrito por tres
+n\'umeros $x_{1}, x_{2}, x_{3}$. Explorando la distribuci\'on de estos
+n\'umeros en el espacio de las variables, es claro que en realidad
+estos datos viven en un espacio bidimensional. El objetivo es escribir
+un c\'odigo en C que realiza una an\'alisis del tipo Principal
+Component Analysis para poder descubrir en que plano del espacio
+$x_{1}, x_{2}, x_3$ viven las variables \verb"3D_data.dat". 
+
+\item 
+El output del c\'odigo debe ser un archivo de texto con los tres
+autovectores ordenados por orden decreciente del autovalores. Cada
+autovector debe estar escrito en una fila por separado, cada
+columna corresponde entonces a las componentes en
+$x_{1}, x_{2}, x_{3}$ . Estos vectores deben tener norma unidad. El archivo de
+salida, despu\'es de ejecutar el c\'odigo debe ser
+\verb"autovectores_3D_data.dat". El archivo debe poder compilarse con
+las librerias \verb"-lm -lgsl -lgslcblas".
+
+\item
+Los dos c\'odigos deben estar en un repositorio de GitHub dentro de
+un directorio que se llame \verb"lin_algebra".
+
+\item
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 3 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+\item
+La calificaci\'on se har\'a en tres partes.
+\begin{itemize}
+\item El c\'odigo fuente y los libros est\'an en un repositorio de
+  github (20\%). 
+\item El c\'odigo de m\'inimos cuadrados recupera adecuadamente los
+  par\'ametros que describen el movimiento dado por
+  \verb"movimiento.dat"(20\%).
+\item El c\'odigo de m\'inimos cuadrados recupera adecuadamente los
+  par\'ametros que describen el movimiento de un conjunto de datos
+  diferente (30\%).
+\item El c\'odigo de PCA recupera adecuadamente los autovectores
+  autovectores que describen los datos \verb"3D_data.dat"(20\%) 
+\item El c\'odigo de PCA recupera adecuadamente los autovectores que
+  describen un conjunto de datos diferente (tambien en 3 dimensiones) (30\%).
+\end{itemize}
+\end{enumerate}
+\end{document}
