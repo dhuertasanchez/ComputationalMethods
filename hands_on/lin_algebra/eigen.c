@@ -14,8 +14,7 @@ int main (void){
   gsl_vector *eval = gsl_vector_alloc (4);
   gsl_matrix *evec = gsl_matrix_alloc (4, 4);
   
-  gsl_eigen_symmv_workspace * w = 
-    gsl_eigen_symmv_alloc (4);
+  gsl_eigen_symmv_workspace * w = gsl_eigen_symmv_alloc (4);
   
   gsl_eigen_symmv (&m.matrix, eval, evec, w);
   
@@ -24,7 +23,7 @@ int main (void){
   gsl_eigen_symmv_sort (eval, evec, 
 			GSL_EIGEN_SORT_ABS_ASC);
   
-  {
+  {  
     int i;
     
     for (i = 0; i < 4; i++)
