@@ -1,0 +1,107 @@
+\documentclass{article}
+\title{Taller \#4. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Febrero 21 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del jueves 7 de Marzo del 2013}  
+
+Es el a\~no 2150. Despu\'es de los descubrimientos de exoplanetas
+similares a la Tierra en el 2020 y de haber resuelto en el 2080 el
+problema de viaje inter-estelar en escalas de tiempo humanas, es una
+pr\'actica com\'un para los estudiantes de la Universidad de los Andes
+hacer salidas de campo a otros planetas.
+ 
+En una de estas salidas de campo, el objetivo de los estudiantes de
+las 300 secciones de Fisica I (la Universidad ahora cuenta con 500 mil
+estudiantes) es repartirse sobre un meridiano del planeta Brahe-$314$
+para hacer experimentos de movimiento parab\'olico y deducir el valor
+de la gravedad en diferentes lugares del planeta.
+
+Sus experimentos de alt\'isima precisi\'on (con errores en mediciones
+de tiempos y posiciones despreciables) en c\'amaras gigantes de alto
+vac\'io consisten en hacer 6 tiros parab\'olicos y medir durante 4
+segundos la trayectoria del proyectil. 
+
+Para evitar sesgos en las mediciones, cada uno de los tiros
+parab\'olicos en cada una de las 300 posiciones sobre el meridiano de
+Brahe-$314$ tiene diferentes velocidades iniciales. 
+
+Dentro del repositorio en \verb"homework/hw4_data/" hay 1800
+archivos diferentes con los datos de estos experimentos,
+correspondientes a 6 tiros parab\'olicos en 300 posiciones. Los
+archivos tienen un nombre del tipo:
+\begin{center}
+\verb"experiment_ID_3_theta_180.0.dat"\\
+\end{center}
+
+Eso indica que ese es el experimento con indentificaci\'on 3 (la
+cuenta para la identificaci\'on empieza en 0) hecho al \'angulo
+$180.0$ polar sobre el meridiano (en analog\'ia con un sistema de
+coordenadas esf\'ericas). En este caso el archivo de datos
+corresponder\'ia a los datos tomados en el polo sur geogr\'afico. 
+
+El objetivo de la tarea es escribir un c\'odigo en Python (o en un
+notebook the IPython) que haga las siguientes tareas:
+\begin{enumerate}
+
+\item
+Por cada uno de los archivos de datos devuelva los par\'ametros
+$g,v_{0x},v_{0y}$, que corresponden a la aceleraci\'on de la gravedad
+en ese sitio, la velocidad inicial en la direcci\'on perpendicular a
+la gravedad y la velocidad inicial en la direccion paralela a la gravedad.
+
+\item
+Procesa los datos anteriores a trav\'es de Principal Component
+Analysis para verificar si los valores obtenidos para la gravedad son
+independientes de los valores iniciales de las velocidades iniciales.  
+
+
+\item
+Prepara una gr\'afica de los valores medios de la gravedad como funci\'on del
+\'angulo polar $\theta$.  
+
+\item 
+El programa debe preparar una lista de las variaciones de la gravedad
+parametrizada por 
+
+\begin{displaymath}
+F=1.0-\frac{g_{\rm media}}{9.81\mathrm{m\ s}^{-2}},
+\end{displaymath}
+
+en funci\'on del \'angulo polar $\theta$.
+
+\item 
+Las variaciones de F corresponden a las fluctuaciones en la gravedad
+respecto al valor de referencia terrestre. Si el programa logra ver
+estas fluctuaciones ahora intente hacer un ajuste a esta variaci\'on
+con una funci\'on del tipo $F = F_{0}\sin(\theta) + c_{0}$, donde
+$F_{0}$ y $c_{0}$ son constantes. El programa deber preparar una
+gr\'afica de los residuos de los valores observados con respecto al
+mejor fit obtenido para esta funci\'on.    
+
+\item
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 4 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 20\% a cada uno de los puntos del
+1 al 5.
+
+\vspace{1cm}
+
+Para ver una aplicaci\'on real de cartograf\'ia de la Luna a
+partir de mediciones de precision de fluctuaciones del campo
+gravitacional, pueden ir aqu\'i:
+
+\verb"http://www.nasa.gov/mission_pages/grail/news/grail20121205.html"
+
+\end{document}
