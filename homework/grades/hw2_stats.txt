@@ -1,0 +1,15 @@
+AndresGarcia	80	20	20
+AndreaRozo	80	20	20
+Wallamejorge	80	20	20	
+gutiloluis	80	20	20
+judicapo	40	10	20 # cuenta espacios como caracteres, no escribe el output
+jubermudez88	40	10	20 # no escribe el output, no calcula las frecuencias
+sergiok1000o	80	20	20 
+Torroledo	60	15	20 # no escribe el output como se requiere (no hay rsort)
+sjumah		60	20	20
+joanmawo	0	0	20 # no corre
+nicvsgodzilla	60	20	20
+napean 		60	15	20 # no escribe el output como se requiere (no hay rsort)
+fabiano15	50	15	20 # produce un warning de division entre cero
+lrios954	
+santig91	60	20	20
