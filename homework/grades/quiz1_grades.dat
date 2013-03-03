@@ -1,14 +1,15 @@
-AndreaRozo	100.0
-SergioK1000o	80.0 # corre, pero la respuesta es incorrecta, las frecuencias son >1?
-sjumah		100.0
-nicvsgodzilla 	100.0
-jubermudez88	60.0 # corre, pero la estructura y resultados son incorrectos, saca una pendiente por cada caracter 
-santig91	60.0 # corre, pero los resultados son incorrectos (x,y estan invertidos), no toma en cuenta caracteres especiales, mal estructurado
-fabiano15	60.0 # corre, pero los resultados son incorrectos (rango empieza en 2), mal estructurado
-joanmawo	50.0 # no corre
-gutiloluis	60.0 # corre, pero la estructura y resultados son incorrectos (eligio los 20 primeros caracteres en una lista sin rankear)
-lrios954	50.0 # no corre
-jm.lara576	50.0 # no corre
-napean		100.0 
-LeonardoMorenoG	100.0
-Torroledo	50.0 # no corre
+AndreaRozo		100.0
+SergioK1000o		80.0 # corre, pero la respuesta es incorrecta, las frecuencias son >1?
+sjumah			100.0
+nicvsgodzilla 		100.0
+jubermudez88		60.0 # corre, pero la estructura y resultados son incorrectos, saca una pendiente por cada caracter 
+santig91		60.0 # corre, pero los resultados son incorrectos (x,y estan invertidos), no toma en cuenta caracteres especiales, mal estructurado
+fabiano15		60.0 # corre, pero los resultados son incorrectos (rango empieza en 2), mal estructurado
+joanmawo		50.0 # no corre
+gutiloluis		60.0 # corre, pero la estructura y resultados son incorrectos (eligio los 20 primeros caracteres en una lista sin rankear)
+lrios954		50.0 # no corre
+jm.lara576		50.0 # no corre
+napean			100.0 
+LeonardoMorenoG		100.0
+Torroledo		50.0 # no corre
+andresfgarcia150	100.0
