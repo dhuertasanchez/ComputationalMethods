@@ -12,4 +12,5 @@ nicvsgodzilla	80	20	20
 napean 		60	15	20 # no escribe el output como se requiere (no hay rsort)
 fabiano15	50	15	20 # produce un warning de division entre cero
 lrios954	60	15	20 # no escribe el output como se requiere
-santig91	60	20	20
+santig91	40	20	20 # no saca la lista de caracteres del libro, da una de entrada
+jm.lara576	60	20	0  # falla con DonQuijote 'ValueError: list.remove(x): x not in list'
