@@ -1,0 +1,89 @@
+\documentclass{article}
+\title{Taller \#4. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Marzo 14 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del jueves 21 de Marzo del 2013}  
+
+Desde hace cerca de 400 a\~nos existen observaciones sistem\'aticas del
+n\'umero de manchas solares. En la \'epoca moderna se ha confirmado
+que la cantidad de estas manchas est\'a correlacionada con un aumento
+de actividad en el Sol en t\'erminos de ejecciones de masa y
+part\'iculas cargadas que pueden ser peligrosas para la vida humana en
+la Tierra.
+
+Dentro del repositorio del curso en \verb"homework/hw5_data"
+encontrar\'an el archivo \verb"monthrg.dat" que incluye datos
+mensuales de n\'umeros de manchas solares observadas desde 1610. El
+formato del archivo est\'a descrito dentro del \verb"README" en el
+mismo directorio.
+
+El objetivo de la tarea es escribir un c\'odigo en Python (o en un
+notebook the IPython) que haga las siguientes tareas:
+\begin{enumerate}
+
+\item
+Prepare una gr\'afica de n\'umero de manchas solares en funci\'on del
+tiempo. Donde el eje $x$ tiene unidades de a\~nos.
+
+\item
+Procesa los datos anteriores (n\'umero de manchas en funci\'on del
+tiempo) para obtener una transformada de Fourier a partir de la
+definci\'on:
+\begin{equation}
+\hat{x}_{k} = \sum_{n=0}^{N-1}x_{n}\exp(-2\pi i k n/N), 
+\end{equation}
+donde $x_{n}$ es la serie de $N$ puntos en funci\'on del tiempo y los
+valores de $k$ corresponden a diferentes
+frecuencias. Espec\'ificamente el programa debe calcular las
+frecuencias y los n\'umeros complejos correspondientes a cada
+$k=0,1,\dots,N-1$. 
+
+{\bf Importante}. No se trata de programar la suma sino de usar las
+rutinas FFT para hacer el c\'alculo.
+
+\item
+
+Calcula el espectro de potencias, $P$. Es decir, calcula la norma al
+cuadrado de cada $\hat{x}_{k}$ en funci\'on de la frecuencia y prepara
+una gr\'afica de $P$  como funci\'on de la frecuenca $f$. 
+
+\item 
+Prepara una gr\'afica del espectro de potencias esta vez como
+funci\'on del periodo $T=1/f$  para per\'iodos entre 1 y 20
+a\~nos. Alcanza a ver que algun valor del espectro de potencias domina
+para un per\'iodo determinado? 
+
+\item 
+Hace cero todos los valores de $\hat{x}_{k}$ para $k$ mayores a lo que
+corresponder\'ia un per\'iodo de $20$ a\~nos y hace la transormada de
+Fourier inversa para obtener una nueva serie de puntos
+$x^{\prime}_{n}$. El objetivo es preparar una gr\'afica con los nuevos
+puntos y los datos originales, todo en una misma escala de n\'umero
+de manchas solares como funci\'on del tiempo en unidades de a\~nos.
+Los puntos $x^{\prime}_{n}$ deben tener entonces la normalizaci\'on
+adecuada. 
+
+\item 
+Finalmente, el programa debe hacer una predicci\'on de cu\'ando se
+dar\'a el siguiente m\'aximo solar a partir de los resultados de los
+puntos anteriores.
+
+\item
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 5 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 20\% a cada uno de los puntos del
+2 al 6.
+
+\end{document}
