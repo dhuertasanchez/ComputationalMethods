@@ -1,0 +1,2 @@
+target1.dat:	requirement1.dat
+	echo "compared to target1.dat, the file requirement1.dat has been recently changed"
