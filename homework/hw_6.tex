@@ -1,0 +1,51 @@
+\documentclass{article}
+\title{Taller \#6. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 9 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del martes 16 de Abril del 2013}  
+
+Se les presenta el siguiente sistema de ODEs acopladas:
+
+\begin{equation}
+\frac{dx}{dt} = \sigma(y-x)
+\end{equation}
+
+\begin{equation}
+\frac{dy}{dt} = x(\rho -z) - y
+\end{equation}
+
+\begin{equation}
+\frac{dz}{dt} = xy -\beta z
+\end{equation}
+
+donde $\sigma$, $\rho$ y $\beta$ son constantes.
+
+\begin{enumerate}
+\item 
+Escriba un programa en $C$ que resuelva estas ecuaciones diferenciales para $\sigma=10$, $\beta=8.0/3.0$ y $\rho=28.0$ mediante un m\'etodo Runge-Kutta de cuarto orden para condiciones iniciales arbitrarias $x_0,y_0,z_0$ en intervalo de tiempo $0.0<t<3.0$. El programa debe estar escrito en al menos dos archivos de c\'odigo fuente separados. Uno debe contener el \verb"main" y los otros archivos las rutinas que considere necesarias para ejecutar el programa. 
+
+\item 
+Ejecute el programa para $10$ condiciones iniciales diferentes donde cada  $x_0,y_0,z_0$ es un n\'umero aleatorio entre $-10$ y $10$. Presente los resultados para esas $10$ condiciones iniciales en tres gr\'aficas bidimensionales que presenten las orbitas en los planos $x-y$, $x-z$ y $y-z$.
+
+\item 
+Haga un archivo \verb"Makefile" que: compile el c\'odigo, lo ejecute y produzca las gr\'aficas cuando se ejecute el comando \verb"make" en el directorio que contiene el c\'odigo fuente.
+
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 33\% a cada uno de los puntos del 1 al 3. Solamente se recibir\'an tareas que est\'en en un repositorio de github.
+
+
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 6 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+
+
+\end{document}
