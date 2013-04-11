@@ -15,3 +15,4 @@ lrios954	60	15	20 # no escribe el output como se requiere
 santig91	40	20	20 # no saca la lista de caracteres del libro, da una de entrada
 jm.lara576	60	20	0  # falla con DonQuijote 'ValueError: list.remove(x): x not in list'
 felgonzalezh	40	10	20 # no escribe output, no calcula las frecuencias
+LeonardoMorenoG 60      15      20 # parece correcto, pero se demora una eternidad en correr.
