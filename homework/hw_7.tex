@@ -1,0 +1,89 @@
+\documentclass{article}
+\title{Taller \#7. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 16 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del martes 23 de Abril del 2013}  
+
+Es com\'un encontrar estrellas que presentan un comportamiento
+oscilatorio. Por ejemplo, el Sol tiene oscilaciones debido a
+variaciones de presi\'on (conocidas como ondas de modos-p) con per\'iodos de 5
+minutos, medibles a partir de m\'etodos de imagen doppler.  Otro
+ejemplo conocido son las estrellas de tipo Cefeida que tienen un
+brillo variable con  periodos que pueden estar en el orden de d\'ias o
+inclusos meses.
+
+El siguiente ejercicio plantea un modelo simple para describir una
+estrella pulsante en el caso donde las pulsaciones son originadas por
+variaciones en la presi\'on. Para esto trabajaremos en simetr\'ia
+esf\'erica donde la \'unica coordenada importante es la radial.
+
+En este caso la aceleraci\'on radial de un elemento infinetesimal de
+gas a una distancia $r$ del centro es un balance entre gravedad y
+cambios de presi\'on:
+
+\begin{equation}
+\rho\frac{d^2r}{d t^2} = -\frac{GM_r\rho}{r^2} - \frac{dP}{dr}, 
+\end{equation}
+
+donde $\rho$ es la densidad local del gas, $M_{r}$ es la masa de gas
+contenida en una esfera de radio $r$ y $P$ es la presi\'on del gas que
+cambia a medida que nos alejamos del centro de la estrella.
+
+Vamos a simplificar aun m\'as este problema pensando en que toda la
+masa de la estrella $M$ est\'a concentrada en un punto y alrededor,
+hay una capa de tenue gas de masa $m$ y radio $R$. Esto nos permite
+reescribir el balance de la ecuaci\'on anterior de la siguiente forma: 
+
+\begin{equation}
+m\frac{d^2R}{d t^2} = -\frac{GM_rm}{R^2} + 4\pi R^{2}P.
+\end{equation}
+
+En este caso la velocidad de expansi\'on/contracci\'on de la
+superficie de la estrella es $v = dR/dt$. 
+
+Ahora incluimos una condici\'on inicial sobre la termodin\'amica del
+sistema diciendo que la compresi\'on y la expansi\'on son
+adiab\'aticas. Es decir $PR^{3\gamma}$ es constante, donde $\gamma$
+representa el cociente entre los calores espec\'ificos del gas.
+
+
+\begin{enumerate}
+\item 
+Escriba un programa en $C$ que resuelva este problema para condiciones
+iniciales: $t=0$, $R=1.7\times 10^{12}$cm, $v=0$cm/s, $P=5.6\times
+10^{5}$ dinas/cm$^2$. Usando intervalos de tiempo de $10^3$ segundos,
+con $\gamma=5/3$. Para la masa de la estrella puede tomar $M = 1\times
+10^{34}$g y para la masa de la capa de gas $m=1\times 10^{29}$g.
+
+\item
+Prepare tres gr\'aficas de $R$, $v$ y $P$ como funci\'on del tiempo
+desde $t=0$ hasta $t=1.5\times 10^{6}$ segundos.
+
+\item 
+Escriba un programa en Python que encuentre el periodo de oscilaci\'on (en
+d\'ias) y el radio de equilibrio (en cm) y los escriba en un archivo
+llamado \verb"period_amplitude.txt".
+
+\item 
+Haga un archivo \verb"Makefile" que ejecute los tres puntos anteriores
+cuando se use el comando \verb"make" en el directorio que contiene el
+c\'odigo fuente.   
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 25\% a cada uno de los puntos del 1
+al 3. Solamente se recibir\'an tareas que est\'en en un repositorio de
+github. 
+
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 7 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+
+\end{document}
