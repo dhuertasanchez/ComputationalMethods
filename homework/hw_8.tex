@@ -1,0 +1,52 @@
+\documentclass{article}
+\title{Taller \#8. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 23 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del martes 30 de Abril del 2013}  
+
+El objetivo de este taller es resolver la ecuaci\'on de difusi\'on del calor
+
+\begin{equation}
+\frac{\partial^2u}{\partial t^2} = \frac{\partial u}{\partial t}.
+\end{equation}
+
+\begin{enumerate}
+
+\item 
+Escriba un programa en $C$ que resuelva esta ecuaci\'on en el intervalo $0<x<1$para las siguiente condiciones iniciales: $u(x,0) = 4x(1-x)$, $u(0,t)= u(L,t)=0$. Esta ecuaci\'on debe estar resuelta para el intervalo $0<t<3$.
+
+
+\item
+Para el caso anterior, prepare una gr\'afica que muestre la evoluci\'on de la func\'on $u(x,t)$ para 10 invervalos de tiempo igualmente espaciados entre $0<t<3$.
+
+
+\item 
+
+Escriba un programa en $C$ que resuelva esta ecuaci\'on en el intervalo $-5<x<5$para las siguiente condiciones iniciales: $u(x,0) = \exp(-x^2)$, $u(-5,t)= u(5,t)=0$. Esta ecuaci\'on debe estar resuelta para el intervalo $0<t<3$.
+
+\item
+Para el caso anterior, prepare una gr\'afica que muestre la evoluci\'on de la func\'on $u(x,t)$ para 10 invervalos de tiempo igualmente espaciados entre $0<t<3$.
+
+\item 
+Haga un archivo \verb"Makefile" que ejecute los cuatro puntos anteriores
+cuando se use el comando \verb"make" en el directorio que contiene el
+c\'odigo fuente.   
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 20\% a cada uno de los puntos del 1
+al 5. Solamente se recibir\'an tareas que est\'en en un repositorio de
+github. 
+
+Enviar un email al monitor del curso Daniel Felipe Duarte {\tt
+  df.duarte578} en {\tt uniandes.edu.co} con el subject
+\verb"RESPUESTA TALLER 8 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea. 
+
+
+\end{document}
