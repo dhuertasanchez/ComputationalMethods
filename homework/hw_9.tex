@@ -1,0 +1,58 @@
+\documentclass{article}
+\title{Taller \#9. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 30 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del martes 4 de Mayo del 2013}  
+
+El objetivo de este taller es usar exploraci\'on MCMC y estad\'istica
+bayesiana para resolver un problema que nace de una historia de la vida real
+(!). Es un problema planteado por Ivan Caicedo, estudiante de
+maestr\'ia en Uniandes. 
+
+En una regi\'on del espacio marcada por coordenadas $x_{0}, y_{0},
+z_{0}$ hay una fuente de part\'iculas. A diferentes
+posiciones $z_1,z_2$ est\'an ubicados dos detectores que
+registran la traza dejada por una part\'icula. Estos detectores son
+planos y est\'an alineados para ser perpendiculares al plano $x-y$.  
+
+La traza de cada part\'icula est\'a descrita entonces por las
+posiciones dejadas en cada detector. De esta manera cada traza est\'a
+descrita por 6 n\'umeros: $x_1,y_1, z_1, x_2,y_2, z_2$. Nosotros
+contamos con las mediciones de diferentes trazas, el problema es
+encontrar los valores m\'as probables de $x_0,y_0,z_0$ para el origen de estas trazas.
+
+
+En el archivo \verb"homework/hw9_data/traces.dat" encontrar\'a un archivo de texto con 6
+columnas. Cada columna corresponde a los n\'umeros que describen las
+trazas y cada fila corresponde a una traza diferente.
+\begin{enumerate}
+\item 
+Escriba un programa en $python$ que use un me\'etodo MCMC para
+encontrar la posici\'on m\'as probable de $x_0,y_0,z_0$. 
+
+\item 
+Escriba un programa que preparare tres gr\'aficas de densidad de
+probabilidad (pi\'ensenlo como histogramas bidimensionales
+adecuadamente normalizados) en los planos $x-y$, $x-z$, $y-z$ para el
+origen m\'as probable.   
+\end{enumerate}
+
+En la calificaci\'on se dar\'a un 50\% a cada uno de los puntos del 1
+al 2. Solamente se recibir\'an tareas que est\'en en un repositorio de
+github. 
+
+Enviar un email a {\tt  j.e.forero.romero} en {\tt gmail.com} con el
+subject
+
+
+\verb"RESPUESTA TALLER 9 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea.  
+
+
+\end{document}
