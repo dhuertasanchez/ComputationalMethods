@@ -1,0 +1,83 @@
+\documentclass{article}
+\title{Taller \#10. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 30 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del viernes 10 de Mayo del 2013}  
+
+
+El objetivo de este taller es escribir un integrador Runge-Kutta de
+cuarto orden para estudiar la interacci\'on de dos galaxias de disco. Vamos a
+seguir de cerca el paper cl\'asico de Toomre \& Toomre
+\textit{Galactic Bridges and Tails},Astrophysical Journal, Vol. 178,
+pp. 623-666 (1972), este paper esta en el repositorio como
+\verb"homework/TT.pdf" 
+
+Una galaxia ser\'a descrita como una masa central con 100
+cuerpos en \'orbitas circulares que la rodean. Una imagen que puede
+servir es la del sistema solar, pero donde solamente existen 5 orbitas
+circulares posibles y en cada \'orbita se encuentran 12, 18, 24, 30 y 36
+cuerpos, tal como se muestra en la Figura 1 del paper, en el panel
+marcado con "$-1$". 
+
+El movimiento de cada una de las part\'iculas que rodean a la masa
+central est\'a determinado por la siguiente ecuaci\'on vectorial de
+segundo orden:
+
+
+\begin{equation}
+\frac{d^2\vec{r}}{dt^2} = -\frac{GM}{r^2} \hat{r}
+\end{equation}
+
+donde $\vec{r}$  es un vector que va de la masa central a la
+part\'icula, $\hat{r}$ es el vector unitario correspondiente,
+$r=|\vec{r}|$, $M$ es la masa del cuerpo central y $G$ es la constante
+de gravitaci\'on.  Una vez se conocen las condiciones iniciales de
+cada una de las masas $\vec{r}_0$, $\vec{v}_0$ es posible conocer la
+  posici\'on y la velocidad en eventos. Noten que estamos usando una
+  aproximaci\'on donde la fuerza que siente cada part\'icula solamente
+  se debe solamente a la masa central. Esto es equivalente a decir a
+  que la masa de todas las part\'iculas es despreciable con respecto a
+  la masa central. 
+
+
+\begin{enumerate}
+\item El primer punto de la tarea es escribir un programa que genere
+  las condiciones  iniciales (posiciones y velocidades) para que las
+  100 part\'iculas de una galaxia aislada   orbiten de manera estable
+  en c\'irculos alrededor de la masa  central. La masa del cuerpo
+  central debe ser de $10^{11}$ masas solares, el radio externo de
+  $50$ kiloparsecs y cada una de las orbitas circulares debe estar
+  equiespaciada a $10$ kiloparsecs.  
+\item 
+  Escriba el c\'odigo que evolucione la posici\'on y la velocidad de
+  cada una de las part\'iculas durante 2 mil millones de
+  a\~nos. 
+\item 
+  Tomando las condiciones iniciales anteriores, muestre que en efecto
+  la configuraci\'on es estable. Prepare gr\'aficas de la posicion de
+  las 100 part\'iculas en 5 momentos diferentes equiespaciados en los
+  2mil millones de a\~nos de evoluci\'on del sistema.
+
+\item 
+  Interacci\'on con otra galaxia.
+\end{enumerate}
+
+
+Solamente se recibir\'an tareas que est\'en en un repositorio de
+github. 
+
+Enviar un email a {\tt  j.e.forero.romero} en {\tt gmail.com} con el
+subject
+
+
+\verb"RESPUESTA TALLER 10 FISICA COMPUTACIONAL". En el cuerpo del texto
+debe ir la direcci\'on del repositorio donde est\'a la tarea.  
+
+
+\end{document}
