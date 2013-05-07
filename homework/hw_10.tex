@@ -1,7 +1,7 @@
 \documentclass{article}
 \title{Taller \#10. F\'isica Computacional / FISI 2025 \\Semestre
   2013-I. \\ Profesor: Jaime E. Forero Romero} 
-\date{Abril 30 2013}
+\date{Mayo 7 2013}
 \begin{document}
 \maketitle
 
@@ -13,9 +13,9 @@
 
 El objetivo de este taller es escribir un integrador Runge-Kutta de
 cuarto orden para estudiar la interacci\'on de dos galaxias de disco. Vamos a
-seguir de cerca el paper cl\'asico de Toomre \& Toomre
-\textit{Galactic Bridges and Tails},Astrophysical Journal, Vol. 178,
-pp. 623-666 (1972), este paper esta en el repositorio como
+seguir el ejemplo  del paper cl\'asico de Toomre \& Toomre
+\textit{Galactic Bridges and Tails} en el Astrophysical Journal, Vol. 178,
+pp. 623-666 (1972), el cual se encuentra repositorio como
 \verb"homework/TT.pdf" 
 
 Una galaxia ser\'a descrita como una masa central con 100
@@ -25,10 +25,10 @@ circulares posibles y en cada \'orbita se encuentran 12, 18, 24, 30 y 36
 cuerpos, tal como se muestra en la Figura 1 del paper, en el panel
 marcado con "$-1$". 
 
-El movimiento de cada una de las part\'iculas que rodean a la masa
-central est\'a determinado por la siguiente ecuaci\'on vectorial de
-segundo orden:
-
+El movimiento {\bf de cada una} de las part\'iculas que rodean a la masa
+central est\'a determinado por la siguiente ecuaci\'on diferencial
+ordinaria vectorial de segundo orden: 
+ 
 
 \begin{equation}
 \frac{d^2\vec{r}}{dt^2} = -\frac{GM}{r^2} \hat{r}
@@ -37,39 +37,63 @@ segundo orden:
 donde $\vec{r}$  es un vector que va de la masa central a la
 part\'icula, $\hat{r}$ es el vector unitario correspondiente,
 $r=|\vec{r}|$, $M$ es la masa del cuerpo central y $G$ es la constante
-de gravitaci\'on.  Una vez se conocen las condiciones iniciales de
+de gravitaci\'on.  Una vez se conocen las posiciones y velocidades
+iniciales de
 cada una de las masas $\vec{r}_0$, $\vec{v}_0$ es posible conocer la
-  posici\'on y la velocidad en eventos. Noten que estamos usando una
+  posici\'on y la velocidad en momentos siguientes. Noten que estamos usando una
   aproximaci\'on donde la fuerza que siente cada part\'icula solamente
   se debe solamente a la masa central. Esto es equivalente a decir a
   que la masa de todas las part\'iculas es despreciable con respecto a
-  la masa central. 
+  la masa central. As\'i mismo la masa central no siente ninguna
+  fuerza apreciable por parte de las part\'iculas.
 
+Los siguientes puntos deben ser desarrollados en Python.
 
 \begin{enumerate}
-\item El primer punto de la tarea es escribir un programa que genere
+\item El primer punto de la tarea consiste escribir un programa que genere
   las condiciones  iniciales (posiciones y velocidades) para que las
-  100 part\'iculas de una galaxia aislada   orbiten de manera estable
+  100 part\'iculas de una galaxia de disco orbiten de manera estable
   en c\'irculos alrededor de la masa  central. La masa del cuerpo
-  central debe ser de $10^{11}$ masas solares, el radio externo de
+  central debe ser de $10^{12}$ masas solares, el radio externo de
   $50$ kiloparsecs y cada una de las orbitas circulares debe estar
-  equiespaciada a $10$ kiloparsecs.  
+  equiespaciada a $10$ kiloparsecs (1 parsec son
+  $3.0\times10^{16}$metros).  
+Pista: ¿Cu\'al es la aceleraci\'on centr\'ipeta de una part\'icula en una
+\'orbita de radio $r$?
 \item 
   Escriba el c\'odigo que evolucione la posici\'on y la velocidad de
   cada una de las part\'iculas durante 2 mil millones de
-  a\~nos. 
+  a\~nos.  Se debe utilizar un m\'etodo de Runge-Kutta de cuarto orden
+  para integrar la ecuaci\'on (1) para cada part\'icula del disco. 
 \item 
   Tomando las condiciones iniciales anteriores, muestre que en efecto
-  la configuraci\'on es estable. Prepare gr\'aficas de la posicion de
+  la configuraci\'on es estable. Es decir, las part\'iculas que
+  representan el disco de la galaxia siguen en su \'orbita circular
+  despu\'es de los 2 mil millones de a\~nos. Prepare gr\'aficas de la posicion de
+  las 100 part\'iculas en 5 momentos diferentes equiespaciados en los
+  2mil millones de a\~nos de evoluci\'on del sistema.
+\item 
+  El punto final incluye una segunda galaxia id\'entica a la
+  primera. Si se considera que la galaxia anterior tiene un centro de
+  masa en la posici\'on $(0\hat{i}+0\hat{j})$ kpc una velocidad de centro de
+  masa nula, vamos a considerar ahora que la masa central de la segunda galaxia
+  tiene una posicion $(150\hat{i}+200\hat{j})$ kpc y el centro de masa
+  tiene una velocidad inicial $-100\hat{j}$ km/s. La
+  direcci\'on $\hat{z}$ es perpendicular al plano del disco. Ahora
+  evolucione estas nuevas condiciones iniciales por 2 mil millones de
+  a\~nos para ver la interacci\'on de las dos galaxias.  Prepare gr\'aficas de la posicion de
   las 100 part\'iculas en 5 momentos diferentes equiespaciados en los
   2mil millones de a\~nos de evoluci\'on del sistema.
 
-\item 
-  Interacci\'on con otra galaxia.
+  Note que en esta configuraci\'on las masas centrales sienten su
+  influencia mutua y su \'orbita tambi\'en debe ser calculada.
+
 \end{enumerate}
 
 
-Solamente se recibir\'an tareas que est\'en en un repositorio de
+
+En la calificaci\'on se dar\'a un 25\% a cada uno de los puntos del 1
+al 4. Solamente se recibir\'an tareas que est\'en en un repositorio de
 github. 
 
 Enviar un email a {\tt  j.e.forero.romero} en {\tt gmail.com} con el
