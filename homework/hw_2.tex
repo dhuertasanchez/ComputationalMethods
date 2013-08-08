@@ -1,22 +1,42 @@
 \documentclass{article}
-\title{Taller \#1. F\'isica Computacional / FISI 2025 \\Semestre 2013-II. \\ Profesor: Jaime E. Forero Romero}
+\title{Taller \#2. F\'isica Computacional / FISI 2025 \\Semestre 2013-II. \\ Profesor: Jaime E. Forero Romero}
 \date{Agosto 8 2013}
 \begin{document}
 \maketitle
 
-{\bf Los dos scripts de soluci\'on de esta tarea deben ser enviados por correo electr\'onico antes de las 5PM del jueves 22 de Agosto del 2013 a la direcci\'on del monitor del curso (Christian poveda) {\texttt{cn.poveda542@uniandes.edu.co}} con el subject \verb"RESPUESTA TALLER 2 FISICA COMPUTACIONAL"}.
+{\bf Los tres programas con el c\'odigo fuente de esta tarea deben ser subidos a la p\'agina de sicuaplus del curso como un \'unico archivo tar antes de las 5PM del Jueves 22 de Agosto.}
 
 \begin{enumerate}
 
 
-\item Escriba un programa que diga si un n\'umero entero menor o igual a $10^6$ puede descomponerse como multiplicaci\'on de dos factores primos. Si es posible, que imprima los dos factores en pantalla. Si no es posible, que imprima un mensaje indicando que la separaci\'on en dos factores primos no se puede hacer.
+\item (30 puntos) Escriba un programa que calcule el centro de masa de una distribuci\'on de puntos en tres dimensiones. El archivo de entrada tiene un n\'umero indefinido de lineas y 3 columnas. Cada linea corresponde a un punto y las columnas a las posiciones $x$, $y$, $z$ escritas como \verb"float". El c\'odigo debe funcionar con cualquier archivo que tenga el formato correcto. 
 
-\item Escriba un programa que cuente el numero de vocales (a,e,i,o,u) en un archivo ASCII arbitrario y que imprima en pantalla una l\'inea indicando la vocal y el n\'umero de veces que fu\'e encontrada.
+El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_centro.c" y el programa debe poder ejecutarse de la siguiente manera:
 
-\item Escriba un programa que calcule el centro de masa de una distribuci\'on de puntos en tres dimensiones. El archivo de entrada tiene un n\'umero indefinido de lineas y 3 columnas. Cada linea corresponde a un punto y las columnas a las posiciones $x$, $y$, $z$. 
+\begin{verbatim}
+./a.out [input_file]
+\end{verbatim}
+
+\item (30 puntos) Escriba un programa que cuente el numero de vocales (a,e,i,o,u) en un archivo ASCII arbitrario y que imprima en pantalla una l\'inea indicando la vocal y el n\'umero de veces que fu\'e encontrada.
+
+El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_vocales.c" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+./a.out [input_file]
+\end{verbatim}
+
+\item (40 puntos) Escriba un programa que diga si un n\'umero entero menor o igual a $10^6$ puede descomponerse como multiplicaci\'on de dos factores primos. Si es posible, que imprima los dos factores en pantalla. Si no es posible, o el valor de entrada es incorrecto (es un n\'umero negativo o major que $10^6$), el programa debe imprimir un mensaje indicando por qu\'e la separaci\'on en dos factores primos no se puede hacer.
+
+
+El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_primos.c" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+./a.out [numero_para_descomponer]
+\end{verbatim}
+
 
 \end{enumerate}
 
-Cada punto tiene un valor de 
+Los valores de cada punto se reparten de la manera siguiente: $10$ puntos por tener c\'odigo fuente que compila sin errores. El resto de puntos se asignan por tener un ejecutable que funciona correctamente con par\'ametros de entrada decididos por el profesor.
 
 \end{document}
