@@ -9,7 +9,13 @@
 \begin{enumerate}
 
 
-\item (30 puntos) Escriba un programa que calcule el centro de masa de una distribuci\'on de puntos en tres dimensiones. El archivo de entrada tiene un n\'umero indefinido de lineas y 3 columnas. Cada linea corresponde a un punto y las columnas a las posiciones $x$, $y$, $z$ escritas como \verb"float". El c\'odigo debe funcionar con cualquier archivo que tenga el formato correcto. 
+\item (30 puntos) Escriba un programa que calcule el m\'inimo del potencial gravitacional de una distribuci\'on de puntos en tres dimensiones. El archivo de entrada tiene un n\'umero indefinido de lineas y 3 columnas. Cada linea corresponde a un punto y las columnas a las posiciones $x$, $y$, $z$ escritas como \verb"float". El c\'odigo debe funcionar con cualquier archivo que tenga el formato correcto. 
+
+El potencial gravitacional para cada punto $i$ est\'a definido de la siguiente manera:
+
+\begin{equation}
+\phi_i = -\sum_{j\neq i} \frac{1}{\sqrt{(x_i - x_j)^2 + (y_i - y_j)^2 + (z_i - z_j)^2}}
+\end{equation}
 
 El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_centro.c" y el programa debe poder ejecutarse de la siguiente manera:
 
@@ -17,12 +23,29 @@ El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_centro.c
 ./a.out [input_file]
 \end{verbatim}
 
+El output producido debe ser una l\'inea con las posiciones en tres dimensiones del m\'inimo. Ejemplo:
+
+\begin{verbatim}
+234.5 123.0 40.7
+\end{verbatim}
+
+
 \item (30 puntos) Escriba un programa que cuente el numero de vocales (a,e,i,o,u) en un archivo ASCII arbitrario y que imprima en pantalla una l\'inea indicando la vocal y el n\'umero de veces que fu\'e encontrada.
 
 El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_vocales.c" y el programa debe poder ejecutarse de la siguiente manera:
 
 \begin{verbatim}
 ./a.out [input_file]
+\end{verbatim}
+
+El output producido deben ser cinco l\'ineas con las cuentas de cada vocal. Ejemplo:
+
+\begin{verbatim}
+a 34095
+e 1233
+i 12399
+o 9455
+u 1484
 \end{verbatim}
 
 \item (40 puntos) Escriba un programa que diga si un n\'umero entero menor o igual a $10^6$ puede descomponerse como multiplicaci\'on de dos factores primos. Si es posible, que imprima los dos factores en pantalla. Si no es posible, o el valor de entrada es incorrecto (es un n\'umero negativo o major que $10^6$), el programa debe imprimir un mensaje indicando por qu\'e la separaci\'on en dos factores primos no se puede hacer.
@@ -34,6 +57,11 @@ El nombre del archivo del c\'odigo fuente debe ser \verb"NombreApellido_primos.c
 ./a.out [numero_para_descomponer]
 \end{verbatim}
 
+Si la descomposici\'on entre n\'umeros primos es posible. El output debe ser de una l\'inea con los dos n\'umeros primos. Ejemplo,
+
+\begin{verbatim}
+509 997
+\end{verbatim}
 
 \end{enumerate}
 
