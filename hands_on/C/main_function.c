@@ -21,7 +21,7 @@ int main(void){
   return 0;
 }
 
-void print_points(n_points){
+void print_points(int n_points){
   int i;
   float radius;
   float volume;
