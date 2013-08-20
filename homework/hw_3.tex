@@ -1,0 +1,89 @@
+\documentclass{article}
+\title{Taller \#3. F\'isica Computacional / FISI 2025 \\Semestre 2013-II. \\ Profesor: Jaime E. Forero Romero}
+\date{Agosto 20 2013}
+\begin{document}
+\maketitle
+
+{\bf Los cuatro programas con el c\'odigo de esta tarea deben ser subidos a la p\'agina de sicuaplus del curso como un \'unico archivo tar antes de las 5PM del Martes 27 de Agosto.}
+
+\begin{enumerate}
+
+
+\item (20 puntos) Escriba un programa que cuente el numero de vocales (a,e,i,o,u) en un archivo ASCII arbitrario y que imprima en pantalla una l\'inea indicando la vocal y el n\'umero de veces que fu\'e encontrada. Se deben tomar en cuenta las mayusculas y los casos con tilde.
+
+El nombre del archivo del c\'odigo debe ser \verb"NombreApellido_vocales.py" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+python NombreApellido_vocales.py [input_file]
+\end{verbatim}
+
+El output producido deben ser cinco l\'ineas con las cuentas de cada vocal. Ejemplo:
+
+\begin{verbatim}
+a 34095
+e 1233
+i 12399
+o 9455
+u 1484
+\end{verbatim}
+
+\item (20 puntos) Escriba un programa que diga si un n\'umero entero menor o igual a $10^6$ puede descomponerse como multiplicaci\'on de dos factores primos. Si es posible, que imprima los dos factores en pantalla. Si no es posible, o el valor de entrada es incorrecto (es un n\'umero negativo o major que $10^6$), el programa debe imprimir un mensaje indicando por qu\'e la separaci\'on en dos factores primos no se puede hacer.
+
+
+El nombre del archivo del c\'odigo debe ser \verb"NombreApellido_primos.py" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+./python NombreApellido_primos.py [numero_para_descomponer]
+\end{verbatim}
+
+Si la descomposici\'on entre n\'umeros primos es posible. El output debe ser de una l\'inea con los dos n\'umeros primos. Ejemplo,
+
+\begin{verbatim}
+509 997
+\end{verbatim}
+
+\item (30 puntos) Escriba un programa que diga si una serie de frases escritas dentro de un archivo de texto son pal\'indromos.
+
+El nombre del archivo del c\'odigo debe ser \verb"NombreApellido_pali.py" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+./python NombreApellido_pali.py [inputfile]
+\end{verbatim}
+
+Si dentro del archivo se encontraran las frases:
+\begin{verbatim}
+Amar de traer cama: ama crearte drama.
+Avid as a fool; aloof as a diva.
+Dabale arroz la zorras al abad.
+Desearte - reconocere -– trae sed.
+\end{verbatim}
+
+La salida debe ser
+\begin{verbatim}
+True
+True
+False
+True
+\end{verbatim}
+
+\item (30 puntos) Escriba un programa que liste los archivos en el directorio donde se encuentra y cuenta el n\'umero de lineas que contiene cada archivo.
+
+El nombre del archivo del c\'odigo debe ser \verb"NombreApellido_wc.py" y el programa debe poder ejecutarse de la siguiente manera:
+
+\begin{verbatim}
+./python NombreApellido_wc.py
+\end{verbatim}
+
+La salida debe ser del siguiente estilo
+\begin{verbatim}
+NombreApellido_wc.py 40
+Metamorfosis.txt 503450
+compras.txt 8
+\end{verbatim}
+
+
+\end{enumerate}
+
+Los valores de cada punto se reparten de la manera siguiente: $10$ puntos por tener c\'odigo que se ejecuta sin errores. El resto de puntos se asignan por tener un programa que funciona correctamente con par\'ametros de entrada decididos por el profesor.
+
+\end{document}
