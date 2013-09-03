@@ -93,7 +93,15 @@ What would happen if you try to modify the variable \verb"n_x" inside a function
 
 \subsection{GNU Scientific Library}
 
-Most of the computations that we will perform in C will be done using external libraries. We will tap on the work done by other people. However simple it may seem it is important that you understand how external libraries can be used in C.
+Most of the computations that we will perform in C will be done using
+external libraries. We will tap on the work done by other
+people. However simple it may seem it is important that you understand
+how external libraries can be used in C.  
+
+\begin{verbatim}
+sudo apt-get install libgsl0-dev
+sudo apt-get install libgsl0ldbl
+\end{verbatim}
 
 Let's start by considering the following example that uses the gsl library to compute the the Bessel function $J_{0}(x)$ for $x=5$:
 
