@@ -207,7 +207,12 @@ When the regression model is linear in the unknown parameters, then we call this
 
 Solving this problem means finding a model $\mathbf{\hat{m}}$ that best reproduced the observed values. \emph{Best reproducing} means seeing how different are the observations $\mathbf{d}$ when compared to the results of the theory computed over the model: $\mathbf{G} \mathbf{\hat{m}}$.
 
-Suppose we are given a collection of $M$ measurements of a property to form a vector $\mathbf{d} \in \real^M$. From our geophysics we know the forward problem such that we can predict the data from a known model $\mathbf{m} \in \real^N$. That is, we know the $N$ vectors $\mathbf{g}_k \in \real^M$ such that 
+Suppose we are given a collection of $M$ measurements of a property to
+form a vector $\mathbf{d} \in \real^M$. We know forward problem such
+that we can predict the data from a known model $\mathbf{m} \in
+\real^N$. That is, we know the $N$ vectors $\mathbf{g}_k \in \real^M$
+such that   
+
 \begin{equation}
 \mathbf{d} = \sum_{k=1}^{N} \mathbf{g}_k m_k = \mathbf{G} \mathbf{m}
 \end{equation}
@@ -251,7 +256,7 @@ One of the first techniques that you have to learn in statistical analysis is Pr
 
 This time we start from $M$ different measurements of points in $N$ dimensions. The dimensions might be different physical quantities (velocities, masses), or might be the points in wavelength where you measure the intensity of a spectrum.
 
-We start by measuring the covariance matrix of different dimension of all the data points. This covariance matrix will be a $N\times N$ matrix where each element is computed as:
+We start by measuring the covariance matrix, ${\bf\Sigma}$ of different dimension of all the data points. This covariance matrix will be a $N\times N$ matrix where each element is computed as:
 
 \begin{equation}
 \sigma_{i,j} = \frac{\sum_{k=1}^{M} (d^{k}_i - \bar{d_i})(d^{k}_j -\bar{d_{j}})}{M-1}
@@ -259,6 +264,29 @@ We start by measuring the covariance matrix of different dimension of all the da
 
 In this notation there are $M$ vector of measurements ${\mathbf d}^{1}$,\ldots,${\mathbf d}^{M}$. Where each vector has $N$ components, for instance the $k$-th measurement will be ${\mathbf d}^{k}=(d^k_{1},\ldots,d^k_{N})$.
 
-The PCA technique consists in calculating the covariance matrix and calculating its eigenvalues and eigenvectors. If you rank the eigenvalues in descending order the associated eigenvectors will tell the directions (in $N$ dimensional space) where the variance decreases. With this you will be able to reduce the dimensionality of your problem and express each point as the sum of the eigenvectors.
+Some properties of the covariance matrix are the following:
+\begin{enumerate}
+\item The matrix ${\bf\Sigma}$ is symmetric;
+  $\sigma_{ij}=\sigma_{ji}$.
+\item Diagonal elements correspond to the the variance of the
+  corresponding variables $\sigma_{ii}=\sigma_i^2$.
+\item The covariance matrix is defined as non-negative
+  ($\sigma_{ij}\geq 0$).
+\end{enumerate}
+
+The value of each entry in the covariance matrix depends on the units
+defined to make the measurements. An alternative is to use the
+correlation matrix,${\mathbf R}$, which normalizes each measuremente
+by the square root of the variance along that dimension. As a result
+the diagonal elements of ${\mathbf R}$ are unity $\rho_{ii}=1$.
+
+The PCA technique consists in calculating the covariance matrix (or
+the correlation matrix to avoid the arbitrary unit scaling) and
+calculating its eigenvalues and eigenvectors. If you rank the
+eigenvalues in descending order the associated eigenvectors will tell
+the directions (in $N$ dimensional space) where the variance
+decreases. With this you will be able to reduce the dimensionality of
+your problem and express each point as the sum of the eigenvectors of
+this matrix.
 
 \end{document}
