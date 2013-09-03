@@ -100,7 +100,7 @@ how external libraries can be used in C.
 
 \begin{verbatim}
 sudo apt-get install libgsl0-dev
-sudo apt-get install libgsl0ldbl
+sudo apt-get install liblapack-dev
 \end{verbatim}
 
 Let's start by considering the following example that uses the gsl library to compute the the Bessel function $J_{0}(x)$ for $x=5$:
@@ -120,7 +120,7 @@ int main (void){
 If the setup for the library are the standard ones, the program can be compiled as
 
 \begin{verbatim}
-cc -lgsl -lm test.c 
+cc -lgsl -lgslcblas -lm test.c 
 \end{verbatim}
 
 
@@ -128,7 +128,7 @@ cc -lgsl -lm test.c
 If you are under UBUNTU probably the compilation order matters and you should instead write
 
 \begin{verbatim}
-cc test.c -lgsl -lm 
+cc test.c -lgsl -lgslcblas -lm 
 \end{verbatim}
 
 Executing the program will produce the following results:
