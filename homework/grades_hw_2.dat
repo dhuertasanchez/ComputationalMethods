@@ -1,36 +1,37 @@
 	Potencial Gravitatorio		Vocales		Primos				Nota	Comentarios
-Agudelo Duenas Nathalie 	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (30%)				
+	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (30%)				
+Agudelo Duenas Nathalie 	10	20	10	20	10	0	10	10	4,5	
 Aldana Paez Miguel Francisco	10	20	10	20	10	0	10	10	4,5	
-Araujo Tabares Enrique Jose 	10	20	10	20	10	0	10	10	4,5	
-Ariza Acero Maria Margarita	10	20	10	20	10	10	10	10	5	
-Ayala Granados Juliana Maria	10	20	10	20	10	10	10	0	4,5	
-Becerra Espinosa Richard Alejandro 	10	20	10	20	10	0	10	10	4,5	
-Bermeo Ortiz Juan Diego	10	20	10	20	10	10	10	10	5	
-Noguera Julian Bermudez 	10	20	10	20	10	0	10	10	4,5	
-Davila Diaz David Andres 	0	0	10	20	10	0	0	0	2	
-Estupinan Mendez Juan David 	0	0	10	20	10	0	10	10	3	
-Gamboa Higuera Diego Fernando	10	0	10	20	10	10	10	10	4	5 dias calculando el centro y no termina
-Garzon Miguez Oscar Fernando	10	0	10	20	10	10	10	10	4	Segmentation fault en centro
-Gonzalez Torres Henry Alejandro	10	20	10	20	10	10	10	0	4,5	
-Hayek Valencia Jorge Nicolas	0	0	10	20	10	0	10	10	3	
-Hoyos Restrepo Paulina	10	20	10	20	10	0	10	10	4,5	
-Jimenez Velasquez Mateo	10	0	10	20	10	0	10	10	3,5	Segmentation fault en centro
-Lacorazza Buitrago Stefano	10	20	10	20	10	0	0	0	3,5	
-Lozano Gomez Daniel									0	No entregó
-Machado Molina Rafael	10	20	10	0	10	0	10	10	3,5	Segmentation fault en vocales
-Marchena Diaz Nicolas	10	0	10	0	10	10	0	10	2,5	Segmentation fault en centro
-Martinez Gomez Henry Mauricio	10	20	10	20	10	10	0	10	4,5	
-Moran Tovar Roberto	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
-Navarrete Rodriguez Maria Cristina	10	15	10	20	10	0	10	10	4,25	En centro el potencial da un numero -inf
-Olivares Noguera Sebastian									0	No entregó
-Ortiz Torres Martha Ines	10	0	10	20	10	10	10	10	4	Segmentation fault en centro
-Perez Angel Lina Camila	10	0	10	20	10	10	10	10	4	Centro es ineficiente y ademas incorrecto por mala lectura del archivo
-Pizano Wagner Luis Alberto	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
-Quintana Catano Cesar Augusto	10	0	10	20	0	0	0	0	2	El potencial esta mal calculado
-Restrepo Ayala Mateo	10	15	10	20	10	0	10	10	4,25	En centro toma los indices empezando en 1 y no en 0
-Rincon Puche Jesus David	10	0	10	20	10	10	10	10	4	En centro estan mal calculados los potenciales
-Rivera Lozano Camilo Andres									0	No entregó
-Rueda Corredor Henry Steven	10	20	10	20	10	0	10	10	4,5	
-Ruiz Uribe Nancy Estefania	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
-Solano Gomez Jesus Alberto	10	20	10	20	10	0	10	0	4	
-Zambrano Sierra Diego Alejandro	10	20	10	10	10	0	0	0	3	Segmentation fault en primos
+Araujo Tabares Enrique Jose 	10	20	10	20	10	10	10	10	5	
+Ariza Acero Maria Margarita	10	20	10	20	10	10	10	0	4,5	
+Ayala Granados Juliana Maria	10	20	10	20	10	0	10	10	4,5	
+Becerra Espinosa Richard Alejandro 	10	20	10	20	10	10	10	10	5	
+Bermeo Ortiz Juan Diego	10	20	10	20	10	0	10	10	4,5	
+Noguera Julian Bermudez 	0	0	10	20	10	0	0	0	2	
+Davila Diaz David Andres 	0	0	10	20	10	0	10	10	3	
+Estupinan Mendez Juan David 	10	0	10	20	10	10	10	10	4	5 dias calculando el centro y no termina
+Gamboa Higuera Diego Fernando	10	0	10	20	10	10	10	10	4	Segmentation fault en centro
+Garzon Miguez Oscar Fernando	10	20	10	20	10	10	10	0	4,5	
+Gonzalez Torres Henry Alejandro	0	0	10	20	10	0	10	10	3	
+Hayek Valencia Jorge Nicolas	10	20	10	20	10	0	10	10	4,5	
+Hoyos Restrepo Paulina	10	0	10	20	10	0	10	10	3,5	Segmentation fault en centro
+Jimenez Velasquez Mateo	10	20	10	20	10	0	0	0	3,5	
+Lacorazza Buitrago Stefano									0	No entregó
+Lozano Gomez Daniel	10	20	10	0	10	0	10	10	3,5	Segmentation fault en vocales
+Machado Molina Rafael	10	0	10	0	10	10	0	10	2,5	Segmentation fault en centro
+Marchena Diaz Nicolas	10	20	10	20	10	10	0	10	4,5	
+Martinez Gomez Henry Mauricio	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
+Moran Tovar Roberto	10	15	10	20	10	0	10	10	4,25	En centro el potencial da un numero -inf
+Navarrete Rodriguez Maria Cristina									0	No entregó
+Olivares Noguera Sebastian	10	0	10	20	10	10	10	10	4	Segmentation fault en centro
+Ortiz Torres Martha Ines	10	0	10	20	10	10	10	10	4	Centro es ineficiente y ademas incorrecto por mala lectura del archivo
+Perez Angel Lina Camila	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
+Pizano Wagner Luis Alberto	10	0	10	20	0	0	0	0	2	El potencial esta mal calculado
+Quintana Catano Cesar Augusto	10	15	10	20	10	0	10	10	4,25	En centro toma los indices empezando en 1 y no en 0
+Restrepo Ayala Mateo	10	0	10	20	10	10	10	10	4	En centro estan mal calculados los potenciales
+Rincon Puche Jesus David									0	No entregó
+Rivera Lozano Camilo Andres	10	20	10	20	10	0	10	10	4,5	
+Rueda Corredor Henry Steven	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
+Ruiz Uribe Nancy Estefania	10	20	10	20	10	0	10	0	4	
+Solano Gomez Jesus Alberto	10	20	10	10	10	0	0	0	3	Segmentation fault en primos
+Zambrano Sierra Diego Alejandro	10	20	10	20	10	10	0	10	4,5	
