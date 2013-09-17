@@ -1,6 +1,6 @@
-	Potencial Gravitatorio		Vocales		Primos				Nota	Comentarios
+Nombre	Potencial Gravitatorio		Vocales		Primos				Nota	Comentarios
 	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (20%)	Compila (10%)	Funciona (30%)				
-Agudelo Duenas Nathalie 	10	20	10	20	10	0	10	10	4,5	
+Agudelo Duenas Nathalie 	10	20	10	20	10	10	10	10	5	
 Aldana Paez Miguel Francisco	10	20	10	20	10	0	10	10	4,5	
 Araujo Tabares Enrique Jose 	10	20	10	20	10	10	10	10	5	
 Ariza Acero Maria Margarita	10	20	10	20	10	10	10	0	4,5	
@@ -8,7 +8,7 @@ Ayala Granados Juliana Maria	10	20	10	20	10	0	10	10	4,5
 Becerra Espinosa Richard Alejandro 	10	20	10	20	10	10	10	10	5	
 Bermeo Ortiz Juan Diego	10	20	10	20	10	0	10	10	4,5	
 Noguera Julian Bermudez 	0	0	10	20	10	0	0	0	2	
-Davila Diaz David Andres 	0	0	10	20	10	0	10	10	3	
+Davila Diaz David Andres 	0	0	10	20	10	10	10	10	3,5	
 Estupinan Mendez Juan David 	10	0	10	20	10	10	10	10	4	5 dias calculando el centro y no termina
 Gamboa Higuera Diego Fernando	10	0	10	20	10	10	10	10	4	Segmentation fault en centro
 Garzon Miguez Oscar Fernando	10	20	10	20	10	10	10	0	4,5	
@@ -30,7 +30,7 @@ Pizano Wagner Luis Alberto	10	0	10	20	0	0	0	0	2	El potencial esta mal calculado
 Quintana Catano Cesar Augusto	10	15	10	20	10	0	10	10	4,25	En centro toma los indices empezando en 1 y no en 0
 Restrepo Ayala Mateo	10	0	10	20	10	10	10	10	4	En centro estan mal calculados los potenciales
 Rincon Puche Jesus David									0	No entregó
-Rivera Lozano Camilo Andres	10	20	10	20	10	0	10	10	4,5	
+Rivera Lozano Camilo Andres	10	20	10	20	10	10	10	10	5	
 Rueda Corredor Henry Steven	10	0	10	20	10	0	10	10	3,5	Intenta abrir el archivo equivocado en centro
 Ruiz Uribe Nancy Estefania	10	20	10	20	10	0	10	0	4	
 Solano Gomez Jesus Alberto	10	20	10	10	10	0	0	0	3	Segmentation fault en primos
