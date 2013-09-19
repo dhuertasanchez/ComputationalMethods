@@ -7,7 +7,10 @@
 \usepackage{verbatim}
 
 \begin{document}
-\setcounter{section}{3}
+\setcounter{section}{4}
+\section{Basic aspects of linear algebra and matrix computations}
+
+
 \section{Linear Algebra and Regressions: Technical Aspects in C}
 In this chapter we will see how basic linear algebra concepts will serve us to create models to interpret a set of measured points.
 
@@ -296,5 +299,13 @@ the directions (in $N$ dimensional space) where the variance
 decreases. With this you will be able to reduce the dimensionality of
 your problem and express each point as the sum of the eigenvectors of
 this matrix.
+
+As a more concrete example of the application of Principal Component
+Analysis let's take some data from the context of neurosciences. We
+have a patient and we are measuring her brain activity through
+encephalograms taken with 24 electrodes at different points on its
+head. The encephalogram measures electric activity as a function of
+time. In this case we have now 24 different signals taken at 400
+different times. In the figure we show two different signals.
 
 \end{document}
