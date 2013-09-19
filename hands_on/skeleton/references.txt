@@ -1,0 +1,8 @@
+
+Recommended C Style and Coding Standards
+
+http://www.doc.ic.ac.uk/lab/cplus/cstyle.html
+
+Google Python Style Guide
+
+http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
