@@ -9,7 +9,7 @@ Becerra Espinosa Richard Alejandro 	20	0	8	0	30	0	2.9	intenta contar lineas de d
 Bermeo Ortiz Juan Diego							0	No entrego
 Bermudez Noguera Julian	20	4	8	8	0	0	2	Entrego archivos binarios y no codigo fuente en pali. No entrego wc.
 Davila Diaz David Andres 							0	No entrego
-Estupinan Mendez Juan David 	20	4	4	4	30		3.1	Ineficiente, no da una respuesta en menos de un minuto.
+Estupinan Mendez Juan David 	20	4	4	4	30	30	4.6	Ineficiente en primos, no da una respuesta en menos de un minuto.
 Gamboa Higuera Diego Fernando							0	No entrego
 Garzon Miguez Oscar Fernando	20	4	8	8	0	30	3.5	
 Gonzalez Torres Henry Alejandro	15	0	8	8	30	0	3.05	no toma en cuenta las mayusculas en vocales. Intenta contar lineas de directorios en wc
