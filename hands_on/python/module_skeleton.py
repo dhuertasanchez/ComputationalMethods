@@ -21,7 +21,7 @@ def load_data(filename):
 
 def get_fft_raw(data):
     """
-    Uses raw data to compute the power spectrum
+    Uses raw data to compute the power spectrum.
     Input: 
     - data: numpy array of shape [n:m]. Raw data.   
     Output:
@@ -35,7 +35,8 @@ def get_fft_raw(data):
 
 def get_p_spectrum(fft_freq, fft_amplitudes):
     """
-    Prepares all the plots.
+    Computes the power spectrum from fft data.
+
     Input: 
     - fft_freq: numpy array of shape [n,m]. Frequencies for each signal.
     - fft_amplitides: numpy complex array of shape[n,m]. Fourier amplitudes.
@@ -52,7 +53,8 @@ def get_p_spectrum(fft_freq, fft_amplitudes):
 
 def make_plots(fft_freq, p_spectrum):
     """
-    Prepares all the plots.
+    Makes power spectrum plots.
+
     Input: 
     - fft_freq: numpy array of shape [n,m]. Frequencies for each signal.
     - p_spectrum: numpy array of shape [n,m]. Power spectrum for each signal.
