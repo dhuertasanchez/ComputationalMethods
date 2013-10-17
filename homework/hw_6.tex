@@ -1,0 +1,143 @@
+\documentclass{article}
+\title{Taller \#6. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-II. \\ Profesor: Jaime E. Forero Romero} 
+\date{Octubre 17, 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del jueves 7 de Noviembre del 2013. El esqueleto del
+  c\'odigo debe estar en el repositorio antes del medio d\'ia del
+  martes 29 de Octubre del 2013.}   
+
+
+El objetivo de este taller es escribir un integrador Runge-Kutta de
+cuarto orden para estudiar la interacci\'on de dos galaxias de
+disco. 
+
+Vamos a seguir el ejemplo  del paper cl\'asico de Toomre \& Toomre
+\textit{Galactic Bridges and Tails} en el Astrophysical Journal, Vol. 178,
+pp. 623-666 (1972), el cual se encuentra repositorio como
+\verb"homework/TT.pdf" 
+
+Una galaxia ser\'a descrita como una masa central con 100
+cuerpos en \'orbitas circulares que la rodean. Una imagen que puede
+servir es la del sistema solar, pero donde solamente existen 5 orbitas
+circulares posibles y en cada \'orbita se encuentran 12, 18, 24, 30 y 36
+cuerpos, tal como se muestra en la Figura 1 del paper, en el panel
+marcado con "$-1$". 
+
+El movimiento {\bf de cada una} de las part\'iculas que rodean a la masa
+central est\'a determinado por la siguiente ecuaci\'on diferencial
+ordinaria vectorial de segundo orden: 
+ 
+\begin{equation}
+\frac{d^2\vec{r}}{dt^2} = -\frac{GM}{r^2} \hat{r}
+\end{equation}
+
+donde $\vec{r}$  es un vector que va de la masa central a la
+part\'icula, $\hat{r}$ es el vector unitario correspondiente,
+$r=|\vec{r}|$, $M$ es la masa del cuerpo central y $G$ es la constante
+de gravitaci\'on.  Una vez se conocen las posiciones y velocidades
+iniciales de cada una de las masas $\vec{r}_0$, $\vec{v}_0$ es posible
+conocer la posici\'on y la velocidad en momentos siguientes. Noten que
+estamos usando una  aproximaci\'on donde la fuerza que siente cada
+part\'icula solamente se debe solamente a la masa central. Esto es
+equivalente a decir a  que la masa de todas las part\'iculas es
+despreciable con respecto a la masa central. As\'i mismo la masa central no siente ninguna  fuerza apreciable por parte de las part\'iculas.
+
+\begin{enumerate}
+\item El primer punto de la tarea consiste escribir un programa que genere
+  las condiciones  iniciales (posiciones y velocidades) para que las
+  100 part\'iculas de una galaxia de disco orbiten de manera estable
+  en c\'irculos alrededor de la masa  central. La masa del cuerpo
+  central debe ser de $10^{12}$ masas solares, el radio externo de
+  $50$ kiloparsecs y cada una de las orbitas circulares debe estar
+  equiespaciada a $10$ kiloparsecs (1 parsec son
+  $3.0\times10^{16}$metros).  El centro de la galaxia debe ubicarse en
+  el punto $x_{0}\hat{i} + y_{0}\hat{j}$ kpc y la velocidad del centro de
+  masa es $v_x\hat{i}+v_y\hat{j}$ km/s y donde $x_{0}$, $y_{0}$,
+  $v_{x}$ y $v_{y}$ son
+  n\'umeros arbitrarios que se deben como argumento del c\'odigo al
+  momento de ser ejecutado. Estas condiciones iniciales (posiciones y
+  velocidades) deben ser
+  escritas en un archivo de texto al momento de ejecutar el
+  c\'odigo. En este archivo la primera columna ser\'a un entero que
+  llamaremos ID y corresponde a un n\'umero entero de cada
+  part\'icula. El ID negativo si se trata de la part\'icula
+  central, y cero o positivo si se trata de las part\'iculas en las \'orbitas
+  circulares. Pista: ¿Cu\'al es la aceleraci\'on centr\'ipeta de una
+  part\'icula en una  \'orbita de radio $r$? 
+\item 
+  Escriba el c\'odigo que evolucione la posici\'on y la velocidad de
+  cada una de las part\'iculas durante 5 mil millones de
+  a\~nos.  Este c\'odigo debe leer las condiciones iniciales generadas
+  por el c\'odigo anterior. Se debe utilizar un m\'etodo de
+  Runge-Kutta de cuarto orden para integrar la ecuaci\'on (1) para
+  cada part\'icula del disco.  El c\'odigo debe generar cinco archivos
+  de texto con el entero de identidad, posiciones, velocidades de las part\'iculas en 5  momento diferentes equiespaciados en los 5 mil millones de a\~nos de
+  evoluci\'on del sistema. El c\'odigo debe tomar como argumento el
+  nombre del archivo con las condiciones iniciales. 
+\item 
+  Prepare un programa de python que toma como entrada un n\'umero arbitario de 
+  archivos generados por el c\'odigo anterior y prepara gr\'aficas que
+  muestran las posiciones.  Utilice estre programa para mostrar que
+  las part\'iculas que representan el disco de la galaxia siguen en su
+  \'orbita circular despu\'es de 5 mil millones de a\~nos. 
+\item 
+  Este punto incluye una segunda galaxia id\'entica a la
+  primera. Si se considera que la galaxia anterior tiene un centro de
+  masa en la posici\'on $(0\hat{i}+0\hat{j})$ kpc y una velocidad de centro de
+  masa nula, vamos a considerar ahora que la masa central de la
+  segunda galaxia tiene una posicion $(150\hat{i}+200\hat{j})$ kpc y
+  el centro de masa  tiene una velocidad inicial $-100\hat{j}$ km/s. La
+  direcci\'on $\hat{z}$ es perpendicular al plano del disco. 
+  Las condiciones iniciales de cada una de las galaxias son generadas
+  con el c\'odigo del primer punto. Concatenando los dos archivos
+  (utilizando el comando \verb"cat") debe generar un archivo \'unico
+  de condiciones iniciales.
+  
+  Ahora
+  evolucione estas nuevas condiciones iniciales por 5 mil millones de
+  a\~nos para ver la interacci\'on de las dos galaxias.  Prepare
+  gr\'aficas de la posicion de las part\'iculas de las dos galaxies en
+  5 momentos diferentes equiespaciados en los  5mil millones de a\~nos
+  de evoluci\'on del sistema. 
+  Note que en esta configuraci\'on las masas centrales sienten su
+  influencia mutua y su \'orbita tambi\'en debe ser calculada.
+
+\item
+  Ahora el programa debe poder calcular la colision de las galaxias
+  cuando se generan las condiciones iniciales para dos galaxias con
+  posiciones y velocidades del centro de masa arbitrarios generados
+  con el programa de condiciones iniciales.
+
+\end{enumerate}
+
+El repositorio debe tener al menos tres c\'odigos con los siguientes nombres:
+
+\begin{enumerate}
+\item \verb"IC.c": c\'odigo que genera las condiciones iniciales de
+  una sola galaxia con las posiciones y velocidades del centro de masa
+  dadas como par\'ametros de entrada al momento de ejecutar el programa.
+\item \verb"evolve.c": c\'odigo que evoluciona un archivo con 
+  condiciones iniciales dadas al momento de ejecutar el programa.
+\item \verb"plots.py": c\'odigo que prepara gr\'aficas de
+  posiciones, tomando como entrada un n\'umero
+  arbitrario de archivos de ID, posiciones y velocidades.
+\end{enumerate}
+
+
+En la calificaci\'on se dar\'a un 20\% a cada uno de los puntos del 1
+al 5. Solamente se recibir\'an tareas que est\'en en un repositorio de
+github. Las gr\'aficas deben preparse con programas en python. La
+respuesta a cada uno de los puntos debe ser redactada en un informe
+que debe estar dentro del repositorio. Todos los pasos deben poder
+ejecutarse con un Makefile.
+
+
+Divi\'ertanse: \verb"http://viz.adrian.pw/galaxy/"
+
+\end{document}
