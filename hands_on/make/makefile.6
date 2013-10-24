@@ -1,8 +1,7 @@
+all: a.out
 
 a.out: main.o geometry.o io.o
 	cc -lm main.o geometry.o io.o
-
-
 
 main.o:	main.c
 	cc -c main.c
@@ -12,8 +11,6 @@ geometry.o: geometry.c
 
 io.o: io.c
 	cc -c io.c
-
-all: a.out
 
 clean: 
 	rm -f *.o
