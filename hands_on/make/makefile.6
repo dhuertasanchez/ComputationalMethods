@@ -1,7 +1,7 @@
 all: a.out
 
 a.out: main.o geometry.o io.o
-	cc -lm main.o geometry.o io.o
+	cc main.o geometry.o io.o -lm
 
 main.o:	main.c
 	cc -c main.c
