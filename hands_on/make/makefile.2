@@ -1,7 +1,7 @@
-columna_4.dat:	data_test.csv
-	 awk -F "\"*,\"*" '{print $$4}' data_test.csv > columna_4.dat
-
 columna_3.dat:	data_test.csv
 	 awk -F "\"*,\"*" '{print $$3}' data_test.csv > columna_3.dat
+
+columna_4.dat:	data_test.csv
+	 awk -F "\"*,\"*" '{print $$4}' data_test.csv > columna_4.dat
 
 
