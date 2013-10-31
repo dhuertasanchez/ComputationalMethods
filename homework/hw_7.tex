@@ -1,0 +1,78 @@
+\documentclass{article}
+\title{Taller \#7. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-II. \\ Profesor: Jaime E. Forero Romero} 
+\date{Octubre 31, 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y la respuesta debe estar en un repositorio de github con
+  un commit final antes del medio d\'ia del martes 5 de noviembre del
+  2013.} 
+
+El objetivo de este taller es resolver la ecuaci\'on de Burgers
+mediante dos m\'etodos num\'ericos diferentes. 
+
+La ecuaci\'on de Burgers es:
+
+\begin{equation}
+\frac{\partial u}{\partial t} +cu\frac{\partial u}{\partial x}=0.
+\end{equation}
+
+Esta ecuaci\'on se puede reescribir de la siguiente manera
+
+\begin{equation}
+\frac{\partial u}{\partial t} +c\frac{\partial (u^2/2)}{\partial x}=0.
+\label{eq:uno}
+\end{equation}.
+
+Un posible esquema para resolver esta ecuaci\'on es uno que calcula
+las derivadas como diferencias centradas, es decir, la derivadas en el
+punto $i$ dependen de los valores en $i-1$ y $i+1$:
+
+\begin{equation}
+u_i^{j+1} = u_i^{j-1} - \beta\left[\frac{(u^2)_{i+1}^j - (u^2)_{i-1}^j}{2}\right]
+\end{equation}
+
+donde $u^2$ es la velocidad al cuadrado y $\beta=c/(\Delta x/\Delta t)$
+es conocido como el n\'umero de Courant-Friederichs-Levy. Para que
+este esquema funcione num\'ericamente se debe cumplir la condicion
+$\beta<1.0$.
+
+Un segundo esquema m\'as preciso (conocido como el m\'etodo de
+Lax-Wendroff) hace uso de una expansi\'on de hasta segundo
+orden de la funci\'on. En este nuevo esquema la soluci\'on est\'a dada
+por: 
+
+\begin{eqnarray}
+u_i^{j+1} &=& u_i^{j} - \frac{\beta}{4}[(u^2)^{j}_{i+1} -
+  (u^2)_{i-1}^j]\\ \nonumber
+& + &\frac{\beta^2}{8}[(u_{i+1}^j + u_i^j)((u^2)_{i+1}^j -
+  (u^2)_{i}^{j})\\\nonumber
+& - &(u_i^j+u_{i-1}^j)((u^2)_i^j - (u^2)_{i-1}^j)].
+\label{eq:dos}
+\end{eqnarray}
+
+\begin{enumerate}
+\item Escriba un programa que resuelva la ecuaci\'on de Burgers usando
+  el esquema num\'erico de la ecuaci\'on \ref{eq:uno}. 
+\item Defina arrays con 200 items para las condiciones iniciales y
+  para la soluci\'on.
+\item Tome la condici\'on inicial como la funci\'on sinusoidal
+  $3.0\sin(\pi x)$ donde $0<x<2$ y la velocidad del sonido es $c=1$.
+\item Tome las condiciones de contorno fijas donde $u(x=0)=u(x=1)=0$.
+\item Encuentre la soluci\'on cuando el tiempo total transcurrido es
+  $T=0.15$. Defina $\Delta t$ tomando en cuenta la condici\'on de
+  estabilidad $\beta<1$. 
+\item Guarde todos los valores de $u$ para todas las iteraciones.
+\item Grafique la condici\'on inicial y los valores de $u$ en una
+  gr\'afica 3D ($x,t,u$) para ver la evoluci\'on de la soluci\'on.
+\item Repita todos los pasos anteriores pero esta vez usando el
+  esquema de Lax-Wendroff. Mantenga los mismos valores de $\Delta t$
+  que utiliz\'o anteriormente. 
+\item Comente las diferencias entre los resultados el primer m\'etodo y Lax-Wendroff.
+\end{enumerate}
+
+Todo el desarrollo debe estar en un \'unico notebook de Ipython.
+
+\end{document}
