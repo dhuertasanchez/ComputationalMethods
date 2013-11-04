@@ -1,0 +1,30 @@
+Nombre	Polinomio		PCA				
+	Compila (10%)	Funciona (40%)	Compila (10%)	Funciona (40%)	Total (100%)	Comentarios Polinomio	Comentarios PCA
+Agudelo Duenas Nathalie 	10	30	0	0	2	Faltó el Chi cuadrado	No entrego
+Aldana Paez Miguel Francisco	10	40	10	0	3		No calcula correctamente los autovalores
+Araujo Tabares Enrique Jose 	10	0	10	0	1	No hace el fit correctamente	No calcula correctamente los autovalores
+Ariza Acero Maria Margarita	10	0	10	0	1	Invalid length	Entregó el programa que no era
+Ayala Granados Juliana Maria	0	0	0	0	0		
+Becerra Espinosa Richard Alejandro 	10	40	10	0	3		No calcula correctamente los autovalores
+Bermeo Ortiz Juan Diego	10	40	10	0	3		No calcula correctamente los autovalores
+Bermudez Noguera Julian	10	40	10	0	3		El elemento inicializador no es una constante
+Davila Diaz David Andres 	10	40	10	0	3		
+Estupinan Mendez Juan David 	10	40	10	40	5		No calcula correctamente los autovalores
+Gamboa Higuera Diego Fernando					0		
+Garzon Miguez Oscar Fernando	10	5	10	35	3	No hace la regresion correctamente	Los autovalores estan un poco desviados
+Gonzalez Torres Henry Alejandro	10	40	10	40	5		
+Hayek Valencia Jorge Nicolas	10	40	10	35	4.75	"Demasiado SPAM pero esta bien"	Los autovalores estan un poco desviados
+Hoyos Restrepo Paulina	10	0	10	0	1	Matrix is singular	No calcula correctamente los autovalores
+Jimenez Velasquez Mateo	10	30	10	20	3.5	El fit no es preciso	No calcula autovectores ni chi cuadrado
+Lacorazza Buitrago Stefano					0		
+Lozano Gomez Daniel	10	0	10	0	1	Segmentation fault	Segmentation fault
+Martinez Gomez Henry Mauricio	0	0	0	0	0		Demasiados errores, no compila
+Moran Tovar Roberto	10	30	10	0	2.5	Faltó el Chi cuadrado	Segmentation fault
+Navarrete Rodriguez Maria Cristina	10	40	0	0	2.5		No entrego
+Olivares Noguera Sebastian	10	30	10	40	4.5	Segmentation fault en Chi cuadrado	
+Ortiz Torres Martha Ines	10	0	0	0	0.5	Invalid length	Tipo incompatible para el argumento
+Quintana Catano Cesar Augusto					0		
+Restrepo Ayala Mateo	10	0	10	40	3	Index out of range	
+Rincon Puche Jesus David	10	0	10	0	1	No hace el fit correctamente	No calcula correctamente los autovalores
+Rivera Lozano Camilo Andres	10	40	10	40	5		
+Ruiz Uribe Nancy Estefania	10	0	0	0	0.5	Segmentation fault	‘out’ no se declaró aquí
