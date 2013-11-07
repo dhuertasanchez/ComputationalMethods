@@ -1,0 +1,63 @@
+\documentclass{article}
+\title{Taller \#8. F\'isica Computacional / FISI 2025 \\Semestre
+  2013-II. \\ Profesor: Jaime E. Forero Romero} 
+\date{Noviembre 7, 2013}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y la respuesta debe estar en un repositorio de github con
+  un commit final antes del medio d\'ia del lunes 18 de noviembre del
+  2013.} 
+
+El objetivo es usar MCMC para encontrar los par\'ametros de un modelo
+f\'isico que describe la evoluci\'on temporal de un sustrato
+fosforilado. Esto es parte de la tesis de pregrado {\bf Modulation of
+  the thermodynamic behavior in the membrane of Bacillus subtilis by
+  the activity of the enzyme Desaturase $\Delta$-5 des} de Juanita
+Lara. 
+
+Una parte clave en este trabajo requiere seguir la evoluci\'on
+temporal de un sustrato $P$. Esta evoluci\'on est\'a descrita por la
+siguiente ecuaci\'on diferencial:
+
+\begin{equation}
+\frac{dP}{dt} = \frac{\alpha(S_0 -P)}{K_{m1}+S_0-P} - \frac{\beta
+  P}{K_{m2}+P}, 
+\end{equation}
+
+donde $\alpha$, $\beta$, $K_{m1}$, $K_{m2}$ y $S_0$ son constantes. Una
+descripci\'on detallada de los fundamentos detr\'as de esta ecuaci\'on
+puede encontrarse en el repositorio en
+\verb"homework/draft_juanita.pdf". 
+
+Juanita midi\'o en el laboratorio la evoluci\'on de $P$ en funci\'on
+del tiempo. Estos datos se encuentran en el repositorio del curso en
+un archivo llamado \verb"homework/dimer_observations.dat".
+
+El objetivo es encontrar el valor m\'as probable de las constantes
+$\alpha$, $\beta$, $K_{m1}$, $K_{m2}$ y $S_0$. 
+
+\begin{enumerate}
+\item Escriba un programa en python que realice una exploraci\'on MCMC
+  del espacio de par\'ametros relevante para el problema.
+
+\item Prepare gr\'aficas de contorno de la distribuci\'on de $chi^2$
+  en planos bidimensionales que sean las combinaciones de los
+  par\'ametros. Ejemplo: contornos de la distribuci\'on de $\chi^2$ en el
+  plano $\alpha$-$\beta$.
+
+\item Prepare gr\'aficas que comparen los datos observacionales con
+  los resultados de la ecuaci\'on diferencial evaluada con los mejores
+  par\'ametros encontrados por el c\'odigo MCMC.
+
+\item Eval\'ue el intervalo de incertidumbre para las constantes del
+  modelo. 
+
+
+
+\end{enumerate}
+El programa debe poder ejecutarse y preparar las gr\'aficas con
+  un archivo Makefile.
+
+\end{document}
