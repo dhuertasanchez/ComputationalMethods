@@ -1,0 +1,1 @@
+- Exercise on the lens equation - multiple images. (Learning C)
