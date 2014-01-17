@@ -1,4 +1,4 @@
-ComputationalPhysicsUniandes
+ComputationalMethods
 ============================
 
-All the material for the Computational Physics Course at Uniandes
+All the material for the Computational Methods Course at Uniandes
