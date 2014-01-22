@@ -1,0 +1,86 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-2.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+
+\noindent
+FISI 2028 M\'etodos Computationales
+Semestre 2014 - 10\\
+Taller \#1\\
+Profesor: Jaime Forero, email: je.forero\\
+Monitor: Nicol\'as Garavito, email: jn.garavito57\\
+
+{\bf Importante}
+\begin{itemize}
+
+\item Los tres scripts de soluci\'on de esta tarea deben subirse a
+  trav\'es de sicuaplus antes de las 4PM del jueves 30 de Enero como
+  un \'unico archivo zip con el nombre
+  \verb"NombreApellidos_hw1.zip", por ejemplo yo deber\'ia subir un
+  archivo llamado \verb"JaimeForero_hw1.zip"
+
+\item La nota m\'axima de este taller es de 100 puntos. Los puntos indicados
+en cada literal solamente se otorgan si el script se puede ejecutar y
+da los resultados correctos.  
+
+\item Todos los archivos se encuentran en este repositorio:
+
+  \verb"https://github.com/forero/ComputationalMethodsData/tree/master/homework/hw_1"
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item El archivo \verb"hamlet.txt" contiene a Hamlet. Escriba un
+  script que calcule lo siguiente
+\begin{itemize}
+\item (10 puntos) ¿Cu\'antas l\'ineas no contienen la palabra "the"?
+\item (20 puntos) ¿Cu\'antas veces aparece la vocal que m\'as veces est\'a en el
+  texto? ¿Cuál es esta vocal? 
+\end{itemize}
+
+\item
+El archivo \verb"Pi_2500000.txt" contiene las primeras 2500000 cifras
+decimales $\pi$.  Haga un script que 
+\begin{itemize}
+\item Encuentre cuantas veces aparecen los literales \verb"0",
+  \verb"00", \verb"000", \verb"0000", \verb"00000", \verb"000000".
+\item Encuentre cuantas veces aparecen los literales \verb"N",
+  \verb"N0", \verb"N00", \verb"N000", \verb"N0000", \verb"N00000",
+  donde \verb"N" es un n\'umero que va de 1 hasta 9.
+\item (20 puntos) Guarde los items anteriores en un archivo que tiene
+  10 filas y 6 columnas. Cada columna corresponde a un valor de $N$ y
+  el rango en la fila corresponde a las ocurrencias de cada uno de los
+  literales para ese \verb"N".
+\end{itemize}
+
+
+\item
+El archivo \verb"notas_fisicaII_201320.dat" contiene notas de
+Fisica II. Las primeras tres columnas son las notas de parciales, la
+cuarta columna es la nota de la complementaria, la quinta columna es
+la nota del final y la ultima columna es la nota definitiva. 
+
+Escriba un script que utilice \verb"awk" para responder a las
+siguientes preguntas: 
+\begin{itemize}
+\item (10 puntos) ¿Cu\'antos estudiantes pasaron el primer parcial?
+\item (10 puntos) ¿Cu\'antos estudiantes pasaron el primer parcial,
+  perdieron el final, y pasaron la materia?
+\item (15 puntos) ¿Cu\'antos estudiantes perdieron al menos un parcial
+  y pasaron la materia?
+\item (15 puntos)¿Cu\'antos estudiantes pasaron solamente dos
+  parciales y pasaron la materia? 
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{document}
