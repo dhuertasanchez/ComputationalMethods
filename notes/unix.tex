@@ -2,18 +2,41 @@
 \begin{document}
 \section{UNIX \& Emacs: Controlling the Machine}
 
-If you are taking this course probably this is your first time confronted to computers using operative systems other than Windows or MAC. Probably you don't have enough working experience to recognize the meaning the following words: Unix, Linux, Ubuntu, GNU. If you do, congratulations! this part of the course should be easier for you.
+If you are taking this course probably this is your first time
+confronted to computers using operative systems other than Windows or
+MAC. Probably you don't have enough working experience to recognize
+the meaning the following words: Unix, Linux, Ubuntu, GNU. If you do,
+congratulations! this part of the course should be easier for you. 
 
-UNIX\footnote{Wikipedia says: Unix (officially trademarked as UNIX, sometimes also written as Uɴɪx in small caps) is a multitasking, multi-user computer operating system originally developed in 1969 by a group of AT\&T employees at Bell Labs, including Ken Thompson, Dennis Ritchie, Brian Kernighan, Douglas McIlroy, Michael Lesk and Joe Ossanna.} is the name of a family of operating systems very common in academic circles and high performance engineering. If you use a commercial email provider, you can be sure that the messages you received today were handled by computers under some flavor of UNIX. If you are thinking about going into the research path of astrophysics, high energy physics, earth sciences, computational physics or theoretical chemistry (just to name a few) you are bound to make use of systems under UNIX. It could be either GNU/LINUX or MAC operating systems.
+UNIX\footnote{Wikipedia says: Unix (officially trademarked as UNIX,
+  sometimes also written as Uɴɪx in small caps) is a multitasking,
+  multi-user computer operating system originally developed in 1969 by
+  a group of AT\&T employees at Bell Labs, including Ken Thompson,
+  Dennis Ritchie, Brian Kernighan, Douglas McIlroy, Michael Lesk and
+  Joe Ossanna.} is the name of a family of operating systems very
+common in academic circles and high performance engineering. If you
+use a commercial email provider, you can be sure that the messages you
+received today were handled by computers under some flavor of UNIX. If
+you are thinking about going into the research path of astrophysics,
+high energy physics, earth sciences, computational physics or
+theoretical chemistry (just to name a few) you are bound to make use
+of systems under UNIX. It could be either GNU/LINUX or MAC operating
+systems. 
 
-The purpose of this document is to give you a starting point and get you working as soon as possible in UNIX systems.
+The purpose of this document is to give you a starting point and get
+you working as soon as possible in UNIX systems. 
 
 \subsection{The Console}
-In UNIX environments you have to learn to control the machine. This can be done with text. That actually means typing text that can be understood by the machine.
+In UNIX environments you have to learn to control the machine. This
+can be done with text. That actually means typing text that can be
+understood by the machine. 
 
-The {\tt Terminal} is the place to do that. Type text and feed it into the machine. As a result you might get it to do what you need. 
+The {\tt Terminal} is the place to do that. Type text and feed it into
+the machine. As a result you might get it to do what you need.  
 
-Let's assume for a moment that you have logged on and have a terminal open. There must be a cursor showing the place where the text will be written. It looks like this:
+Let's assume for a moment that you have logged on and have a terminal
+open. There must be a cursor showing the place where the text will be
+written. It looks like this: 
 
 \begin{verbatim}
 forero@compufis:~>
@@ -25,7 +48,9 @@ Now write the following existential text and hit the return key
 forero@compufis:~>whoami
 \end{verbatim}
 
-The terminal will reply back to you by telling you the username you have. If its different from your username it means that you are logged into somebody else's account. In my case I get in the terminal:
+The terminal will reply back to you by telling you the username you
+have. If its different from your username it means that you are logged
+into somebody else's account. In my case I get in the terminal: 
 
 \begin{verbatim}
 forero
@@ -34,7 +59,10 @@ forero@compufis:~>
 and the terminal is ready to accept more commands.
 
 
-This is a summary of the commands you will find yourself using most of the time. Each command includes a brief explanation of its meaning and some useful options to that command. To fully understand them you have to explore by yourself.
+This is a summary of the commands you will find yourself using most of
+the time. Each command includes a brief explanation of its meaning and
+some useful options to that command. To fully understand them you have
+to explore by yourself. 
 
 \subsubsection*{Directories}
 \begin{itemize}
@@ -49,29 +77,54 @@ This is a summary of the commands you will find yourself using most of the time.
 
 \subsubsection*{Files}
 \begin{itemize}
-\item  \verb"touch filename": changes the timestamp in \verb"filename". If \verb"filename" doesn't exist, it will create it.
-\item\verb"mv filename1 filename2": renames \verb"filename1" as \verb"filename2". It will overwrite \verb"filename2", if it already existed.
-\item\verb"mv filename1 dirname": moves \verb"filename1" into \verb"dirname".
-\item\verb"cp filename1 filename2": copies the contents \verb"filename1" into \verb"filename2". It will overwrite \verb"filename2", if it already existed.
-\item\verb"rm filename": deletes \verb"filename"
+\item  \verb"touch file.txt": changes the timestamp in \verb"file.txt". If \verb"file.txt" doesn't exist, it will create it.
+\item\verb"mv file1.txt file2.txt": renames \verb"file1.txt" as \verb"file2.txt". It will overwrite \verb"file2.txt", if it already existed.
+\item\verb"mv file.txt dirname": moves \verb"file.txt" into \verb"dirname".
+\item\verb"cp file.txt file2.txt": copies the contents \verb"file.txt" into \verb"file2.txt". It will overwrite \verb"file2.txt", if it already existed.
+\item\verb"rm file.txt": deletes \verb"file.txt"
 \item\verb"tar -cvf compressed.tar files": used to compress the \verb"files" into \verb"compressed.tar"
 \item\verb"tar -xvf compressed.tar": used to expand the file \verb"compressed.tar".
-\item \verb"gzip filename": compresses \verb"filename" into \verb"filename.gz"
-\item \verb"gunzip filename.gz": expands the file \verb"filename.gz".
+\item \verb"gzip file.txt": compresses \verb"file.txt" into \verb"file.txt.gz"
+\item \verb"gunzip file.txt.gz": expands the file \verb"file.txt.gz".
 \end{itemize}
 
 
 
 Other useful commands to manipulate file content
 \begin{itemize}
-\item\verb"less filename": allows a quick view of \verb"filename".
-\item\verb"head filename": first ten lines in a file.
-\item\verb"tail filename": last ten lines in a file
+\item\verb"less file.txt": allows a quick view of \verb"file.txt".
+\item\verb"head file.txt": first ten lines in a file.
+\item\verb"tail file.txt": last ten lines in a file
 \item\verb"cat filename1 filename2": concatenate and print files.
 \item\verb"tac filename1 filename2": concatenate and print files in reverse.
-\item\verb"grep pattern filename": print lines in \verb"filename" matching \verb"pattern"
-\item\verb"wc filename": print line, word and byte counts in \verb"filename". 
+\item\verb"grep pattern file.txt": print lines in \verb"file.txt"
+  matching \verb"pattern". It is case sensitive.
+\item\verb"wc file.txt": print line, word and byte counts in \verb"file.txt". 
 \end{itemize}
+
+More details on grep
+\begin{itemize}
+\item\verb"grep -o partofline file.txt": prints the subsection in the
+  line that matches \verb"partofline"
+\item\verb"grep -i string file.txt": selects the case insensitive
+  search
+\item\verb"grep -iw word file.txt": selects the line that matches the
+  word "word".
+\item\verb"grep -v pattern file.txt": prints the lines that do not match \verb"pattern".
+\end{itemize}
+
+Another useful command to do quick hacks is \verb"awk". It is very useful to
+deal with files with columns.
+\begin{itemize}
+\item\verb"awk '{print $1,$2;}' file.txt": prints the columns 1 and 2
+  from \verb"file.txt".
+\item\verb"awk '{if($3>30)print $0}' file.txt ": prints all the lines
+  that have the values in the column 3 greater than 30
+\item\verb"awk '{if($2==""\verb"Bogota""\verb")print $0}' file.txt":
+  prints all the lines that have the word \verb"Bogota" in the second column.
+\end{itemize} 
+
+
 
 These commands are even more useful when you use wildcards.
 \begin{itemize}
@@ -85,8 +138,8 @@ These commands are even more useful when you use wildcards.
 \begin{itemize}
 \item\verb"ssh machinename": connects to another machine.
 \item\verb"wget https://www.host.com/file.txt": grabs the \verb"file.txt" from the server \verb"www.host.com".
-\item\verb"scp username@machine:filename ./": copies \verb"filename" from \verb"machine" to the local directory. 
-\item\verb"rsync username@machine:filename ./": copies \verb"filename" from \verb"machine" to the local directory. It can resume the transaction if it dropped before.
+\item\verb"scp username@machine:file.txt ./": copies \verb"file.txt" from \verb"machine" to the local directory. 
+\item\verb"rsync username@machine:file.txt ./": copies \verb"file.txt" from \verb"machine" to the local directory. It can resume the transaction if it dropped before.
 \end{itemize}
 
 
@@ -95,7 +148,7 @@ These commands are even more useful when you use wildcards.
 \item\verb"top": Shows the resources in your machine. 
 \item\verb"ps -eaf ": Shows the processes running in the machine.
 \item\verb"kill -9 PID": Kills a process.
-\item\verb"chmod [ugo+-rwx] filename": chages read/write/execution permission.
+\item\verb"chmod [ugo+-rwx] file.txt": chages read/write/execution permission.
 \end{itemize}
 
 
@@ -132,7 +185,8 @@ emacs new_file.txt &
 \item\verb"Meta-x query-replace" query replace.
 \end{itemize}
 
-Other common options for people writing code are vim (UNIX) and TextWrangler (MAC). 
+Other common options for people writing code are vim (UNIX) and
+TextWrangler (MAC).  
 
 \end{document}
 
