@@ -1,0 +1,116 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#2 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 10}
+\author{Profesor: Jaime Forero}
+\date{Mi\'ercoles 5 de Febrero, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Los siete archivos con el c\'odigo fuente que soluciona esta
+  tarea deben subirse a trav\'es de sicuaplus antes de las 4PM del
+  jueves 19 de Febrero como un \'unico archivo zip con el nombre
+  \verb"NombreApellidos_hw2.zip", por ejemplo yo deber\'ia subir un
+  archivo llamado \verb"JaimeForero_hw2.zip"
+
+\item La nota m\'axima de este taller es de 100 puntos. Los puntos indicados
+en cada literal solamente se otorgan si el programa compila y da los
+resultados esperados seg\'un la descripci\'on de cada punto.
+ 
+
+\item El archivo del genoma de la Vibrio cholerae se encuentra en este
+  repositorio:
+
+  \verb"https://github.com/forero/ComputationalMethodsData/tree/master/homework/hw_2"
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item 
+\begin{itemize}
+\item[a)] (10 puntos) Hay una araña en el borde de la rueda de un
+  carro. La araña esta quieta mientras que el carro se mueve a una
+  velocidad de $8$0 km/h. Las ruedas giran sobre el camino sin
+  deslizamiento. Considere que el radio de la rueda es de 30
+  cm. Haga un programa en C llamado \verb"mosca_quieta.c" que
+  escriba dentro de un archivo llamado \verb"mosca_quieta.txt" las
+  coordenadas $x$-$y$ (en metros) de la trayectoria que describe la mosca en un
+  sistema de referencia en reposo. El archivo debe escribir en la
+  primera columna la posici\'on en $x$ y en la segunda la posici\'on
+  en $y$.
+
+\item[b)] (10 puntos) Ahora la araña se mueve desde la parte exterior
+  de la rueda hacia el centro con una velocidad de $30$ cm/s. Haga un
+  programa en C llamado \verb"mosca_radial.c" que escriba dentro de un
+  archivo llamado \verb"mosca_radial.txt" las coordenadas $x-y$ de la
+  trayectoria de la mosca en un sistema de referencia en reposo. 
+\end{itemize}
+
+\item
+\begin{itemize}
+\item[a)] (10 puntos) Escriba un programa en C que genere un archivo
+  con $n$ filas y $m$ columnas de n\'umeros aleatorios entre $0$ y
+  $1$. El c\'odigo fuente debe estar en un archivo llamado
+  \verb"gen_random.c". El programa debe poder ejecutarse como
+  \verb"gen_random.x n m filename", donde \verb"filename" es un nombre
+  arbitrario del archivo donde se van a escribir los datos. 
+
+\item[b)] (10 puntos) 
+Escriba un programa en C que lea un archivo de nombre arbitrario que
+contiene $n$ filas y $m$ columnas de n\'umeros escritos en el mismo
+formato que usa \verb"gen_random.c" para escribir los datos. El
+c\'odigo fuente debe estar en un archivo llamado
+\verb"max_random.c". El c\'odigo debe adem\'as imprimir en pantalla el
+valor m\'aximo en cada una de las columnas. El programa debe poder
+ejecutarse como \verb"max_random.x n m filename", donde
+\verb"filename" es un nombre arbitrario del archivo que contiene los
+datos. 
+
+\item[c)] (25 puntos) Escriba un programa en C que lea un archivo de
+  nombre arbitrario que contiene $n$ filas y $m$ columnas de n\'umeros
+  escritos en el mismo formato que usa \verb"gen_random.c" para
+  escribir los datos. El c\'odigo fuente debe estar en un archivo
+  llamado \verb"sort_random.c". El c\'odigo debe adem\'as imprimir en
+  pantalla las $m$ columnas con las $n$ filas reordenadas de tal
+  manera que los valores de la primera columna est\'en ordenados de
+  menor a mayor. El programa debe poder ejecutarse como 
+  \verb"sort_random.x n m filename", donde \verb"filename" es un
+  nombre arbitrario del archivo que contiene los datos. 
+
+\end{itemize}
+
+\item
+\begin{itemize}
+\item[a)] (10 puntos) El archivo \verb"Vibrio_cholerae.txt" contiene
+  el genoma de la bacteria Vibrio cholerae. Escriba un programa en C
+  llamado \verb"patron.c" que encuentre los {\bf dos} patrones de 5 bases
+  consecutivas que m\'as se encuentren en las primeras $10^4$ bases
+  del genoma de la Vibrio cholerae. 
+
+\item[b)] (25 puntos) Escriba un programa en C llamado
+  \verb"patron_nm.c" que encuentre los dos patrones de $n$ bases
+  consecutivas que m\'as se encuentren en las primeras $m$ bases del
+  genoma de la Vibrio cholerae. Este programa debe poder ejecutarse
+  desde consola como \verb"patron_nm.x n m". El programa debe
+  verificar que $n>0$, $m>0$, $n\leq m$ y que $m$ es menor que el
+  n\'umero de bases en el genoma. Si alguna de esas condiciones no se
+  cumple, el programa debe escribir un mensaje explicando el problema
+  antes de parar su ejecuci\'on. 
+\end{itemize}
+
+
+
+\end{enumerate}
+
+\end{document}
