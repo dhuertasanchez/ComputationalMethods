@@ -1,4 +1,4 @@
-# Some variables are declares
+# Some variables are declared
 
 a = 1
 b = 10.0
