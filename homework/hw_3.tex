@@ -17,12 +17,11 @@
 {\bf Importante}
 \begin{itemize}
 
-\item Los cinco archivos con el c\'odigo fuente que soluciona esta
+\item Los cinco archivos con el c\'odigo en Python que soluciona esta
   tarea deben subirse a trav\'es de sicuaplus antes de las 4PM del
   jueves 27 de Febrero como un \'unico archivo zip con el nombre
   \verb"NombreApellidos_hw3.zip", por ejemplo yo deber\'ia subir un
-  archivo llamado \verb"JaimeForero_hw3.zip". Todos los programas
-  deben escribirse en Python.  
+  archivo llamado \verb"JaimeForero_hw3.zip". 
 
 \item La nota m\'axima de este taller es de 100 puntos. Los puntos indicados
   en cada literal solamente se otorgan si el programa compila y da los
@@ -33,11 +32,11 @@
 \begin{enumerate}
 \item
 {\bf Conjunto de mandelbrot}\\
-
+(20 puntos)
 Escriba un programa que prepare en una grid de resolucion de
 $1024\times 1024$ pixeles las primeras $n$ iteraciones del
 Conjunto de
-Mandelbrot. \verb"http://en.wikipedia.org/wiki/Mandelbrot_set". 
+Mandelbrot. Ver: \verb"http://en.wikipedia.org/wiki/Mandelbrot_set". 
 
 El programa debe poder ejecutarse como
 
@@ -50,6 +49,7 @@ gr\'afica.
 
 \item 
 {\bf Distancias sobre la esfera}\\
+(20 puntos)
 Escriba un programa que calcula la distancia en kil\'ometros entre dos pares de
 ciudades dada su longitud y latitud.
 
@@ -74,7 +74,7 @@ difusi\'on de fotones en el interior del Sol o la propagaci\'on de
 fotones resonantes en una galaxias.
 
 \begin{itemize}
-\item[a)] Escriba un programa en Python que describa el movimiento
+\item[a)] (15 puntos) Escriba un programa en Python que describa el movimiento
   browniano de una part\'icula que comienza en el origen del sistema
   de coordenadas. El programa debe preparar una gr\'afica de la distancia
   hasta el origen como funci\'on del n\'umero de pasos. 
@@ -85,12 +85,11 @@ python browniano_2D.py n
 Donde $n$ es el n\'umero m\'aximo de iteraciones. La gr\'afica final
 debe llamarse \verb"browniano_2D_n.pdf".
 
-\item[b)] Ahora consideremos un caso simplificado de la difusi\'on de
-  fotones en el interior solar. Los fotones producidos
+\item[b)] (20 puntos) Ahora consideremos un caso simplificado de la difusi\'on de fotones en el interior solar. Los fotones producidos
   en el centro de la distribuci\'on de gas hacen un movimiento
   browniano de paso $1$, para una esfera de tama\~no $10^5$. Considere
   ahora que tiene $n$ fotones. Calcule un histograma con los n\'umero
-  de pasos que le toma a los fotones escapar.
+  de pasos que le toma a los fotones escapar de la distribuci\'on de gas.
 
   El programa debe poder ejecutarse como
 \begin{verbatim}
@@ -102,9 +101,8 @@ Donde $n$ es el n\'umero de fotones a propagar.
 El histograma final
 debe llamarse \verb"histo_difusion_solar_central_n.pdf".
 
-\item[c)] Considere ahora el mismo caso anterior pero esta vez los $n$
-  fotones est\'an distribuidos inicialmente de manera homog\'enea en
-  la esfera. 
+\item[c)] (25 puntos) Considere ahora el mismo caso anterior pero esta vez los $n$ fotones est\'an distribuidos inicialmente de manera homog\'enea en
+  la esfera.
 
 El programa debe poder ejecutarse como
 
