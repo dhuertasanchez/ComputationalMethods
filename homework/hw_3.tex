@@ -1,0 +1,124 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#3 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 10}
+\author{Profesor: Jaime Forero}
+\date{Mi\'ercoles 19 de Febrero, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Los cinco archivos con el c\'odigo fuente que soluciona esta
+  tarea deben subirse a trav\'es de sicuaplus antes de las 4PM del
+  jueves 27 de Febrero como un \'unico archivo zip con el nombre
+  \verb"NombreApellidos_hw3.zip", por ejemplo yo deber\'ia subir un
+  archivo llamado \verb"JaimeForero_hw3.zip". Todos los programas
+  deben escribirse en Python.  
+
+\item La nota m\'axima de este taller es de 100 puntos. Los puntos indicados
+  en cada literal solamente se otorgan si el programa compila y da los
+  resultados esperados seg\'un la descripci\'on de cada punto.
+ 
+\end{itemize}
+
+\begin{enumerate}
+\item
+{\bf Conjunto de mandelbrot}\\
+
+Escriba un programa que prepare en una grid de resolucion de
+$1024\times 1024$ pixeles las primeras $n$ iteraciones del
+Conjunto de
+Mandelbrot. \verb"http://en.wikipedia.org/wiki/Mandelbrot_set". 
+
+El programa debe poder ejecutarse como
+
+\begin{verbatim}
+python plot_mandelbrot.py n
+\end{verbatim}
+Donde $n$ es el n\'umero de iteraciones. El programa debe producir un
+archivo en pdf llamado \verb"mandelbrot_n.pdf" para guardar la
+gr\'afica. 
+
+\item 
+{\bf Distancias sobre la esfera}\\
+Escriba un programa que calcula la distancia en kil\'ometros entre dos pares de
+ciudades dada su longitud y latitud.
+
+El programa debe poder ejecutarse como
+\begin{verbatim}
+python ditancia_esfera.py -144.0 +10.0 +20.0 -5.0
+\end{verbatim}
+
+Donde los dos primeros valores corresponden a la latitud y longitud de
+la primera ciudad y los dos siguientes a la latitud y
+longitud de la segunda ciudad. Estas coordenadas deben estar en
+grados. La distancia debe imprimirse en pantalla.
+
+\item
+{\bf Movimiento Browniano}\\
+
+Vamos a estudiar un caso de movimiento browniando simplificado donde
+una part\'icula se mueve en l\'inea recta por una distancia de $1$
+antes de cambiar aleatoriamente su direcci\'on. Este caso simplificado
+puede ayudarnos a describir diferentes problemas f\'isicos desde la
+difusi\'on de fotones en el interior del Sol o la propagaci\'on de
+fotones resonantes en una galaxias.
+
+\begin{itemize}
+\item[a)] Escriba un programa en Python que describa el movimiento
+  browniano de una part\'icula que comienza en el origen del sistema
+  de coordenadas. El programa debe preparar una gr\'afica de la distancia
+  hasta el origen como funci\'on del n\'umero de pasos. 
+El programa debe poder ejecutarse como
+\begin{verbatim}
+python browniano_2D.py n
+\end{verbatim}
+Donde $n$ es el n\'umero m\'aximo de iteraciones. La gr\'afica final
+debe llamarse \verb"browniano_2D_n.pdf".
+
+\item[b)] Ahora consideremos un caso simplificado de la difusi\'on de
+  fotones en el interior solar. Los fotones producidos
+  en el centro de la distribuci\'on de gas hacen un movimiento
+  browniano de paso $1$, para una esfera de tama\~no $10^5$. Considere
+  ahora que tiene $n$ fotones. Calcule un histograma con los n\'umero
+  de pasos que le toma a los fotones escapar.
+
+  El programa debe poder ejecutarse como
+\begin{verbatim}
+python difusion_solar_central.py n
+\end{verbatim}
+Donde $n$ es el n\'umero de fotones a propagar. 
+
+
+El histograma final
+debe llamarse \verb"histo_difusion_solar_central_n.pdf".
+
+\item[c)] Considere ahora el mismo caso anterior pero esta vez los $n$
+  fotones est\'an distribuidos inicialmente de manera homog\'enea en
+  la esfera. 
+
+El programa debe poder ejecutarse como
+
+\begin{verbatim}
+python difusion_solar_homogenea.py n
+\end{verbatim}
+
+Donde $n$ es el n\'umero de fotones a propagar. 
+
+El histograma final
+debe llamarse \verb"histo_difusion_solar_homogenea_n.pdf".
+
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
