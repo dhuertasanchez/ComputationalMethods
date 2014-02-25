@@ -297,13 +297,18 @@ Note that the matrix ${(\mathbf{G}^T \mathbf{G})}$ is a square $N\times N$ matri
 
 \subsection{Principal Component Analysis}
 
-Many times in physics you don't have a theory, not event a model, of the data your are getting. However, in the process of building a model you would like to explore your measurements and get a handle on the physical process that might affect your data.
+Principal Component Analysis is used when you have a set of
+measurements or individuals described by a large number of variables
+and you want (hope to be able) to reduce that dimensionality.
 
-One of the first techniques that you have to learn in statistical analysis is Principal Component Analysis (PCA). The objective of this section is that you learn to perform and interpret data using this technique.
+This time we start from $M$ different measurements of points in $N$
+dimensions. The dimensions might be different physical quantities
+(velocities, masses), or might be the points in wavelength where you
+measure the intensity of a spectrum. 
 
-This time we start from $M$ different measurements of points in $N$ dimensions. The dimensions might be different physical quantities (velocities, masses), or might be the points in wavelength where you measure the intensity of a spectrum.
-
-We start by measuring the covariance matrix, ${\bf\Sigma}$ of different dimension of all the data points. This covariance matrix will be a $N\times N$ matrix where each element is computed as:
+We start by measuring the covariance matrix, ${\bf\Sigma}$ of
+different dimension of all the data points. This covariance matrix
+will be a $N\times N$ matrix where each element is computed as: 
 
 \begin{equation}
 \sigma_{i,j} = \frac{\sum_{k=1}^{M} (d^{k}_i - \bar{d_i})(d^{k}_j -\bar{d_{j}})}{M-1}
@@ -346,5 +351,56 @@ different times. In the figure we show two different signals.
 
 
 \subsection{K-means clustering}
+
+Clustering means to the ways of finding groups in a set of data.  This
+means that within a set of observations there will be groups that are
+similar and others are different. A clear application can be though in
+a group of students that is measured by two numbers: the amount of
+hours spent studyng every week and the final grade in a course. In
+this case there might be four clusters; students that
+
+\begin{enumerate}
+\item{Spend a lot of time studying and have good grades}
+\item{Don't spend time studying and have good grades}
+\item{Spend a lot of time studying and have bad grades}
+\item{Don't spend time studying and have bad grades}
+\end{enumerate}
+
+The question is. How can we design an algorithm to find these
+clusters?
+
+$K$-means clustering is an easy way to partition a data set into $K$
+clusters. We denote by $S_1$, $\cdots$, $C_K$ the $K$ sets containing
+all the observations. These sets satisfy two properties: (1) the sum
+of all the sets is equal to the original observation set and (2) the
+clusters are disjoint. 
+
+A possible way to define the partitioning that splits the observations
+into $K$ clusters is to minimize the sum of the variance of each
+cluster.
+
+\begin{displaymath}
+\sum_{k=1}^K \frac{1}{|C_k|}\sum_{m,m^\prime \in C_k}\sum_{n=1}^{N}
+(x_{m,n} - x_{m^\prime, n})^2.
+\end{displaymath}
+%
+meaning that the variance is the average of all the euclidian interparticle
+distances between all the pairs in the cluster.
+
+
+An heuristic algorithm to minimize this variance is the following
+
+\begin{itemize}
+\item Initialize by asigning a number from $1$ to $K$ to each
+  observation. 
+\item Iterate until the number assigned to each observation stops
+  changing.
+\begin{itemize}
+\item For each of set of points wih the label $k$, compute the
+  centroid.
+\item Assign each measurement to the cluster number $k$ whose centroid
+  is closest.
+\end{itemize}
+\end{itemize}
 
 \end{document}
