@@ -1,0 +1,106 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#4 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 10}
+\author{Profesor: Jaime Forero}
+\date{Mi\'ercoles 26 de Febrero, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Todos los programas que solucionan esta tarea deben encontrarse
+  en un repositorio en github con un commit final hecho antes del
+  medio d\'ia del viernes 14 de Marzo. Cada literal debe resolverse
+  con un noteboook de ipython por separado.
+
+\item La nota m\'axima de este taller es de 140 puntos. Los puntos indicados
+  en cada literal solamente se otorgan si el da los resultados
+  esperados seg\'un la descripci\'on de cada punto. 
+ 
+\end{itemize}
+
+\begin{enumerate}
+\item
+{\bf Homicidios}\\
+
+En el siguiente repositorio:
+
+\verb"https://github.com/finiterank/homicidios/"
+
+se encuentra el archivo \verb"data/homicidios.1990.a.2013.csv" que contiene
+los datos de homicidios en todos los municipios de Colombia entre 1990
+y 2013.
+
+\begin{itemize}
+\item[a)] (25 puntos) Realice un descomposici\'on en PCA de todos los
+  historiales de homicidios expresados en la tasa de homicidios por
+  cada 100 mil habitantes. ¿Es posible reducir la dimensionalidad de
+  los datos?  
+
+\item[b)] (25 puntos) Exprese ahora cada una de las historias de tasa de
+  homicidios como la lista de coeficientes que son necesarios
+  para expresarlas como combinación lineal de los autovectores
+  encontrados en el ítem anterior. Haga un análisis de K-clustering
+  sobre estos datos para $K=2,3,4,5$. ¿Es posible decir que los datos
+  se separan en clusters? 
+\end{itemize}
+
+
+
+
+\item 
+{\bf Pobreza}\\
+En el siguiente repositorio:
+
+\verb"https://github.com/finiterank/mapa_pobreza_colombia"
+
+se encuentra el archivo \verb"data/pobreza.csv" con datos
+multidimensionales de pobreza que incluyen acceso a salud, calidad
+escolar, empleo informal, etc.
+
+\begin{itemize}
+  \item[a)] (25 puntos) Realice un estudio PCA sobre las variables
+    \emph{Analfabetismo},
+    \emph{Inasistencia Escolar}, \emph{Alta dependencia econ\'omica},
+    \emph{Sin Fuente Agua Mejorada}. ¿Es posible reducir la
+    dimensionalidad de los datos?
+  \item[b)] (25 puntos) ¿Existen clusters en el espacio de esas mismas
+    variables? 
+\end{itemize}
+
+
+\item 
+{\bf Saber, Pobreza y Homicidios}\\
+(20 puntos)
+
+En el siguiente repositorio 
+
+\verb"https://github.com/finiterank/saber_notebooks"
+
+Se encuentra el archivo \verb"rank.2011.csv" que tiene resultados
+sobre las pruebas Saber en todos los municipios de Colombia para el
+año 2011. 
+
+Para este punto tambi\'en tenga en cuenta los datos de los puntos anteriores.
+
+\begin{itemize}
+  \item[a)] (40 puntos) Tomando en cuenta los resultados de las pruebas saber
+    (puntajes de matem\'aticas y lenguaje), los datos de \emph{Alta
+    dependencia econ\'omica}, \emph{Inasistencia Escolar}, \emph{Sin
+    Fuente Agua Mejorada}. ¿Hay alguna diferencia en la distribución
+    de estas variables entre los diferentes clusters definidos de
+    acuerdo a los homicidios?    
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
