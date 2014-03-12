@@ -1,0 +1,106 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#5 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 10}
+\author{Profesor: Jaime Forero}
+\date{Mi\'ercoles 12 de Marzo, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Todos los programas que solucionan esta tarea deben encontrarse
+  en un repositorio en github con un commit final hecho antes del
+  medio d\'ia del viernes 28 de Marzo. Cada literal debe resolverse
+  con un noteboook de ipython por separado. 
+
+\item La nota m\'axima de este taller es de 100 puntos. Los puntos indicados
+  en cada literal solamente se otorgan si el da los resultados
+  esperados seg\'un la descripci\'on de cada punto. 
+ 
+
+ \item Los datos de esta tarea se encuentran en el repositorio
+
+
+\verb"https://github.com/forero/ComputationalMethodsData" 
+
+en la carpeta \verb"homework/hw_5".
+
+\end{itemize}
+
+\begin{enumerate}
+\item
+{\bf Per\'iodo del ciclo solar} (20 puntos)
+En \verb"sparse_sample_monthrg.dat" se encuentran datos del n\'umero
+de manchas solares en funci\'on del tiempo. La primera columna
+corresponde al a\~no, la segunda al mes, la tercera al n\'umero de
+d\'ias de datos tomados y la cuarta al promedio de manchas. La
+particularidad de estos datos es que {\bf no est\'an espaciados
+  homog\'eneamente en el tiempo.} 
+
+Escriba un programa en Python que estime el ciclo solar en a\~nos a
+partir de an\'alisis de Fourier.
+
+
+\item
+{\bf Estrellas Variables RR-Lyrae}
+Datos de la intensidad de una estrella variable RR-Lyrae se encuentran
+en \verb"RR_Lyrae_template.dat". 
+
+\begin{itemize}
+\item[a)] (10 puntos) Escriba un programa en Python que calcule la
+  misma curva de intensidad cuando se toman en cuenta $N$ ($1<N<11$)
+  componentes de Fourier. 
+\item[b)] (5 puntos) Prepare gr\'aficas de la curva reconstru\'ida con $N$
+componentes.  
+\item[c)] (5 puntos)
+Prepara una gr\'afica de $\chi^2$ en funci\'on del n\'umero de
+componentes $N$ tomadas en cuenta al momento de hacer la
+reconstrucci\'on.   
+\end{itemize}
+
+\item
+
+{\bf C\'irculos} (30 puntos)
+En el archivo \verb"BAO.dat" se encuentran posiciones en un plano
+$x-y$. Estos puntos corresponden a la superposici\'on de diferentes
+c\'irculos m\'as un fondo de puntos distribuidos aleatoriamente a
+partir de una distribuci\'on homog\'enea. 
+
+Escriba un programa en python que encuentre el di\'ametro de estos
+c\'irculos. 
+
+Ayuda:
+Funci\'on de autocorrelaci\'on \\ 
+\verb"http://mathworld.wolfram.com/Autocorrelation.html"\\
+\verb"http://mathworld.wolfram.com/Wiener-KhinchinTheorem.html"
+
+\item {\bf Filtro pasa bandas}(30 puntos) 
+Escribir un programa en python que lea un archivo (.wav) y
+  calcule la transformada de Fourier, haga cero las amplitudes por fuera de una
+banda de frecuencias, y luego calcula la tranformada inversa para escribir
+un archivo (.wav) con el resultado.
+
+Ayuda:
+\begin{itemize}
+\item Para grabar archivos .wav en UNIX y en WINDOWS  se puede
+  instalar SOX:
+  \verb"http://sox.sourceforge.net/"
+  
+\item 
+  Para leer archivos de Sonido en python usar la libreria
+  scikits.audiolab
+ \verb"http://cournape.github.io/audiolab/"
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
