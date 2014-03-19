@@ -1,0 +1,15 @@
+Nombre			P1a	P1b	P2	P3a	P3b	P3c	P3d	Total
+========================================================================================
+DavidAleman		3	20	20	10	10	13	13	89			
+DavidDavila		3	5	15	10	10	15	15	73
+HenryMartinez		3	20	20	3	3	5	5	59
+JesusPrada		10	20	20	10	10	15	15	100
+JuanDavidGodoy		10	20	20	10	10	15	15	100
+JuanRafaelAlvarez	3	20	20	10	10	15	5	83
+JulianaAyala		10	20	20	10	10	15	5	90
+MariaCamilaRemolina	10	20	20	10	10	15	15	100
+MurielPerez		3	20	20+10	8	8	13	13	95
+SebastianCalderon	3	20	20	10	10	13	13	89
+SergioCotrino		3	20	20	10	10	15	15	93
+NicolasRomero		10	20	20	10	10	15	15	100
+
