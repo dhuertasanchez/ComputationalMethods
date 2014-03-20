@@ -3,7 +3,7 @@ Nombre                1a(10)  1b(10)  2a(10)  2b(10)  2c(25)  3a(10)  3b(25)    
 DavidAleman             10      10      10      7      0       0       0        37
 DavidDavila             10       7      10      7      8       3       0        45
 HenryMartinez           10      10      9       7      15      0       0        51
-JesusPrada              10      10      10      10     13      10     20        83
+JesusPrada              10      10      10      10     25      10     20        95
 JuanDGodoy              10       7      10      10     25      10     15        87
 JuanRAlvarez            10      10      10      7      0       0      5         42
 JuanSCalderon           10      10      9       7      0       0      0         39
