@@ -33,13 +33,13 @@ int main(int argc, char **argv){
   FLOAT *mass;
 
   /*timestep variables*/
-  FLOAT delta_t= 0.1;
-  int n_steps = (int)(5000.0/delta_t);
+  FLOAT delta_t= 0.001;
+  int n_steps = (int)(100.0/delta_t);
   int n_points = 3;
   FLOAT radius = 100.0;
   FLOAT unit_mass = 1.0; 
   FLOAT vel_initial = sqrt((11.0/3.0) * G_GRAV * unit_mass / (sqrt(3.0)*radius));
-
+  int i,j;
   
   /*memory allocation*/
   x = get_memory(n_points);
@@ -57,10 +57,20 @@ int main(int argc, char **argv){
   initialize_vel(v_x,v_y,v_z, n_points, vel_initial, radius);
   initialize_mass(mass, n_points, unit_mass);
 
-  get_acceleration(a_x, a_y, a_z, x, y, z, mass, n_points);
+  /*implementation of a simple Euler integration*/
+  for(i=0;i<n_steps;i++){
+    get_acceleration(a_x, a_y, a_z, x, y, z, mass, n_points);
+    for(j=0;j<n_points;j++){    
+      x[j] = x[j] + delta_t * v_x[j];
+      y[j] = y[j] + delta_t * v_y[j];
+      z[j] = z[j] + delta_t * v_z[j];
 
-  print_status(x,y,z,v_x,v_y,v_z, a_x, a_y, a_z, n_points);
-  
+      v_x[j] = v_x[j] + delta_t * a_x[j];
+      v_y[j] = v_y[j] + delta_t * a_y[j];
+      v_z[j] = v_z[j] + delta_t * a_z[j];
+    }
+    print_status(x,y,z,v_x,v_y,v_z, a_x, a_y, a_z, n_points);
+  }  
 }
 
 void get_acceleration(FLOAT *ax, FLOAT *ay, FLOAT *az, FLOAT *x, FLOAT *y, FLOAT *z, FLOAT *mass, int n_points){
@@ -129,8 +139,10 @@ FLOAT * get_memory(int n_points){
 void print_status(FLOAT *x, FLOAT *y, FLOAT *z, FLOAT *vx, FLOAT *vy, FLOAT *vz, FLOAT *ax, FLOAT *ay, FLOAT *az, int n_points){
   int i;
   for(i=0;i<n_points;i++){
-    printf("%f %f %f %f %f %f %f %f %f \n", 
-	   x[i], y[i], z[i], vx[i], vy[i], vz[i], ax[i], ay[i], az[i]);
+    printf("%f %f %f ",
+	   x[i], y[i], z[i]);
   }
-  
+  printf("\n");
 }
+
+
