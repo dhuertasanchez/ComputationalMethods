@@ -1,0 +1,199 @@
+\documentclass{article}
+\title{Taller \#6. M\'etodos computacionales / FISI 2028 \\Semestre
+  2014-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 8, 2014}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del martes 22 de Abril del 2013. El esqueleto de todos los c\'odigos debe estar en el repositorio antes del medio d\'ia del
+  viernes 10 de Abril.}   
+
+\begin{enumerate}
+
+\item {\bf Din\'amica de cazadores y de presas} (20 puntos)
+
+
+Tenemos dos especies, una caza a la otra. El n\'umero de presas es $x$
+y el numero de cazadores es $y$. Su evoluc\'ion temporal est\'a
+descrita por las siguientes dos ecuaciones 
+
+\begin{equation}
+\frac{dx (t)}{dt} = Ax(t) - Bx(t)y(t)
+\end{equation}
+
+\begin{equation}
+\frac{dy (t)}{dt} = -Cy(t) + Dx(t)y(t)
+\end{equation}
+
+\begin{itemize}
+\item Encuentre los valores de $x(0)$ y $y(0)$ para que exista equilibrio
+($\dot{x}=\dot{y}=0$) asumiendo que $A=20$, $B=1$, $C=30$ y $D=1$.
+
+\item Var\'ie las condiciones iniciales de la siguiente manera: $y(0)$
+  se mantiene fijo en el valor encontrado en el punto anterior
+  mientras que $x(0)$ disminuye en una unidad con respecto al valor
+  encontrado en el punto anterior hasta llegar a 1. Solucione el
+  sistema de ecuaciones  para $0<t<1$ y este conjunto de condiciones
+  iniciales y represente las soluciones en el plano $x-y$. 
+
+  El repositorio debe tener al menos tres c\'odigos con los siguientes
+  nombres: \verb"volterra_lotka.c" que resuelve el sistema de ecuaciones
+  diferenciales y \verb"plot_solutions.py" que prepara los datos y la
+  gr\'afica de las soluciones en el plano $x-y$. 
+
+  Todo se debe poder ejecutar con un Makefile.
+
+\end{itemize}
+
+\item {\bf Din\'amica de tres masas} (30 puntos)
+
+Escriba un programa que haga una integraci\'on con un Runge-Kutta de
+cuarto orden para el problema de las tres masas mencionado en
+clase para un tiempo de integraci\'on de $100$ a\~nos. La \'unica
+diferencia es que las velocidades iniciales van perpendiculares al
+plano definitdo por las tres masas.
+
+\item {\bf Colisiones de galaxias} (50 puntos)
+
+Vamos a seguir el ejemplo  del paper cl\'asico de Toomre \& Toomre
+\textit{Galactic Bridges and Tails} en el Astrophysical Journal, Vol. 178,
+pp. 623-666 (1972), el cual se encuentra repositorio como
+\verb"homework/2013-02/TT.pdf" 
+
+Una galaxia ser\'a descrita como un (1) cuerpo central de masa $M$ con $N$ cuerpos (estrellas) en \'orbitas que la rodean. Estos cuerpos van a estar distribuidos de manera uniforme sobre un c\'irculo de radio $R$.
+
+El movimiento {\bf de cada una} de las part\'iculas que rodean a la masa
+central est\'a determinado por la siguiente ecuaci\'on diferencial
+ordinaria vectorial de segundo orden: 
+ 
+\begin{equation}
+\frac{d^2\vec{r}}{dt^2} = -\frac{GM}{r^2} \hat{r}
+\end{equation}
+
+donde $\vec{r}$  es un vector que va de la masa central a la
+part\'icula, $\hat{r}$ es el vector unitario correspondiente,
+$r=|\vec{r}|$, $M$ es la masa del cuerpo central y $G$ es la constante
+de gravitaci\'on.  Una vez se conocen las posiciones y velocidades
+iniciales de cada una de las masas $\vec{r}_0$, $\vec{v}_0$ es posible
+conocer la posici\'on y la velocidad en momentos siguientes. Noten que
+estamos usando una  aproximaci\'on donde la fuerza que siente cada
+part\'icula solamente se debe solamente a la masa central. Esto es
+equivalente a decir a  que la masa de todas las part\'iculas es
+despreciable con respecto a la masa central. As\'i mismo la masa central no sie te ninguna  fuerza apreciable por parte de las part\'iculas. 
+
+\begin{enumerate}
+\item Escribir un programa que genere
+  las condiciones  iniciales (posiciones y velocidades) para que las
+  $N$ part\'iculas de una galaxia de disco orbiten de manera estable
+  en c\'irculos alrededor de la masa  central. 
+  El centro de la galaxia debe ubicarse en
+  el punto $x_{0}\hat{i} + y_{0}\hat{j} + z_{0}\hat{k}$ kpc y la
+  velocidad del centro de masa es $v_{0x}\hat{i}+v_{0y}\hat{j} +
+  v_{0z}\hat{k}$ km/s y donde $x_{0}$, $y_{0}$, $z_{0}$, $v_{0x}$,
+  $v_{0y}$ y $v_{0z}$ son  n\'umeros arbitrarios que se deben como
+  argumento del c\'odigo al  momento de ser ejecutado. Igualmente los
+  valores de $M$, $R$ y $N$ deben ser n\'umeros que entran como
+  par\'ametros de entrada al momento de la ejecuci\'on. 
+
+  Para las cantidades de entrada las unidades son $M_{\odot}$,
+  distancias en kpc y velocidades en km/s. 
+
+  Estas condiciones iniciales (posiciones y velocidades) deben ser
+  escritas en un archivo de texto al momento de ejecutar el
+  c\'odigo. En este archivo la primera columna ser\'a un entero que
+  llamaremos ID y corresponde a un n\'umero entero de cada
+  part\'icula. El ID es negativo si se trata de la part\'icula
+  central, y positivo si se trata de las part\'iculas en las \'orbitas
+  circulares. 
+
+\item 
+  Escribir el c\'odigo que evolucione la posici\'on y la velocidad de
+  cada una de las part\'iculas durante un tiempo $T$ (medido en
+  unidades de miles de millones de a\~nos).  Este c\'odigo debe leer
+  las condiciones iniciales generadas por el c\'odigo anterior. Se
+  debe utilizar un m\'etodo de Runge-Kutta de cuarto orden para
+  integrar la ecuaci\'on de movimiento para cada part\'icula del
+  disco.  El c\'odigo debe generar cinco archivos 
+  de texto con el entero de identidad, posiciones, velocidades de las
+  part\'iculas en $M$ momentos diferentes equiespaciados en el tiempo
+  $T$ de evoluci\'on del sistema
+  evoluci\'on del sistema. El c\'odigo debe tomar como argumento el
+  nombre del archivo con las condiciones iniciales, el tiempo $T$ y el
+  n\'umero de momentos $M$. Cada vez que se escriba un archivo se debe
+  usar el mismo formato utilizado para las condiciones iniciales.
+
+\item 
+  Prepare un programa de python que toma como entrada un n\'umero arbitario de 
+  archivos generados por el c\'odigo anterior y prepara gr\'aficas que
+  muestran las posiciones.  Utilice estre programa para mostrar que
+  las part\'iculas que representan el disco de la galaxia siguen en su
+  \'orbita circular despu\'es de 5 mil millones de a\~nos. 
+  
+\item 
+  Este punto incluye una segunda galaxia id\'entica a la
+  primera. Si se considera que la galaxia anterior tiene un centro de
+  masa en la posici\'on $(0\hat{i}+0\hat{j})$ kpc y una velocidad de centro de
+  masa nula, vamos a considerar ahora que la masa central de la
+  segunda galaxia tiene una posicion $(150\hat{i}+200\hat{j})$ kpc y
+  el centro de masa  tiene una velocidad inicial $-100\hat{j}$ km/s. La
+  direcci\'on $\hat{z}$ es perpendicular al plano del disco. 
+
+  Las condiciones iniciales de cada una de las galaxias son generadas
+  con el c\'odigo del primer punto con $N=10^5$ y
+  $R=20$kpc. Concatenando los dos archivos (utilizando el comando
+  \verb"cat") debe generar un archivo \'unico de condiciones iniciales.
+  
+  Ahora evolucione estas nuevas condiciones iniciales por un intervalo
+  $T=5$  para ver la interacci\'on de las dos galaxias.  Prepare
+  gr\'aficas de la posicion de las part\'iculas de las dos galaxias en
+  $M=5$ momentos diferentes equiespaciados en el tiempo $T$.
+
+  Note que en esta configuraci\'on las masas centrales sienten su
+  influencia mutua y su \'orbita tambi\'en debe ser calculada.
+
+\end{enumerate}
+
+El repositorio debe tener al menos tres c\'odigos con los siguientes nombres:
+
+\begin{enumerate}
+\item \verb"IC.c": c\'odigo que genera las condiciones iniciales de
+  una sola galaxia con las posiciones y velocidades del centro de masa
+  dadas como par\'ametros de entrada al momento de ejecutar el programa.
+\item \verb"evolve.c": c\'odigo que evoluciona un archivo con 
+  condiciones iniciales dadas al momento de ejecutar el programa.
+\item \verb"plots.py": c\'odigo que prepara gr\'aficas de
+  posiciones, tomando como entrada un n\'umero
+  arbitrario de archivos de ID, posiciones y velocidades.
+\end{enumerate}
+
+Todos los pasos deben poder ejecutarse con un Makefile.
+Inspiraci\'on: \verb"http://viz.adrian.pw/galaxy/"
+
+\item {\bf Colapso gravitacional} (10/20/30 puntos)
+
+Escriba un programa en C que integre las ecuaciones de movimiento de
+$N=10^4$ masas iguales (cada una de $1$M$_\odot$) que se encuentran
+distribuidas inicialmente de manera aleatoria dentro de una esfera de
+radio $20$ parsec. Modifique las ecuaciones de Newton para que la
+fuerza de gravedad sea una constante si la separaci\'on entre dos
+masas es menor que $0.01$ parsec. Se debe describir la evoluci\'on del
+sistema por $10^9$ a\~nos de tal manera que la energ\'ia total se
+conserve dentro de una incertidumbre menor a $\Delta E/|E|<10^{-5}$.  
+
+Prepare gr\'aficas de la evoluc\'ion del sistema en 20 momentos
+diferentes, as\'i como de la cantidad $G=2K+U$ en cada paso de tiempo,
+donde $K$ es la energ\'ia cin\'etica y $U$ es la energ\'ia potencial.  
+ 
+El repositorio debe tener al menos dos c\'odigos. Uno llamado
+\verb"nbody.c" que resuelve las ecuaciones diferenciales y otro
+\verb"plot_nbody.py" que produce las gr\'aficas necesarias.
+
+Todo se debe poder ejecutar usando un Makefile.
+
+\end{enumerate}
+
+
+\end{document}
