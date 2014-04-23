@@ -1,0 +1,1 @@
+https://github.com/jdprada1760/Tarea6/blob/master/Finales/punto3/2D/Colision_Galaxias_sim.ipynb
