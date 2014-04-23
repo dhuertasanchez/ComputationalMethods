@@ -7,7 +7,7 @@ AlvarezVelasquez  25+23      25+23     0     96
 CotrinoSandoval   25+23      25+25     0     98
 GodoyLandinez     25+20      25+20     25    115  
 MCRG              25+23      25+24     15    113
-Aleman            25+0       18+0      0     43
+Aleman            25+1       20+15     0     70
 DavilaDiaz        15+0       18+0      0     33
 HMMartinezGomez	  20+10      0         0     30
 Ju.Ayala          25+15      0         0     40
