@@ -1,0 +1,101 @@
+\documentclass{article}
+\title{Taller \#7. M\'etodos computacionales / FISI 2028 \\Semestre
+  2014-I. \\ Profesor: Jaime E. Forero Romero} 
+\date{Abril 29, 2014}
+ \usepackage{amsmath}
+\begin{document}
+\maketitle
+
+{\bf Esta tarea debe resolverse por parejas (i.e. grupos de 2
+  personas) y debe estar en un repositorio de la cuenta de github de
+  uno de los miembros de cada equipo con un commit final hecho antes del
+  medio d\'ia del viernes 9 de Mayo. En todos los casos se debe hacer
+  un programa en C que resuelva la ecuaci\'on diferencial, un programa
+en python que haga una animaci\'on con los resultados y un Makefile
+que compile y ejecute todos los programas.}
+
+\begin{enumerate}
+
+\item {\bf Cuerda Vibrando} (40 puntos)
+
+(Ver cap\'itulo 18.2 de Landau, Paez, Bordeianu)\\
+
+Vamos a considerar una cuerda de longitud $L$ descrita por la funci\'on
+$u(x,t)$ que corresponde al desplazamiento con respecto a su
+posici\'on de equilibrio. En este de una perturbaci\'on inicial, la
+evoluci\'on de $u$ est\'a dada por 
+
+\begin{equation}
+\frac{\partial^2 u (x,t)}{\partial x^2} =
+\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}
+\end{equation}
+
+donde $c=\sqrt{T/\rho}$ es una velocidad de propagaci\'on con $T$ la
+tensi\'on de la cuerda y $\rho$ su densidad.
+
+Como condici\'on inicial se tiene que la cuerda est\'a estirada de
+forma triangular, con el m\'aximo ubicado a $8/10$ de la longitud
+total de la cuerda con una altura $1$. Es decir.
+
+\begin{equation}
+u(x,t=0) = 
+\begin{cases}
+1.25x/L & x\leq 0.8L\\
+5-5x/L & x>0.8L
+\end{cases}
+\end{equation}
+
+Integre esta ecuaci\'on tomando $T=0.01$, $\rho=40$ y $L=100$. 
+
+\item {\bf Ecuaci\'on de Schroedinger dependiente del tiempo} (60 puntos)
+
+(Ver cap\'itulo 18.6 de Landau, Paez, Bordeianu)\\
+
+La evoluci\'on espacial y temporal de una part\'icula cu\'antica en
+1D est\'a descrita por la siguiente ecuaci\'on de Schroedinger dependiente del
+tiempo 
+
+\begin{equation}
+i\frac{\partial \psi(x,t)}{\partial t} =
+-\frac{\partial^2\psi(x,t)}{\partial x^2} + V(x)\psi(x,t).
+\end{equation}
+
+Donde $\psi(x,t)$ es la funci\'on de onda y $V(x)$ es un potencial
+externo. En esta expresi\'on onstantes como la masa de la part\'icula
+y $\hbar$ se han hecho igual es a 1/2 y 1. 
+
+La funci\'on de onda es compleja y puede descomponerse en su parte
+real y compleja   
+
+\begin{equation}
+\psi(x,y) = R(x,t) + iI(x,t), 
+\end{equation}
+%
+de esta manera se deben resolver dos ecuaciones acopladas
+\begin{equation}
+\frac{\partial R(x,t)}{\partial t} =
+-\frac{\partial^2I(x,t)}{\partial x^2} + V(x)I(x,t).
+\end{equation}
+
+\begin{equation}
+\frac{\partial I(x,t)}{\partial t} =
++\frac{\partial^2R(xt)}{\partial x^2} - V(x)R(x,t).
+\end{equation}
+
+donde la densidad de probabilidad $\rho(x,t) = |\psi(x,t)|^2$
+es la cantidad de inter\'es f\'isico para describir la evoluci\'on
+temporal. 
+
+Resuelva esta ecuaci\'on para la siguiente condici\'on inicial
+
+\begin{equation}
+\psi(x,t=0) = \exp\left[ -\frac{1}{2} \left(\frac{x-5}{\sigma_0}\right)^2\right]\exp{(ik_0x)}
+\end{equation}
+que representa un paquete en$x=5$ con momentum $k_0=16\pi$ y
+$\sigma_0=0.05$, mientras evoluci\'ona en un potencial cuadr\'atico
+$V=x^2/2$. La animaci\'on debe mostrar la evoluci\'on de $\rho(x,t)$.
+
+\end{enumerate}
+
+
+\end{document}
