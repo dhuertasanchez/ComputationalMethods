@@ -6,8 +6,8 @@ JuanDavidGodoy 		15[6]	25[7]	30	5[15]		75
 MariaCamilaRemolina	15[6] 	25[7]	30	5[15]		75
 JuanRafaelAlvarez	18[10]	25[11]	30[12]	?[*]		73
 MurielPerez		18[10]	25[11]	30[12]	?[*]		73
-HMMartinezGomez 	18[1]	25[2]	25[3]	5[4]		73
-SergioCotrino		18[1]	25[2]	25[3]	5[4]		73
+HMMartinezGomez 	18[1]	25[2]	25[3]	2[4]		70
+SergioCotrino		18[1]	25[2]	25[3]	2[4]		70
 DavidAleman 		15[6]	15[13]	25[14]	1		56
 JulianaAyala 		15[6]	15[13]	25[14]	1		56
 DavidDavila 		15[5]	0	25[3]	0		40
