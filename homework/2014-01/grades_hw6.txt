@@ -2,16 +2,16 @@ Estudiante		Presa	3M	Gals	Colapso		Total
 ====================================================================
 JesusPrada		15[6]	25[8]	50	?[*]		90
 NicolasRomero		15[6]	25[8]	50	?[*]		90
-JuanRafaelAlvarez	18[10]	25[11]	30[12]	?[*]		72
-MurielPerez		18[10]	25[11]	30[12]	?[*]		72
-JuanDavidGodoy 		15[6]	25[7]	30	?[*]		70
-MariaCamilaRemolina	15[6] 	25[7]	30	?[*]		70
-HMMartinezGomez 	18[1]	25[2]	25[3]	5[4]		72
-SergioCotrino		18[1]	25[2]	25[3]	5[4]		72
-DavidAleman 		15[6]	15[13]	25[14]	0		55
-JulianaAyala 		15[6]	15[13]	25[14]	0		55
-DavidDavila 		15[5]	0	25[3]	0		40
-SebastianCalderon	15[5]	0	25[3]	0		40
+JuanDavidGodoy 		15[6]	25[7]	30	5[15]		75
+MariaCamilaRemolina	15[6] 	25[7]	30	5[15]		75
+JuanRafaelAlvarez	18[10]	25[11]	30[12]	?[*]		73
+MurielPerez		18[10]	25[11]	30[12]	?[*]		73
+HMMartinezGomez 	18[1]	25[2]	25[3]	5[4]		73
+SergioCotrino		18[1]	25[2]	25[3]	5[4]		73
+DavidAleman 		15[6]	15[13]	25[14]	5		60
+JulianaAyala 		15[6]	15[13]	25[14]	5		60
+DavidDavila 		15[5]	0	25[3]	5		45
+SebastianCalderon	15[5]	0	25[3]	5		45
 
 
 [*] Todavia no termina de correr.
@@ -29,3 +29,4 @@ SebastianCalderon	15[5]	0	25[3]	0		40
 [12] No prepara las graficas para verificar que todo salio bien.
 [13] No hay makefile, no hay programa para hacer las graficas.
 [14] El makefile no funciona y no se puede verificar si las cosas estan bien hechas.
+[15] Todo da cero en los archivos de salida.
