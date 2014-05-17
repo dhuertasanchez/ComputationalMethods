@@ -14,14 +14,33 @@ JulianaAyala 		0	0	0
 NicolasRomero		0	0	0
 
 
-[1] La forma de recorrer el parametro A no funciona si se intenta con otra linea. Funciona asi porque de alguna manera hicieron un fit a ojo y empiezan cerca de la respuesta.
-[2] Las graficas no tienen ejes y no se explica que es la escala de color. Por otro lado las incertidumbres estan mal calculadas. No se hace calculando una desviacion estandar. Tambien suena como un fit a ojo porque los pasos de 0.05 son muy pequenos para que haya una convergencia con apenas 1000 pasos de la cadena. Se debia construir una sola likelihood, no dos. Si el programa esta devolviendo el chi^2, entonces la condicion sobre rx esta mal hecha.
-[3] (luffy? robin? sanji? luffylihood?) Las incertidumbres no salieron de un fit a una parabola. El pito no funciona si no se tiene instalado del comando play. El makefile esta mal hecho: siempre ejecuta el programa sin importar si ya se hicieron las graficas.
-[4] Si la funcion likelihood en realidad esta devolviendo el chi^2, entonces la condicion para decidir si salta o no esta mal.
-[5] Las graficas que se pedian eran de un histograma bidimensional. No se calcularon las incertidumbres sobre los parametros.
-[6] Las graficas que se pedian eran de un histograma bidimensional. No se calcularon bien las incertidumbres sobre los parametros. Habia que hacer un fit a una parabola.
-[7] Las incertidumbres sobre los parametros estan mal calculadas. Habia que hacer un fit a una parabola.
-[8] Entregado un dia tarde. Si la funcion de likelihood devuelve chi^2, entonces el test con oracle = l_prime/l_init esta mal. Tampoco se estimaron las incertidumbres sobre los parametros. Por otro lado el programa bota un error:
+[1] La forma de recorrer el parametro A no funciona si se intenta con
+otra linea. Funciona asi porque de alguna manera hicieron un fit a ojo
+y empiezan cerca de la respuesta. 
+[2] Las graficas no tienen ejes y no se explica que es la escala de
+color. Por otro lado las incertidumbres estan mal calculadas. No se
+hace calculando una desviacion estandar. Tambien suena como un fit a
+ojo porque los pasos de 0.05 son muy pequenos para que haya una
+convergencia con apenas 1000 pasos de la cadena. Se debia construir
+una sola likelihood, no dos. Si el programa esta devolviendo el chi^2,
+entonces la condicion sobre rx esta mal hecha. 
+[3] (luffy? robin? sanji? luffylihood?) Las incertidumbres no salieron
+de un fit a una parabola. El pito no funciona si no se tiene instalado
+del comando play. El makefile esta mal hecho: siempre ejecuta el
+programa sin importar si ya se hicieron las graficas. 
+[4] Si la funcion likelihood en realidad esta devolviendo el chi^2,
+entonces la condicion para decidir si salta o no esta mal. 
+[5] Las graficas que se pedian eran de un histograma bidimensional. No
+se calcularon las incertidumbres sobre los parametros. 
+[6] Las graficas que se pedian eran de un histograma bidimensional. No
+se calcularon bien las incertidumbres sobre los parametros. Habia que
+hacer un fit a una parabola. 
+[7] Las incertidumbres sobre los parametros estan mal
+calculadas. Habia que hacer un fit a una parabola. 
+[8] Entregado un dia tarde. Si la funcion de likelihood devuelve
+chi^2, entonces el test con oracle = l_prime/l_init esta mal. Tampoco
+se estimaron las incertidumbres sobre los parametros. Por otro lado el
+programa da un error: 
 create_cb_arglist: Failed to build argument list (siz) with enough arguments (tot-opt) required by user-supplied function (siz,tot,opt=2,6,0).
 Traceback (most recent call last):
   File "fitLV.py", line 75, in <module>
@@ -33,4 +52,6 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/dist-packages/scipy/integrate/ode.py", line 749, in run
     x,y,iwork,idid = self.runner(*((f,t0,y0,t1) + tuple(self.call_args)))
 _dop.error: failed in processing argument list for call-back fcn.
-[9] Entregado un dia tarde. Si la funcion de likelihood devuelve chi^2, entonces el test con oracle = l_prime/l_init esta mal. Tampoco se estimaron las incertidumbres sobre los parametros. 
+[9] Entregado un dia tarde. Si la funcion de likelihood devuelve
+chi^2, entonces el test con oracle = l_prime/l_init esta mal. Tampoco
+se estimaron las incertidumbres sobre los parametros.  
