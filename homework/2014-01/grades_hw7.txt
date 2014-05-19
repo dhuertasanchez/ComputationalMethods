@@ -1,0 +1,22 @@
+Estudiante              Cuerda Vibrando(40)       Schrodinger (60)      Total(100)
+===================================================================================
+JuanDavidGodoy                 40                     60                   100
+DavidDavila                    40                     60                   100
+SergioCotrino                  40                     45[3]                85
+JulianaAyala                   40                     45[3]                85
+DavidAleman                    40                     35[5]                75
+JuanRafaelAlvarez              40                     35[5]                75
+MariaCamilaRemolina            40                     60                   100
+MurielPerez                    40                     60                   100
+JuanSebastianCalderon          35[1]                  55[6]                90         
+JesusPrada                     35[1]                  55[6]                90
+HenryMartinez                  25[1][2]               20[4]                45                        
+NicolasRomero                  25[1][2]               20[4]                45
+
+
+[1]El makefile esta mal hecho.
+[2]La animación esta mal hecha.
+[3]Esta mal implementada la solucion del libro en el codigo y por eso no da tan bien la solcion.
+[4]No hay makefile ni .py que haga animación, el codigo no compila y tiene muchos errores!
+[5]No soluciona la ecuacion de Schrodinger.
+[6]El makefile lo modifique para que corriera. (No estaba tan mal)
