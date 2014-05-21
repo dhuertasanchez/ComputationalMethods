@@ -10,8 +10,8 @@ JuanRafaelAlvarez	30[5]	30[5]	60
 SebastianCalderon	30[5]	30[5]	60
 MurielPerez		20[9]	30[8]	50
 SergioCotrino		20[9]	30[8]	50
-JulianaAyala 		0	0	0	
-NicolasRomero		0	0	0
+JulianaAyala 		20[10]	30[11]	50
+NicolasRomero		20[10]	30[11]	50
 
 
 [1] La forma de recorrer el parametro A no funciona si se intenta con
@@ -55,3 +55,11 @@ _dop.error: failed in processing argument list for call-back fcn.
 [9] Entregado un dia tarde. Si la funcion de likelihood devuelve
 chi^2, entonces el test con oracle = l_prime/l_init esta mal. Tampoco
 se estimaron las incertidumbres sobre los parametros.  
+[10] El makefile debe ejecutar un script en python y producir todas
+las graficas automaticamente, no abrir un notebook. Si estan
+devolviendo el chi^2, entonces el test sobre psi para hacer la cadena
+esta mal implementado. Tampoco se encontro la incertudumbre sobre los
+mejores parametros.
+[11] No hay makefile. El archivo en python da errores al
+ejecutarse. El test sobre alpha_check es incorrecto. No hay estimacion
+sobre las incertidumbres de los parametros.
