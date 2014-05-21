@@ -1,0 +1,23 @@
+Grupo                  |Ciclo Solar(20)|  RRLyrae(20)  |  BAO(30)  |  Filtro pasa bandas(30)  |   Darth Vader(20)  | TOTAL
+===========================================================================================================================
+David Davila            20                10 5 5          0                    24[4]                   10             74
+Muriel Pérez            20                10 5 5          0                    24[4]                   10             74
+MC                      20                10 5 5          22[3]                24[4]                   10             94
+Juan Rafael Alvarez     20                10 5 5          22[3]                24[4]                   10             94
+JS Calderon             11	          10 5 0          0                    0                       0              26
+David Aleman            11                10 5 0          0                    0                       0              26
+Henry Martinez          20                10 5 0          5                    30                      20             90
+Juliana Ayala           20                10 5 0          5                    30                      20             90
+Sergio Romero Cotrino   20                10 5 0[1]       18[2]                30                      20             103
+Nicolas Romero          20                10 5 0[1]       18[2]                30                      20             103
+Juan David Godoy        20                10 5 5          30                   30                      20             120
+Jesus David Prada       20                10 5 5          30                   30                      20             120 
+
+
+[1]Esta grafica esta en x^2 vs frecuencia no contra N componentes que es la que se pide.
+[2]No se halla el radio del circulo de la forma adecuada.
+[3]No halla el valor real del diametro de los circulos.
+[4]No es escucha nada en el archivo de salida.
+
+
+
