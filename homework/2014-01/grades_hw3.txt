@@ -2,7 +2,7 @@ Nombre			P1	P2	P3A	P3B	P3C		Total
 ===============================================================================
 DavidAleman		7	18	13	10 (a)	12 (a)		60
 DavidDavila		18	18	10	5 (b) 	0		51
-HenryMartinez		0	0	0	9 (a,c)	8 (a,c,d)	17	
+HenryMartinez		0	0	7	9 (a,c)	8 (a,c,d)	23	
 JesusPrada		20	7	15	10 (a)  10 (a,d)	62
 JuanDavidGodoy		20	18	15	10 (a)	8 (a,d,e)	71
 JuanRafaelAlvarez	20	18	14	10 (a)	12 (a)		74
