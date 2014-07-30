@@ -1,0 +1,21 @@
+1575  tar -xvzf measurements.tgz 
+ 1576  ls
+ 1577  cd measurements/
+ 1578  ls | wc -l
+ 1579  wc -l *
+ 1580  wc -l * > conteo.dat
+ 1581  less conteo.dat 
+ 1582  awk < conteo.dat '{if($1==24) print $2}'
+ 1583  awk < conteo.dat '{if($1==24) print "mv "$2}'
+ 1584  awk < conteo.dat '{if($1==24) print "mv " $2 " bien/"}'
+ 1585  mkdir bien
+ 1586  mv measurement_station_881.dat bien/
+ 1587  awk < conteo.dat '{if($1==24) print "mv " $2 " bien/"}' > mover.sh
+ 1588  less mover.sh 
+ 1589  ./mover.sh
+ 1590  chmod u+x mover.sh 
+ 1591  ./mover.sh 
+ 1592  ls
+ 1593  mkdir mal
+ 1594  mv measurement_station_* mal
+
