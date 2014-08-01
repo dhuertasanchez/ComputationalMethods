@@ -1,0 +1,77 @@
+\documentclass{article}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#1 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 20}
+\author{Profesor: Jaime Forero}
+\date{Viernes 1 de Agosto, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Los tres scripts de soluci\'on de esta tarea deben subirse a
+  trav\'es de sicuaplus antes de las medio d\'ia del viernes 15 de Agostocomo
+  un \'unico archivo zip con el nombre
+  \verb"NombreApellidos_hw1.zip", por ejemplo yo deber\'ia subir un
+  archivo llamado \verb"JaimeForero_hw1.zip"
+
+\item La nota m\'axima de este taller es de 100 puntos. Se otorgan 1/3 de los puntos si el script es razonable, 1/3 si se puede ejecutar y 1/3 si da los resultados correctos.
+
+\item Todos los archivos se encuentran en este repositorio:
+
+  \verb"https://github.com/forero/ComputationalMethodsData/"
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item El archivo \verb"hands_on/solar/monthrg.dat" contiene 5 columnas descritas por el archivo \verb"hands_on/solar/README". Escriba un script que imprima las siguientes tres cantidades.
+
+\begin{itemize}
+\item (10 puntos) El n\'umero de manchas solares promedio el mes de su nacimiento.
+\item (10 puntos) C\'uantos  meses en entre 1900 y 1950 tuvieron m\'as de 30 manchas solares en promedio.
+\item (10 puntos) El a\~no y el mes que m\'as manchas solares promedio ha tenido en toda la historia. 
+\end{itemize}
+
+
+\item
+El archivo \verb"homework/hw_1/notas_fisicaII_201320.dat" contiene notas de
+F\'isica II. Las primeras tres columnas son las notas de parciales, la
+cuarta columna es la nota de la complementaria, la quinta columna es
+la nota del final y la ultima columna es la nota definitiva. Las notas se encuentran sobre 100. Una nota aprobatoria corresponde a 60 o m\'as.
+
+Escriba un script que responda a las siguientes 2 preguntas:
+\begin{itemize}
+\item (15 puntos) ¿Cu\'antos estudiantes perdieron exactamente un parcial y pasaron la materia?
+\item (15 puntos) ¿Cu\'ales fueron el mejor y el peor promedio de parciales entre las personas que pasaron la materia?
+\end{itemize}
+
+\item
+Un formato muy com\'un para archivos de datos es CSV (Comma Separated Value) donde las columnas se separan por comas. Los datos del archivo \verb"homework/hw_1/giro_2014.csv" se encuetran en este formato. 
+
+Este archivo contiene información de todos los corredores del último Giro d'Italia. El tiempo que aparece en las columnas corresponde al tiempo acumulado al final de la etapa correspondiente.
+
+Se puede utilizar \verb"awk" de la siguiente manera para extraer la columna 3 del archivo \verb"giro_2014.csv"
+\begin{verbatim}
+awk -F "\"*,\"*" '{print $3}' giro_2014.csv
+\end{verbatim}
+
+Escriba un script que responda a las siguientes preguntas:
+
+\begin{itemize}
+\item (10 puntos) ¿Cuántas nacionalidades diferentes participaban en el Giro?
+\item (10 puntos) ¿Cuántos equipos diferentes participaron el Giro?
+\item (20 puntos) ¿Quién era el l\'ider al final de cada una de las 21 etapas? 
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
