@@ -40,6 +40,8 @@ for label_y in ticklabels_y:
 plt.scatter(x,y, s=80.0, alpha=0.5, color='red', label="$f(x)=x^2+x_0$")
 
 ax.legend(loc=0, scatterpoints=1, prop={'size':22})
+ax.set_xlim([0.0,1.0])
+ax.set_ylim([0.0,1.0])
 
 filename = 'random_latex' 
 plt.savefig(filename + '.pdf',format = 'pdf', transparent=True)
