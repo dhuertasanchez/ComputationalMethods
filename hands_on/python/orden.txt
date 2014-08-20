@@ -1,0 +1,9 @@
+- functions.py
+
+- numpy_arrays.py 
+- write_file.py
+- np_loadtxt.py
+
+- simple_imgshow.py
+- simple_matplotlib.py
+- simple_plot3D.py
