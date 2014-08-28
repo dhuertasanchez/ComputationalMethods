@@ -1,0 +1,21 @@
+Apellidos	1a	1b	1c	2a	2b	3a	3b	3c	Total
+Varela Alvarez	10	10	10	5	15	6	6	22	84
+Garzon Alvarado	10	10	10	15	15	10	10	20	100
+Pizano Wagner	10	10	3	15	15	10	10	20	93
+Rodriguez Parra	3	10	10	15	15	6	6	20	85
+Cortes Calderon	3	10	10	15	15	10	10	20	93
+Alvis Narvaez	-	-	-	-	-	-	-	-	0
+Arango Montoya	10	10	10	15	15	10	10	20	100
+Arenas Pardo	10	10	10	15	5	10	10	12	82
+Ariza Fuentes	10	10	0	15	8	10	10	20	83
+Bernal Neira	10	10	10	15	15	?	?	22	82
+Bohorquez Mosquera	10	10	10	5	8	0	0	0	43
+Castillo Ruiz	10	10	10	15	8	10	10	10	83
+Cuartas Martinez	10	10	10	5	5	10	10	20	80
+Cuervo Gomez	10	10	10	15	8	10	10	20	93
+Diaz Mesa	10	4	2	5	15	0	0	0	36
+Farfan Romero	10	10	10	15	8	6	6	13	78
+Garcia Grisales	10	10	10	15	8	10	10	22	95
+Hernandez Charpak	10	10	10	15	4	10	10	20	89
+Jaramillo Duque	10	5	10	15	8	10	10	22	90
+Linares Rugeles	10	10	10	15	8	10	10	20	93
