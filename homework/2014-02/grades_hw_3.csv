@@ -1,0 +1,32 @@
+Apellidos,1 (50/55),2 (50/55),Total,Observaciones
+DavidJaramillo,60,45,105,1. Bien por encontrar los 5 puntos. 2. El programa en python es muy lento. Se debe evitar el uso de loops en Python.
+DavidBernal,60,40,100,1. Bien por encontrar los 5 puntos. 2. El programa en python es muy lento. Se debe evitar el uso de loops en Python. No escribe el archivo final como se pedia en la tarea 2.
+DanielOlaya,50,15,65,"2. La distancia al origen esta mal calculada, esto hace incorrectos los resultados de N vs D. Los pasos de la marcha aleatoria no estan distribuidos homogeneamente sobre la esfera."
+Diego Umana,45,0,45,1. 6 puntos de lagrange? 
+ElkinAlvis,15,15,30,1. No calcula los puntos de lagrange. 2 No calcula bien las marchas (no tiene mucho sentido lo que esta hecho ahi). Se demora mucho.
+EstebanRivera,50,15,65,2. Los puntos no estan uniformemeente distribuidos sobre la esfera. Los resultados de N vs D son incorrectos.
+HenryRueda,15,40,55,1. No calcula los puntos de lagrange correctos. El formato de salida no es lo que se pide. 2. Los puntos no estan generados uniformente sobre la esfera. Es lento el codigo (muchos for). El archivo de salida no tiene el nombre que se pide.
+JuanCarlosLinares,50,15,65,2. El programa es lento. No toma el numero de marchas desde la linea de comandos. Las coordenadas esfericas estan mal utilizadas. Los puntos no estan generados uniformemente sobre la esfera. El resultado de N vs D son incorrectos. El archivo de salida tiene un nombre diferente al pedido.
+JuanFelipeMendez,50,15,65,"2. No toma el numero de marchas desde la linea de comandos. La marcha aleatoria solamente va en el cuadrante positivox,y,z. Los puntos no estan distribuidos sobre la esfera. Los resultados de N vs D son incorrectos."
+LinaPerez,45,40,85,1. 27 puntos de lagrange? 2. Es muy lento (utiliza muchos for). Los puntos no estan generados homogeneamente sobre la esfera.
+LucasVarela,55,40,95,1. Bien por encontrar los 5 puntos. 2. Es muy lento (utiliza muchos for y while). Los puntos no estan generados uniformemente sobre la esfera.
+LuisRodriguezParra,45,40,85,1. Solamente encuentra 2 puntos de lagrange correctos. 2. Lento (muchos for y while). No genera los puntos uniformemente sobre la esfera.
+RudyMendez,45,15,60,1. Solamente encuentra 2 puntos de lagrange. 2. Los puntos no estan generados unformemente sobre la esfera. La distancia al centro esta mal calculada. Los resultados de N vs D son incorrectos.
+SebastianSanabria,15,15,30,"1. Los puntos de lagrange son incorrectos. 2. No toma el numero de marchas desde la linea de comandos. Los puntos no estan generados sobre la esfera, solamente sobre un cuadrante. El resultado de N vs D es incorrecto."
+AuraCuervo,35,15,50,1. Solo un punto de Lagrange correcto. 2 No calcula bien las marchas aleatorias. 
+BillyRevelo,30,40,70,1. Los puntos son incorrectos. 2. No toma el numero de marchas desde la linea de comandos. Los puntos no estan generados homogeneamoente sobre la esfera.
+EdgarCortes,45,45,90,1. Solo dos puntos de lagrange correctos. 2. Los puntos no estan generados homogeneamente sobre la esfera.
+JesusSolano,50,50,100,
+JuanDiegoArango,50,50,100,
+LuisAlbertoPizano,45,40,85,1. L3 esta mal calculado. 2. Puntos no estan homogeneamente sobre la esfera. No se imprimen todos los puntos (eso lo hace mas rapido)
+Manuel Ariza,15,10,25,1. No calcula bien los puntos de lagrange. 2. El codigo no compila y tiene muchos errores
+NatalyCastillo,15,40,55,1. No calcula bien los puntos de lagrange. 2. Los puntos no estan homogeneamente distribuidos sobre la esfera. Lento muchos for y while
+NicolasPerez,0,40,40,1. No la hizo. 2. Los puntos no estan homogeneamente distribuidos sobre la esfera. es lento muchos for y while
+SantiagoCuartas,15,50,65,1. Error de compilacion y no encuentra los puntos de lagrange. 
+sebastianGarzon,30,45,75,1. Puntos de Lagrange? Solo 1 uno bien. 2. No estan distribuidos homogeneamente los puntos sobre la esfera.
+SebastianRosales,50,45,95,2. Puntos no homogeneos sobre la esfera.
+SergioHernandez,55,30,85,1. Bien por encontrar los 5 puntos. 2. Es rapido pero estan mal hecha la marcha.
+SergioDiaz,15,15,30,1. No calcula los puntos de lagrange. 2. No compila y tiene muchos errores
+SergioRey,15,30,45,1. No calcula los puntos de lagrange. 2. No es una caminata 3d y los puntos no son homogeneos sobre la esfera
+DavidGarcia,50,40,90,2. Puntos no homogeneos sobre la esfera y es muy lento.
+JuanCamiloFarfan,50,,50,2. Los puntos no son homogeneos sobre la esfera. Y aún sigue corriendo.
