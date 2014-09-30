@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{hyperref}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\title{Taller \#2 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 20}
+\author{Profesor: Jaime Forero}
+\date{Viernes 15 de Agosto, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Los tres archivos de c\'odigo fuente de soluci\'on de esta tarea
+  deben subirse a trav\'es de sicuaplus antes de las medio d\'ia del
+  viernes 29 de Agosto como un \'unico archivo zip con el nombre
+  \verb"NombreApellidos_hw2.zip", por ejemplo yo deber\'ia subir un
+  archivo llamado \verb"JaimeForero_hw2.zip" 
+
+\item La nota m\'axima de este taller es de 100 puntos. Se otorgan 1/3
+  de los puntos si el c\'odigo fuente es razonable, 1/3 si se puede
+  compilar/ejecutar y 1/3 si da los resultados correctos.  
+\item 
+{\bf Para las personas que entreguen la tarea antes del medio d\'ia
+  del viernes 22 de Agosto cada programa se calificar\'a sobre 35
+  puntos en lugar de 30. Es decir, pueden sacar 115 puntos en lugar de
+  100.} 
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Jugando con $\pi$} 
+
+En el Repositorio \verb"ComputationalMethodsData" se encuentra el
+archivo \verb"homework/hw_1/Pi_2500000.txt" que contiene cerca de 2.5
+millones de d\'igitos del n\'umero $\pi$ en su representaci\'on
+decimal. Escriba un programa en C ( el c\'odigo fuente se debe llamar
+{\verb"suma_digitos_pi.c"}) que sume los primeros $n$ d\'igitos de la
+representaci\'on decimal de $\pi$ . Despu\'es de compilado el programa
+debe poder ejecutarse como  
+
+\begin{verbatim}
+./a.out n
+\end{verbatim}
+Donde \verb"n" representa el n\'umero de d\'igitos decimales para sumar. 
+\begin{itemize}
+
+\item (5 puntos) El programa debe parar su ejecuci\'on y dar un mensaje de error si $n<0$ o si $n>2500000$.
+\item (30 puntos) El programa debe funcionar de manera correcta con valores hasta de $n=2500000$.  El valor final se debe imprimir en pantalla.
+\end{itemize}
+
+
+
+\item {\bf Volando de una ciudad a otra}
+
+Los aviones que vuelan largas distancias internacionales buscan minimizar su consumo de combustible. Para esto la ruta de vuelo debe ser la m\'as corta entre los puntos de partida y llegada.  El objetivo de este ejercicio es escribir un programa que calcule las coordenadas de esa trayectoria para dos puntos arbitrarios sobre la Tierra.
+
+Para simplificar el problema supondremos que la Tierra es perfectamente esf\'erica. Adem\'as vamos a utilizar los \'angulos $\theta$ (polar) y $\varphi$ (ecuatorial) para describir las coordenadas sobre un punto de la esfera.
+
+Escriba un programa (c\'odigo fuente \verb"trayectoria_esfera.c") que dados dos puntos arbitrarios sobre la esfera (parametrizados por $\theta$ y $\varphi$) calcula la trayectoria m\'as corta que entre esos dos puntos. Despu\'es de compilado el programa debe ejecutarse como
+
+\begin{verbatim}
+./a.out theta_1 phi_1 theta_2 phi_2
+\end{verbatim}
+
+Donde \verb"theta_1", \verb"phi_1" corresponden a las coordenadas del primer punto y \verb"theta_2", \verb"phi_2" a las del segundo. Ambos valores deben darse en grados.
+
+\begin{itemize}
+\item (5 puntos) El programa debe parar su ejecuci\'on y dar un mensaje de error si los \'angulos se encuentran por fuera del rango permitido.
+\item (30 puntos) El programa debe escribir en pantalla una serie de $100$ pares de valores de $\theta$ y $\varphi$ que marquen la trayectoria. Estos valores deben corresponder a puntos equidistantes sobre la esfera.
+\end{itemize}
+
+\item {\bf Marcha Aleatoria 3D}
+
+En clase hemos ganado experiencia haciendo marchas aleatorias. En este punto vamos a obtener estad\'isticas para una marcha aleatoria en tres dimensiones. 
+
+
+Las condiciones y definiciones son las siguientes:
+\begin{itemize}
+\item La marcha se hace en coordenadas cartesianas y empieza en el origen $x_{0}=0, y_0=0, z_0=0$. 
+\item Cada paso que toma la marcha siempre tiene longitud igual a uno, $r=\sqrt{d_{ix}^2 + d_{iy}^2 + d_{iz}^2}\equiv 1$ donde los $d_{i}$ indican los desplazamientos del paso $i$ en cada una de las coordenadas. 
+\item La direcci\'on en que se hace el desplazamiento es aleatoria y corresponde a una distribuci\'on plana de probabilidad sobre la esfera. Es decir, no puede haber ninguna direcci\'on privilegiada.  
+\item Luego de $N$ pasos la marcha se encuentra en la posici\'on $x_N, y_N, z_N$ a una distancia $r_N=\sqrt{x_{N}^2 + y_{N}^2 + z_{N}^2}$ del centro.
+\end{itemize}
+
+Esta marcha es difusiva, es decir, que luego de un $N_D$ suficientemente grande puedo esperar que la marcha se encuentre alejada del origen una distancia arbitraria $D$. El objetivo de este ejercicio es estudiar la relaci\'on estad\'istica entre $N_D$ y $D$.
+
+Escriba un programa (c\'odigo fuente \verb"marcha_3D.c") que calcule
+$M$ marchas aleatorias. El programa debe calcular el valor medio y la
+dispersi\'on de los $M$ valores de $N_D$, cuando un $D$ determinado se fija.
+
+En este caso nos interesa hacerlo para una serie de 50 valores diferentes $D=10, 20,\ldots,490,500$. 
+
+Despu\'es de compilado el programa se debe ejecutar como
+\begin{verbatim}
+./a.out M
+\end{verbatim}
+donde $M>2$ es el n\'uemero total de marchas aleatorias.
+
+\begin{itemize}
+\item (30 puntos) El programa debe funcionar de manera correcta para valores arbitrarios de $M$. Al final de su ejecuci\'on el programa debe crear un archivo de nombre \verb"final_stats_3D_M.dat" (donde $M$ corresponde al numero de marchas) que contiene dos columnas y 50 filas. La primera columna tiene los valores de $D=10,20\ldots, 490,500$ y la segunda tiene el valor medio $\langle N_D\rangle$ para el $D$ correspondiente. 
+\item Escriba en los comentarios del c\'odigo fuente si logr\'o
+  encontrar alguna relaci\'on entre $D$ y $\langle N_D\rangle$ con los datos obtenidos por su programa. 
+\end{itemize}
+
+
+
+\item
+{\bf Three Wise Men}
+
+{\textit{The story of the three wise men got me wondering: What if you did walk
+towards a star at a fixed speed?  What path would you trace on the
+Earth? Does it converge to a fixed cycle? —N. Murdoch}}   
+
+Answer: \url{https://what-if.xkcd.com/25/}
+
+\end{enumerate}
+
+
+
+
+\end{document}
+
+\end{document}

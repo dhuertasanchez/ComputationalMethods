@@ -1,0 +1,36 @@
+Apellidos,1a,1b,1c,2a,2b,3a,3b,3c,Total,Observaciones
+Varela Alvarez,10,10,10,5,15,6,6,22,84,"2a. La columna con la nota definitiva es la $6, no la $5; 3a/3b hay una fila de sobra"
+Garzon Alvarado,10,10,10,15,15,10,10,20,100,
+Pizano Wagner,10,10,3,15,15,10,10,20,93,1c. No imprime el mes y el año.
+Rodriguez Parra,3,10,10,15,15,6,6,20,85,1a. No descartó el numero de manchas con -99;  3a/3b hay una fila de sobra
+Cortes Calderon,3,10,10,15,15,10,10,20,93,1a. No descartó el numero de manchas con -99.
+Alvis Narvaez,0,0,0,0,0,0,0,0,0,"El archivo zip no abre, creo que lo comprimió mal."
+Arango Montoya,10,10,10,15,15,10,10,20,100,
+Arenas Pardo,10,10,10,15,5,10,10,12,94,"2b.Pide que el promedio de parciales sea mayor que 60 lo cual no es necesario. 3c. Llego hasta la etapa 11, no sigue diciendo los lideres"
+Ariza Fuentes,10,10,0,15,8,10,10,20,83,1c. No lo hizo. 2b. Hallo bien los promedios pero la funcion de sort estaba mal
+Bernal Neira,10,10,10,15,15,6,6,22,94,3a. Se dio cuenta que era una menos pero no saco la fila con comandos sino lo dijo con palabras. 3b. Lo mismo que en el 3a.
+Bohorquez Mosquera,8,8,8,5,15,0,0,0,44,"1a/1b/1c.Hace wget de github no del raw. 2a. Los condicionales estan mal agrupados, cada or va asociado directamente al and.  3. No lo hizo"
+Castillo Ruiz,10,10,10,15,15,10,10,10,90,3c. Saco la columna de tiempos pero no la sorteo bien.
+Cuartas Martinez,10,10,10,5,5,10,10,20,80,2. Dos de las columnas de 6 estan sin el signo $ entonces siempre da true. Ademas estan mal agrupados los condicionales
+Cuervo Gomez,10,10,10,15,15,10,10,20,100,
+Diaz Mesa,10,4,2,5,15,0,0,0,36,"1b. Le pone un > en: wc -l > mesescon30.dat. Esto hace que no funcione el 1b y se pare el script. Ademas la columna con el numero de manchas es la $4 no la $3. 1c. No da el mes y año, da muchos años y meses con maximos. 2a. No da el que perdio exactamente 1 parcial, sino el que perdio exactamente 2 y paso la materia. 3. No lo hizo"
+Farfan Romero,10,10,10,15,15,6,6,13,85,"3a/3b hay una fila de sobra. 3c. Hace mal el sort, de la fila 16-21 gana Uran"
+Garcia Grisales,10,10,10,15,15,10,10,22,102,"2a. Tuvieron es con ""v""."
+Hernandez Charpak,10,10,10,15,4,10,10,20,89,2b. Para este uso la misma lista de personas del 2a. lo cual no era restricción e impide que vea los mejores y peores promedios reales
+Jaramillo Duque,10,5,10,15,15,10,10,22,97,1b. No incluyo las manchas de los años 1949 y 1950. 
+Linares Rugeles,10,10,10,15,8,10,10,20,93,"2b. En el promedio que personas que perdieron no comprueba que hayan pasado la materia, sino que la hayan perdido."
+Billy Revelo,10,10,7,10,15,10,10,20,92,1b. Esta mal las condiciones del if. 
+Murad Rodriguez,0,0,0,0,0,0,0,0,0,"El archivo zip no abre, mal comprimido"
+Olaya Cortes,7,5,2,0,7,7,7,0,35,"No hay respuestas concretas, toca mirar el .txt!!!, los scripts no son ejecutables , 1c. No estan bien las condiciones del if por eso no da la respuesta correcta. 2a. no hay respuesta. "
+Umaña Rojas,10,10,10,15,15,8,8,18,94,"Tiene errores el script buscando las carpetas adecuadas! 3a dio una mas, 3b dio una mas, 3c, imprime mas cosas de las debidas"
+Rivera Guerrero,10,10,6,10,15,10,10,20,91,1c. Estan mal las condiciones del if!. 2a. Esta mal las condiciones y no dan el valor que es. 
+Rueda Corredor,8,8,8,5,15,10,10,7,71,"No son ejecutables los scripts, no descargan los archivos de datos. 2a. Mal agrupadas las condicones. 3c. No dice quien es el lider!"
+Solano Gomez,10,10,10,15,15,10,10,20,100,
+Mendez Valderrama,10,10,10,7,7,10,10,12,76,2. Mal agrupadas las condiciones. 3c. No estan bienlas respuestas!
+Perez Angel,10,10,10,5,5,10,10,20,80,2. Mal agrupadas las condicones! Me quedaron muchos archivos .txt hay que borrarlos!
+Patiño Leuro,10,10,10,8,15,5,5,0,63,"2a. El if esta mal!,  3a y 3b errores redirigiendo los archivos no hay respuestas! 3c no lo hizo"
+Perez Consuegra,10,10,10,15,5,10,10,20,90,2b mal agrupadas las condciones en el if. 
+Mendez Reina,10,10,10,15,15,10,10,20,100,
+Rosales Cote,10,10,10,15,5,10,10,10,80,2b Mal las condicion del if 3c.  No gano Nairo :(
+Sanabria Ordoñes,10,10,10,15,15,10,10,20,100,No sonejecutables los scripts
+Rey Puentes,10,3,3,5,5,0,0,0,26,"1b y 1c, estan mal las condiciones del if 2. Mal las condiciones del 1f., 3. No la hizo"

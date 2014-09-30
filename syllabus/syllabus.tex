@@ -1,6 +1,7 @@
 % Física Computacional Syllabus
 \documentclass[11pt]{article}
 \usepackage[intlimits]{amsmath}
+\usepackage{hyperref}
 \usepackage{amsfonts}
 \usepackage{amscd}
 \usepackage{amssymb}
@@ -18,12 +19,15 @@
 \begin{document}
 \noindent
 FISI 2028 M\'etodos Computationales
-Semestre 2014 - 10\\
-Martes y Mi\'ercoles 15:30 - 17:00 \\
+Semestre 2014 - 20\\
+Martes y Mi\'ercoles 15:30 - 16:50 \\
 Salon LL-204\\
-Profesor: Jaime Forero, email: je.forero\\
-Monitor: Nicol\'as Garavito, email: jn.garavito57\\
-
+Profesor: Jaime Forero, email: je.forero, Oficina Ip208\\
+Monitores: \\
+(Magistral \& Laboratorio) Nicol\'as Garavito, email: jn.garavito57\\
+(Laboratorio) Luis Alberto Guti\'errez, email: la.gutierrez1280\\
+(Laboratorio) Christian Poveda, email: cn.poveda542\\
+(Magistral) Mar\'ia Camila Remolina, email: mc.remolina197\\
 
 
 \section*{Objetivo}
@@ -50,16 +54,12 @@ m\'etodos tradicionales de computo num\'erico y la parte de
 \'util a una fracci\'on de los asistentes al curso en su vida
 profesional. La segunda parte le ser\'a \'util a \emph{todos}. 
 
-Las lecturas que se deben completar antes de clase tienen que ver con
-la primera parte, sobre todo. Mientras que la segunda parte de
-carpinter\'ia ser\'a trabajada en clase mientras se resuelven
-problemas pr\'acticos de c\'omputo num\'erico. 
 
 \section*{Software}
 \noindent Se usar\'an principalmente los notebooks de IPython
 complementado con C. Tambi\'en se aceptan tareas en los siguientes
 lenguajes de programaci\'on: FORTRAN 90/95, C++ y Python. No se
-aceptar\'an tareas en Matlab, Matem\'atica o cualquier otro lenguaje
+aceptar\'an tareas en Matlab, Mathematica o cualquier otro lenguaje
 de programaci\'on que no este en la lista mencionada antes.  
 
 \section*{Evaluaci\'on}
@@ -67,50 +67,66 @@ de programaci\'on que no este en la lista mencionada antes.
 Hay 8 talleres para entregar. Los primeros 4 valen el 10\% cada uno,
 los siguientes 4 valen el 15\% cada uno. No habr\'a parciales ni
 examen final. Los primeros cuatro talleres ser\'an individuales. Los
-\'ultimos cuatro talleres ser\'an en parejas.  En el caso de los
-talleres individuales, si en las entregas es claro que hubo trabajo en
-grupos entonces la nota de todos los talleres individuales quedar\'a
-autom\'aticamente en cero (0.0). 
+\'ultimos cuatro talleres ser\'an en parejas.  Si en las entregas
+individuales es claro que hubo trabajo en grupos entonces la nota de
+todos los talleres individuales quedar\'a autom\'aticamente en cero
+(0.0).  
 
 Las entregas para los \'ultimos 4 talleres se har\'an en dos tiempos:
 una primera entrega donde se muestre expl\'icitamente un borrador del
 c\'odigo con comentarios, luego la entrega definitiva con el c\'odigo
 completo. La primera entrega es una condici\'on necesaria para aceptar
-la segunda. Solamente esa segunda entrega recibe una nota. 
+la segunda. Solamente la segunda entrega recibe una nota. 
 
 Esta materia se ve al mismo tiempo que el Laboratorio de M\'etodos
 Computationales. El objetivo del Laboratorio es tener m\'as tiempo
-para practicar todos los conceptos vistos en clase. De acuerdo a la
+para practicar todos lo visto en clase. De acuerdo a la
 nota definiva en Laboratorio habr\'a un bono en la nota definitiva de
 este curso. Siendo $x$ la nota de Laboratorio, el bono correspondiente
 se calcula as\'i:
-$3.5< x \leq 4.0\rightarrow 0.2$, $4.0< x\leq 4.5\rightarrow 0.3$, $4.5<x
+$4.0 < x \leq 4.4 \rightarrow 0.2$, $4.4< x\leq 4.8\rightarrow 0.3$, $4.8<x
 \leq 5.0\rightarrow 0.5$.
 
 
+El curso cuenta con un repositorio en github:
+\url{https://github.com/forero/ComputationalMethods}. El material se
+encuentra distribuido en las siguientes carpetas. 
+
+
+\begin{itemize}
+\item \texttt{hands\_on/}: ejemplos para hacer en clase.
+\item \texttt{homework/}: enunciados y calificaciones de las tareas.
+\item \texttt{notas/}: notas de clase.
+\item \texttt{syllabus/}: programa del curso.
+\end{itemize}
+ 
+ 
 
 \section*{Programa}
 
 \begin{center}
-\begin{tabular}{|p{1.8cm}|p{6cm}|p{5cm}|c|c|}
+\begin{tabular}{|p{1.8cm}|p{6cm}|p{4.0cm}|p{4.5cm}|}
 \hline
-Semana & Teor\'ia & Carpinter\'ia & Taller & Deadline \\\hline
-1 (19.1) & Algoritmos	&Consola/Emacs/Gnuplot & \#1 & 30.1\\\hline
-2 (26.1)& 	& Consola/Emacs - C  & &\\\hline
-3 (2.2)& 	&C  & \#2   & 13.2\\\hline
-4 (9.2)& 	&Python &  &\\\hline
-5 (16.2)& 	&IPython Notebook (graficas) / Github Individual & \#3 & 27.2\\\hline
-6 (23.2)&      Principal Component Analysis - Clustering Analysis &  & &\\\hline
-7 (2.3)&  Interpolaci\'on & Dise\~no de programas / Github Colaborando & \#4 & 13.3\\ \hline
-8 (9.3)& An\'alisis de Fourier - FFT &  Ipython & & \\\hline
-9 (16.3) & Integraci\'on y derivaci\'on num\'erica & Ipython & \#5 &27.3\\\hline
-10 (23.3) & Ecuaciones diferenciales ordinarias (1er orden)& & &  \\\hline
-11 (30.3)& Ecuaciones diferenciales ordinarias (2do orden)&  Makefile &  \#6 & 24.4\\\hline 
-12 (6.4) & Ecuaciones diferenciales parciales & & \#7 & 1.5\\\hline
-13 (13.4) & {\bf Semana de trabajo individual} & & &\\\hline 
-14 (20.4) & M\'etodos Monte Carlo &   &  & \\\hline
-15 (27.4) & MCMC para hacer fits &    & \#8 & 8.5\\\hline
-16 (4.5) &  &    &  & \\\hline
+Semana & Teor\'ia & Carpinter\'ia & Taller \\\hline
+1 (28.7) & Algoritmos	&Consola/Emacs/Gnuplot & \#1 (shell scripts)\\\hline
+2 (4.8)& 	& Consola/Emacs - C  & \\\hline
+3 (11.8)& 	&C  & \#2 (C)\\\hline
+4 (18.8)& 	&Python &  \\\hline
+5 (25.8)& 	&IPython Notebook (gr\'aficas) / Github Individual & \#3
+(Python) \\\hline
+6 (1.9)&      Soluci\'on de sistemas lineales de ecuaciones &  & \#4
+(Matrices, Git, C)\\\hline
+7 (8.9)&  Interpolaci\'on & Dise\~no de programas / Github Colaborando & \\ \hline
+8 (15.9)& An\'alisis de Fourier - FFT &  Ipython / Numpy& \#5 (Fourier, Git, Python)\\\hline
+9 (22.9) & {\bf Semana de trabajo individual} & &\\\hline 
+10 (29.9) & Integraci\'on y derivaci\'on num\'erica & Ipython / Numpy & \\\hline
+11 (6.10) & Ecuaciones diferenciales ordinarias (1er orden)& &  \#6
+(EDO1, Derivadas, C, Python, Git)\\\hline
+12 (13.10)& Ecuaciones diferenciales ordinarias (2do orden)&  Makefile &   \\\hline 
+13 (20.10) & Ecuaciones diferenciales parciales & & \#7 (EDO2, EDP, C, Python, Git)\\\hline
+14 (27.10) & M\'etodos Monte Carlo &   & \\\hline
+15 (3.11) & MCMC para hacer fits &    & \#8 (MCMC, Python)\\\hline
+16 (10.11) &  &    & \\\hline
 \hline
 \end{tabular}
 \end{center}
@@ -119,13 +135,19 @@ Semana & Teor\'ia & Carpinter\'ia & Taller & Deadline \\\hline
 \section*{Bibliograf\'ia}
 \begin{itemize}
 \item
-A survey of Computational Physics. R. H. Landau, M. J. P\'aez, C. C.
-Bordeianu. Princeton Univ. Press. 2008 
-\item
-Statistical Mechanics: Algorithms and Computations. W. Krauth, Oxford Univ. Press. 
-\item\verb"http://software-carpentry.org/"
-\item\verb"https://github.com/forero/ComputationalMethods/"
-\item\verb"http://goo.gl/N1pKOI"
+\textit{A survey of Computational Physics}
+. R. H. Landau, M. J. P\'aez, C. C. Bordeianu. Princeton Univ. Press. 2006
+\item 
+\textit{Statistical Mechanics: Algorithms and Computations.}
+W. Krauth, Oxford Univ. Press. 
+\item 
+\textit{Introduction to Computational and Programming Using Python},
+Guttag, J. V. The MIT Press. 2013.
+\item 
+\textit{The C programming language.}
+ B. Kernighan \& D. Ritchie, Second Edition, Prentice Hall.
+\item\url{http://software-carpentry.org/}
+\item\url{http://xkcd.com/}
 \end{itemize}
 
  

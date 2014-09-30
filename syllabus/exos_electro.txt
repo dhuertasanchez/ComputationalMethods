@@ -5,3 +5,15 @@ Semana 9 trabajo individual
 Semana 12. Circuito RLC.
 Semana 16. Modelo de un relampago.
 	
+
+Revisado.
+Semana 3. Tarea para calcular (C) y graficar (gnuplot) equipotenciales.
+
+Semana 6. Bootcamp.
+
+Semana 13. 
+Tarea con Circuito RLC.
+Tarea para el movimiento de una particula cargada en campo magnetico.
+
+Semana 15. Tarea con el modelo de un relampago.
+
