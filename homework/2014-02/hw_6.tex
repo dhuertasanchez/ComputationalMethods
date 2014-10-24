@@ -104,12 +104,12 @@ de 4$R_{T}$ donde $R_T=6378.1$km es el radio de  la Tierra, puede ser
 aproximado por el campo de un dipolo 
 
 \begin{equation}
-{\bf B}_{dip}({\bf r}) = \frac{\mu_0}{4\pi r^3}[3({\bf M}\cdot{\hat{
-    r}})\hat{r}-{\bf M}], 
+\vec{B}_{dip}(\vec{r}) = \frac{\mu_0}{4\pi r^3}[3(\vec{M}\cdot\vec{
+    r})\hat{r}-\vec{M}], 
 \end{equation}
 
-donde ${\bf r}=x\hat{x} + y\hat{y} + z\hat{z}$, $r=|{\bf r}|$ y
-$\hat{r}={\bf r}/r$. Para la Tierra tomamos ${\bf M}=-M\hat{z}$
+donde $\vec{r}=x\hat{x} + y\hat{y} + z\hat{z}$, $r=|\hat{r}|$ y
+$\hat{r}=\vec{r}/r$. Para la Tierra tomamos ${\bf M}=-M\hat{z}$
   antiparalelo al eje $z$ porque el polo norte magn\'etico es cercano
   al polo sur geogr\'afico. 
 
@@ -119,14 +119,22 @@ tenermos que $\mu M/4\pi=B_0R_T^3$. Con esto podemos escribir en
 coordenadas cartesianas:
 
 \begin{equation}
-{\bf B}_{dip} = -\frac{B_0 R_T^3}{r^5}[3xz\hat{x} + 3yz\hat{y} + (2z^2
+\vec{B}_{dip} = -\frac{B_0 R_T^3}{r^5}[3xz\hat{x} + 3yz\hat{y} + (2z^2
   - x^2 -y^2)\hat{z}].
 \end{equation}
+
+En este problema, las velocidades de las part\'iculas est\'an en el r\'egimen relativista. En este caso se tiene que la ecuaci\'on de la fuerza se escribe como
+
+\begin{equation}
+\frac{d(\gamma m \vec{v})}{dt} = q\vec{v}\times\vec{B}, 
+\end{equation}
+%
+donde $\gamma=1/\sqrt{1-v^2/c^2}$. En este caso la energ\'ia cin\'etica de la part\'icula se escribe como $K=(\gamma -1)mc^2$, donde $m$ es la masa en reposo de la part\'icula. 
 
 \begin{itemize}
 
 \item (50 puntos) Escriba un programa en C que integre las ecuaciones
-  de movimiento (no relativistas) de {\bf protones} que tienen una
+  de movimiento relativista de {\bf protones} que tienen una
   posici\'on inicial $(2R_e,0,0)$, energ\'ia cin\'etica inicial
   $E_{k}$ (medida en millones de electronvolts) y tienen una velocidad
   inicial descrita por $(0,v\sin\alpha, v\cos\alpha)$ donde $\alpha$
