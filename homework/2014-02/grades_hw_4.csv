@@ -1,0 +1,30 @@
+Nombre,1 (30),2 (25),3 (15),4 (30),Total,Observaciones
+DavidJaramillo,35,30,20,35,120,Todo perfecto.
+JuanDiegoArango,30,25,15,30,100,Es enredado leer con readlines. Mejor un loadtxt.
+LucasVarela,30,25,15,30,100,"Es un desperdicio de recursos escribir tantos archivos en A/, b/ y m/"
+NicolasPerez,20,12,15,20,67,"Para que se dupican los datos? 1. Los valores de la gravedad estan mal. 2. Se incluyen valores de los archivos corruptos. 4. Los valores del fit para F, no tienen nada que ver con los valores de F."
+Garzon Alvarado,20,25,15,0,60,1. Mal hecho el fit. 3 Hay funciones en python que sacan el promedio como mean. 
+Perez Angel,0,10,0,0,10,Solo quito los datos con ruido.
+Olaya Cortes,30,25,15,30,100,2. No quito los datos corruptos. 4. En python el ajuste por minimos cuadrados se hace mucho mas facil.
+Mendez Valderrama,30,25,15,10,80,4- Estan mal hechos los fits. 
+Cortes Calderon,20,0,0,0,20,
+Diaz Meza,25,25,15,15,80,4. Mal implementada la hipotesis 1. Comentar el notebook!!!
+Bernal Neira,30,25,15,30,100,Todo perfecto
+Rueda Corredor,30,25,15,30,100,Todo perfecto
+Rodriguez Parra,25,13,0,0,38,"1. El punto esta listo, pero no se hace el archivo pedido. 2. No hizo la grafica pero si quito los archivos corruptos. 3. No lo hizo 4. No lo hizo"
+Farfan Romero,5,0,0,0,5,"1. El notebook deberia compilar los archivos en c, da un error porque no existe a.out, al calificador le toca compilarlo manualmente y como hay 2 archivos en c no se sabe cual es tampoco. Esto no sirve: inp = open (""*.dat"",""r""), toca hacer un ciclo. No hace lo pedido en el primer punto, lo que hace no esta claro, no hay comentarios. No genera archivos con resultados. 2. No lo hizo 3. No lo hizo 4. No lo hizo"
+Rosales Cote,28,0,0,0,28,"El repositorio esta mal nombrado (no se baja por esto, pero pendiente para la proxima tarea). 1. En el repositorio no se pone la carpeta de archivos, lo cual hace que el programa falle, el calificador tiene que ponerlos en la carpeta. No hace comentarios en el notebook. La ultima fila del archivo creado no esta completa, le falta una g. 2. No lo hizo 3. No lo hizo 4. No lo hizo"
+Hernandez Charpak,30,25,15,30,100,Todo perfecto
+Revelo Obando,20,0,0,0,20,"El repositorio esta mal nombrado (no se baja por esto, pero pendiente para la proxima tarea). 1. Python es un lenguaje indentado, hay errores de indentación que matan el programa. Funciona pero solo para un archivo, había que hacerlo para todos y obtener los angulos para hacer el archivo final de 5 columnas. Había que aplicar el algoritmo pero muchas veces y guardar los resultados. "
+Castillo Ruiz,20,0,0,0,20,"Hay que hacer un repositorio para cada tarea, no uno con todas (No se baja por esto, pero hay que corregirlo para la proxima). 1. La función: fit1 esta mal hecha. El punto esta incompleto. No se genera el archivo 2. No lo hizo 3. No lo hizo 4. No lo hizo"
+Pizano Wagner,10,0,0,0,10,1. En el repositorio no se pone la carpeta de archivos. No existe el archivo test.dat. No se hace con los datos otorgados. El programa bota errores y esta incompleto. No se comenta detalladamente lo que se hace. 2. No lo hizo 3. No lo hizo 4. No lo hizo
+Solano Gomez,30,25,15,25,95,Se pasa 1h28m de la hora de entrega. 4 es valido solo el analisis grafico? 
+Alvis Narvaez,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Rivera Guerrero,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Garcia Grisales,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Ariza Fuentes,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Mendez Reina,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Umana Rojas,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Cuervo Gomez,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Sanabria Ordonez,0,0,0,0,0,No subieron el link al repositorio a Sicua
+Linares Rugeles,0,0,0,0,0,No subieron el link al repositorio a Sicua
