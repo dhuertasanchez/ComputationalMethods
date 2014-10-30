@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage{hyperref}
+\textheight=25.5cm
+\textwidth=16.0cm
+\oddsidemargin=-0.5cm
+\topmargin=-3.0cm
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+ \usepackage{amsmath}
+\title{Taller \#7 de M\'etodos Computacionales\\ FISI 2028, Semestre 2014 - 20}
+\author{Profesor: Jaime Forero}
+\date{Viernes 31 de Octubre, 2014}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+{\bf Importante}
+\begin{itemize}
+
+\item Todo el c\'odigo fuente y los datos se debe encontrar en un
+  repositorio en github con un commit final hecho antes del medio
+  d\'ia del martes 11 de noviembre. El nombre del repositorio debe ser
+  \verb"Apellidos1_Apellidos2_hw7", por ejemplo si trabajo con
+  Nicol\'as deber\'iamos crear un repositorio llamado
+  \verb"Forero_Garavito_hw7".  
+
+\item 
+  La nota m\'axima de este taller es de 100 puntos. Se otorgan 1/3
+  de los puntos si el c\'odigo fuente es razonable, 1/3 si se puede
+  compilar/ejecutar y 1/3 si da los resultados correctos.  
+
+\item
+  El miercoles 5 de noviembre habr\'a una sesi\'on para presentar
+  avances de diferentes grupos en cada una de las preguntas del
+  taller. Hay un bono de 15 puntos para cada grupo que presente un
+  avance significativo.  
+
+
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item {\bf Cuerda Vibrando} (50 puntos)
+
+(Ver cap\'itulo 18.2 de Landau, Paez, Bordeianu, {\it Soluci\'on de la
+  ecuaci\'on de onda hiperb\'olica})\\
+
+Vamos a considerar una cuerda de longitud $L$ descrita por la funci\'on
+$u(x,t)$ que corresponde al desplazamiento con respecto a su
+posici\'on de equilibrio. Despu\'es de una perturbaci\'on inicial, la
+evoluci\'on de $u$ est\'a dada por 
+
+\begin{equation}
+\frac{\partial^2 u (x,t)}{\partial x^2} =
+\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}
+\end{equation}
+
+donde $c=\sqrt{T/\rho}$ es una velocidad de propagaci\'on con $T$ la
+tensi\'on de la cuerda y $\rho$ su densidad \footnote{En clase ya
+  resolvimos esta ecuaci\'on con diferentes condiciones iniciales:
+  un pulso gaussiano y uno sinusoidal}.
+
+Las condiciones de contorno corresponden a puntos fijos.  Como
+condici\'on inicial se tiene que la cuerda est\'a estirada de forma triangular, con el m\'aximo ubicado a $8/10$ de la longitud
+total de la cuerda con una altura $1$.  Es decir,
+
+\begin{equation}
+u(x,t=0) = 
+\begin{cases}
+1.25x/L & x \leq 0.8L\\
+5-5x/L & x>0.8L
+\end{cases}
+\end{equation}
+
+Integre esta ecuaci\'on tomando $T=40$N y $L=100$m para
+$0<t<120$s. 
+
+El programa debe estar escrito en C y debe poder ejecutarse como
+\verb"./string.x rho" donde \verb"rho" es la densidad lineal de la
+cuerda. Para hacer pruebas pueden tomar $\rho=0.01$kg/m. 
+
+Este programa debe producir un archivo llamado \verb"string_rho.dat"
+donde se guarda la evoluci\'on del sistema en 121 filas (cada fila
+correspondiente a la evolucion para el tiempo en segundos
+correspondiente, i.e. la fila 20 es la evoluci\'on para $t=19$s) y 101
+columnas (cada columna tiene el valor de $y$ para el $x$
+correspondiente, i.e. la columna 99 guarda el valor de $u$ para $x=98$m).
+Debe existir otro programa en python que toma como argumento
+el archivo de datos para producir una gr\'afica
+\verb"cuerda_rho.pdf" del mismo tipo de la Figura 18.3 en el libro de
+Landau, Paez, Bordeianuu. Todo debe poder ejecutarse con un Makefile. 
+
+
+
+\item {\bf Shock}. (50 puntos)
+
+Vamos a trabajar con un fluido unidimensional definido por tres
+cantidades: la velocidad $u$, la presi\'on $p$ y la densidad
+$\rho$. El gas es\'a descrito por una ecuaci\'on de estado con
+exponente adiab\'atico $\gamma=1.4$. Vamos a asumir que este fluido se
+puede describir por las ecuaciones de Euler, que no son nada m\'as que
+una expresi\'on de la conservaci\'on de masa, momentum y energ\'ia.  
+
+El objetivo de este punto es resolver las ecuaciones de Euler para la
+siguiente situaci\'on. Hay un tubo que va desde $x=-10$m hasta $x=10$m
+y en la mitad hay una membrana r\'igida. Del lado izquierdo hay un gas es
+est\'atico $u_I=0$m/s, tiene densidad alta $\rho_I=1$kg/m$^3$ y una presi\'on
+alta $p_I=100$kN/m$^2$. Del lado derecho hay m\'as gas que sigue
+siendo est\'atico $u_D=0$m/s pero tienen una densidad baja
+$\rho_D=0.125$ kg/m$^3$ y una presi\'on m\'as baja $p_D=10$kN/m$^2$. 
+
+Para $t=0$ la membrana desaparece y el gas es libre de evolucionar
+siguiendo las ecuaciones de Euler. El objetivo es calcular la
+presi\'on, densidad y velocidad a lo largo del tubo para el tiempo
+$t=0.1$s.
+
+¿Cómo van a hacer esto? Siguiendo el esquema num\'erico presentado
+aqu\'i:
+
+\url{http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/03_wave/03_05_Sods_Shock_Tube.ipynb}.
+
+{\bf No es necesario que lean las lecciones anteriores del MOOC para
+  resolver el problema. Basta con que vean con cuidado las ecuaciones
+  (8) y (9) que describen el esquema num\'erico necesario para
+  evolucionar las variables del sistema.}
+
+El programa debe estar escrito en C y debe poder ejecutarse como
+\verb"./sod_test.x t" donde \verb"t" es el tiempo en segundos al cual
+se desea evolucionar la soluci\'on. Este programa debe producir un
+archivo llamado \verb"estado_t.dat" donde se guarda en cuatro
+columnas: la posici\'on a lo largo del tubo, la velocidad, presi\'on y
+densidad. Debe existir otro programa en python que toma como argumento
+el archivo de datos para producir una gr\'afica
+\verb"estado_t.pdf". Todo debe poder ejecutarse con un Makefile.
+
+\end{enumerate}
+
+
+\end{document}
